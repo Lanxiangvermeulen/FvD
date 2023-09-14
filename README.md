@@ -16,14 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Lanxiang Vermeulen
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+Blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
- 
+Responsive 
 </details>
 
 
@@ -36,7 +35,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+ https://www.coolblue.nl
+
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
@@ -58,6 +58,31 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
+  Bevindingen screenreader
+  Alt-text niet duidelijk 
+  De foto's zijn niet omschreven, er word niet duielijk omschreven wat je ziet.
+  Zo heb je op de homepagina allemaal sfeer foto's en als Alt-text staat er alleen een kopje 
+  van het artikel bij. Ook als je gaat naar specifieke producten word dit niet goed toegepast. 
+  Er wordt letter een soort product code als alt-tekst toegevoegd, maar verder omschrijven ze niet 
+  duidelijk wat je ziet. 
+
+  Reviews 
+  Screenreader las wel op hoeveel reviews er waren gegeven op een bepaald product, maar er werd niet duidelijk vermeld wat de uitkomst daarvan was. Dus er word niet gezegd: "Dit product heeft 5 sterren, dit is gebaseerd op 5 reacties die zijn achtergelaten". 
+
+  Text to speech leest niet alles voor 
+  De text to speech slaat een volledige blok over omdaat Coolblue een afbeelding heeft geplaatst zonder Alt-text. 
+  Het blok ging over werken bij Coolblue. 
+
+  Bevindingen disability test 
+
+  Bevindingen HTML-checker
+
+  Bevindingen WCAG Checklist
+
+  bevindingen Kleurenblind  
+  
+  Contrast checken & bevindingen
+  
 </details>
 
 
