@@ -14,9 +14,9 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text: #111;
-	--color-background: #eee;
+
+	--coolblue-color: #0090e3;
+	--coolblue-grey: #f2f7fc;
 }
 
 
@@ -28,4 +28,88 @@
 /****************/
 
 /* jouw code */
+
+body {
+	margin: auto;
+}
+
+
+/* Vanaf hier de navigatie */
+header>nav>ul {
+	display: flex;
+	margin: 0;
+	padding: 0 0.8em;
+	align-items: center;
+	overflow: hidden;
+	background-color: var(--coolblue-color);
+	height: 2.75em;
+}
+
+
+li {
+	list-style-type: none;
+}
+
+li:first-of-type {
+	margin-right: auto;
+}
+
+
+
+button {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+img {
+	width: 100%;
+}
+
+/* Alle icoontjes in de nav */
+nav>ul>li {
+	width: 2.4em;
+}
+
+/* Coolblue logo */
+nav>ul>li:nth-of-type(2) {
+	width: 5.5em;
+	margin-right: 1em;
+}
+
+
+nav>li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--coolblue-grey);
+	height: 3em;
+}
+
+
+input {
+	width: 95%;
+	height: 2.5em;
+	outline: none;
+	text-indent: 1em;
+	border: 1px solid #ddd;
+	border-radius: 0.25em;
+}
+
+/* Blader door onze categorieën */
+
+section>h2 {
+	text-align: center;
+}
+
+section>ul {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 0;
+	gap: 1em;
+}
+
+section>ul>li {
+	background-color: var(--coolblue-grey);
+	height: 10em;
+}
 
