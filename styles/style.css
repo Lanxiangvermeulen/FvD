@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -6,22 +8,21 @@
 }
 
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 
-	--coolblue-color: #0090e3;
+	--coolblue-blue: #0090e3;
 	--coolblue-grey: #f2f7fc;
+	--coolblue-omlijning-dikte: 1px solid #ddd;
+	--border-radius-elementen: 0.25em;
+	;
 }
 
-
-
-
+ul::-webkit-scrollbar {
+	display: none;
+}
 
 /****************/
 /* JOUW STYLING */
@@ -31,30 +32,23 @@
 
 body {
 	margin: auto;
+	font-family: "Open Sans";
 }
 
+/* Ik heb op de main een padding gedaan zodat er niet op elke element 
+apart een padding toevoegd hoeft te worden. Dit leek mij meer 
+toepasselijker omdat het anders te complex werd */
 
-/* Vanaf hier de navigatie */
-header>nav>ul {
-	display: flex;
-	margin: 0;
+/* Even checken bij sjors of dit goed staat?  */
+main {
 	padding: 0 0.8em;
-	align-items: center;
-	overflow: hidden;
-	background-color: var(--coolblue-color);
-	height: 2.75em;
 }
 
-
-li {
+/* Dit is algemene styling */
+ul {
+	padding: 0;
 	list-style-type: none;
 }
-
-li:first-of-type {
-	margin-right: auto;
-}
-
-
 
 button {
 	background-color: transparent;
@@ -65,51 +59,344 @@ img {
 	width: 100%;
 }
 
-/* Alle icoontjes in de nav */
-nav>ul>li {
+h2 {
+	font-size: 1em;
+}
+
+h3 {
+	font-size: 0.8em;
+	color: var(--coolblue-blue);
+}
+
+p {
+	font-size: 0.8em;
+}
+
+/* Vanaf hier de navigatie */
+
+header>nav>ul {
+	display: flex;
+	margin: 0;
+	align-items: center;
+	overflow: hidden;
+	background-color: var(--coolblue-blue);
+	height: 2.75em;
+
+}
+
+header>nav>ul>li {
 	width: 2.4em;
 }
 
+header>nav>ul>li:first-of-type {
+	margin-right: auto;
+}
+
+
 /* Coolblue logo */
-nav>ul>li:nth-of-type(2) {
+header>nav>ul>li:nth-of-type(2) {
 	width: 5.5em;
 	margin-right: 1em;
 }
 
 
-nav>li {
+header>nav>form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--coolblue-grey);
 	height: 3em;
+	padding: 0.3em;
 }
 
 
-input {
+header>nav>form>input {
 	width: 95%;
 	height: 2.5em;
 	outline: none;
 	text-indent: 1em;
-	border: 1px solid #ddd;
-	border-radius: 0.25em;
+	border: var(--coolblue-omlijning-dikte);
+	border-radius: var(--border-radius-elementen);
 }
 
-/* Blader door onze categorieën */
+header form button {
+	background-color: var(--coolblue-blue);
+	height: 2.5em;
+	width: 3.5em;
+	border-radius: 0em 0.25em 0.25em 0em;
+}
 
-section>h2 {
+header form button img {
+	height: 1.5em;
+	width: 1.5em;
+}
+
+
+header>ul:nth-of-type(1)>li {
 	text-align: center;
 }
 
-section>ul {
-	display:grid;
-	grid-template-columns: 1fr 1fr;
-	padding: 0;
+header>ul:last-of-type,
+header>ul:nth-of-type(1) {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	overflow: scroll;
+}
+
+header>ul:nth-of-type(1) {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+header>ul:nth-of-type(1)>li,
+header>ul>li>img {
+	width: 100vw;
+	scroll-snap-align: center;
+}
+
+/* Aanbevelingen start hier */
+.aanbevelingen ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1em;
+	overflow: scroll;
+	margin: 0 -0.8em;
+	padding-left: 1em;
+}
+
+.aanbevelingen ul li {
+	border: var(--coolblue-omlijning-dikte);
+	border-radius: 0.2em;
+	width: 15em;
+	display: grid;
+	grid-template-columns: 1fr 5em;
+	padding: 1em;
+
+}
+
+.aanbevelingen ul li a:first-of-type img {
+	width: 3em;
+	margin-bottom: 1em;
+}
+
+.aanbevelingen ul li a:last-of-type img {
+	width: 5em;
+}
+
+.aanbevelingen h3 {
+	font-size: 0.6em;
+	margin: 0;
+}
+
+.aanbevelingen p {
+	margin: 0;
+	font-size: 0.7em;
+}
+
+.aanbevelingen span {
+	font-size: 0.5em;
+}
+
+.aanbevelingen strong {
+	font-size: 0.5em;
+}
+
+
+/* Blader door onze categorieën */
+
+/* Ik had hier eerst alleen een section staan, maar doordat ik later 
+nog meer sections wil toevoegen is dit super onoverzichtelijk en op deze
+manier zijn de codes makkelijker leesbaar voor mezelf en anderen. 
+Nog even checken bij de docent!! */
+
+.categorieen>ul {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	gap: 1em;
 }
 
-section>ul>li {
+.categorieen>ul>li {
 	background-color: var(--coolblue-grey);
 	height: 10em;
+	border: var(--coolblue-omlijning-dikte);
+	border-radius: 0.2em;
 }
 
+/* Ik wilde eerst de grid toepassen op de Li, maar dit bleek niet te werken  */
+/* omdat de Image en de H3 in de a zitten.  */
+
+.categorieen>ul>li>a {
+	display: grid;
+	height: 100%;
+	grid-template-rows: 1fr 1fr;
+}
+
+.categorieen>ul>li>a>h3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	font-size: 0.8em;
+	text-align: center;
+	background: #fff;
+	color: var(--coolblue-blue);
+}
+
+/* Ontdek verschillende merken  */
+.ontdek ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1em;
+}
+
+
+
+.studenten {
+	/* Wit ruimte die ik heb toegevoegd aan de body, heb ik hier 
+	uitgezet */
+	margin: 0 -0.8em;
+	padding: 1em;
+	padding-right: 0;
+	background-image: url(/images/aanbevelingen.avif);
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 5em;
+	margin-bottom: 10em;
+}
+
+/* DIT IS NIEUW */
+.studenten>ul>li {
+	position: relative;
+}
+
+.studenten>ul>li>a>ul {
+	width: 10em;
+	left: 1.6em;
+	display: flex;
+	position: absolute;
+	top: 12.75em;
+	text-wrap: nowrap;
+}
+
+/* DIT NIET MEER */
+
+.studenten>ul>li>a>article {
+	width: 15rem;
+	padding: 1.6em;
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--border-radius-elementen);
+	background: #fff;
+	border: var(--coolblue-omlijning-dikte);
+}
+
+.studenten>ul>li>a>article>img {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* DIT IS NIEUW */
+.studenten>ul>li>a>article>h3 {
+	margin-bottom: 4em;
+}
+
+/* Aanbiedingen kopje */
+.studenten>ul>li>a>article>span:nth-of-type(1) {
+	color: #FF6600;
+	padding: 0.25em 0.35em;
+	margin-right: auto;
+	background: #fef1e8;
+	font-size: 0.8125em;
+	font-family: "Kameron";
+	font-weight: 700;
+	border-radius: var(--border-radius-elementen);
+}
+
+
+.studenten>ul>li>a>article>ul {
+	display: flex;
+}
+
+.studenten>ul>li>a>article>ul>li>img {
+	width: 1em;
+}
+
+/* Het lukte mij niet om autorepeat toe te passen. De flexbox is in 
+dit geval ook korter en beter te begrijpen voor mij. */
+/* 
+Ik heb met student assistent gezeten en zij heeft mij laten zien 
+hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
+.studenten>ul {
+	gap: 2em;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: repeat(4, 1fr);
+
+	/* display:grid; 
+	grid-template-columns: 1fr, 1fr, 1fr, 1fr auto; */
+	/* 
+	display: flex; */
+
+	/* Ik heb dit van https://css-tricks.com/practical-css-scroll-snapping/ */
+	scroll-snap-type: x mandatory;
+	padding-right: 15em;
+	margin-bottom: -8em;
+
+}
+
+.studenten>ul>li {
+	scroll-snap-align: center;
+}
+
+.vacature ul {
+	display: grid;
+	gap: 1em;
+}
+
+.vacature article li:first-of-type {
+	background-color: var(--coolblue-blue);
+	border-radius: var(--border-radius-elementen);
+	padding: 2em;
+}
+
+.vacature article li:nth-of-type(1) h3 {
+	color: white;
+	font-size: 1.3em;
+	margin: 0;
+}
+
+.vacature article li:nth-of-type(1) h3 span {
+	color: #FF6600;
+	font-size: 1.3em;
+	margin-left: -0.2em;
+}
+
+.vacature article li:nth-of-type(1) h4 {
+	color: rgb(209, 239, 255);
+	margin: 0;
+}
+
+.vacature article li:nth-of-type(1) a {
+	display: flex;
+	align-items: center;
+	height: 2em;
+	color: white;
+}
+
+.vacature article li:nth-of-type(1) a img {
+	height: 1em;
+	width: 2em;
+}
+
+.vacature>article>ul>li:nth-of-type(2),
+.vacature>article>ul>li:nth-of-type(3) {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2em 1fr;
+}
+
+.vacature>article>ul>li:nth-of-type(2) img,
+.vacature>article>ul>li:nth-of-type(3) img {
+	grid-row-start: 1;
+	grid-row-end: 3;
+}

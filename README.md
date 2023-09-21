@@ -74,6 +74,7 @@ Responsive
   Het blok ging over werken bij Coolblue. 
 
   Bevindingen disability test 
+  
 
   Bevindingen HTML-checker
 

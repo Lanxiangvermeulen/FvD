@@ -1,60 +1,484 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="jouw naam">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="author" content="jouw naam" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Coolblue</title>
 
-    <link href="styles/style.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="styles/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
 
   <body>
-<header> 
-    <nav>
-      <ul>
-        <li> <button> <img src="images/menu-icon.svg" alt="wel logo"></button></li>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <button><img src="images/menu-icon.svg" alt="wel logo" /></button>
+          </li>
 
-        <li> <button> <img
-              src="/images/coolblue.png"
-              alt="Het logo van Coolblue" /> </button>
-        </li>
+          <li>
+            <button>
+              <img src="images/coolblue.png" alt="Het logo van Coolblue" />
+            </button>
+          </li>
 
-        <li> <button> <img src="images/account_goed.svg" alt="wel logo">
-          </button></li>
-        <li> <button> <img src="images/heart_goed.svg" alt="wel logo">
-          </button></li>
-        <li> <button> <img src="images/winkelmandje_goed.svg" alt="wel logo"></button></li>
+          <li>
+            <button>
+              <img src="images/account_goed.svg" alt="wel logo" />
+            </button>
+          </li>
+          <li>
+            <button><img src="images/heart_goed.svg" alt="wel logo" /></button>
+          </li>
+          <li>
+            <button>
+              <img src="images/winkelmandje_goed.svg" alt="wel logo" />
+            </button>
+          </li>
+        </ul>
+
+        <!-- Ik had hier eerst een Li-tag omheen gezet. Maar op de site van NDM stond dat 
+        een LI nooit los mag staan, er moet altijd een UL omheen. 
+        Hierdoor heb ik verder onderzoek gedaan en heb ik de formtag ontdekt. 
+        Een formtag is bedoeld voor het versturen van data. 
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li -->
+
+        <!-- Aria label  -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
+        <form>
+          <input type="zoekbalk homepage" placeholder="Zoeken naar..." />
+          <button class="search-button" aria-label="Zoeken">
+            <img src="images/zoekeniconen.png" />
+          </button>
+        </form>
+      </nav>
+
+      <!-- Ik heb ervoor gekozen om dit stukjes tekst direct in de Li toe te voegen
+      omdat het valt niet onder een P of header. Het helpt niet om te navigeren.
+      Het is eerder een extratje.  -->
+      <ul id="tekst-carousel">
+        <li>Voor 23.59 uur besteld, morgen gratis bezorgd</li>
+        <li>Gratis ruilen</li>
+        <li>Beste winkelweb 2022</li>
       </ul>
 
-      <li> <input type="zoekbalk homepage"  placeholder="Zoeken naar..."></li>
-    </nav>
-  </header>
+      <ul id="foto-carousel">
+        <li><img src="/images/header_foto2.png" alt="header foto" /></li>
+        <li><img src="/images/header_foto1.avif" alt="header foto" /></li>
+      </ul>
+    </header>
 
-<section> 
-  <h2> Blader door onze categorieën
-  </h2>
-  <ul> 
-    <li> <a> <img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets </a>
-    </li>
+    <main>
+      <section class="aanbevelingen">
+        <article>
+          <ul>
+            <li>
+              <a>
+                <img src="images/Chromebook_nopadding.png" />
+                <h3>Acer Chromebook Spin 513 CP...</h3>
 
-    <li> <a> <img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets</a>
-    </li>
+                <p>Nu met €70,- korting.</p>
+                <span>Adviesprijs</span>
+                <span>499,-</span>
+                <strong>429,-</strong>
+              </a>
 
-    <li> <a><img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets </a>
-    </li>
+              <a>
+                <div>
+                  <img src="images/laptopaanbeveling.png" />
+                </div>
+              </a>
+            </li>
 
-    <li> <a> <img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets
-    </a>
-    </li>
+            <li>
+              <a>
+                <img src="images/Chromebook_nopadding.png" />
+                <h3>Acer Chromebook Spin 513 CP...</h3>
 
-  </ul>
+                <p>Nu met €70,- korting.</p>
+                <span>Adviesprijs</span>
+                <span>499,-</span>
+                <strong>429,-</strong>
+              </a>
 
-</section>
-  
+              <a>
+                <div>
+                  <img src="images/laptopaanbeveling.png" />
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a>
+                <img src="images/Chromebook_nopadding.png" />
+                <h3>Acer Chromebook Spin 513 CP...</h3>
+
+                <p>Nu met €70,- korting.</p>
+                <span>Adviesprijs</span>
+                <span>499,-</span>
+                <strong>429,-</strong>
+              </a>
+
+              <a>
+                <div>
+                  <img src="images/laptopaanbeveling.png" />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Voor de categorieën heb ik ervoor gekozen om een UL te gebruiken omdat 
+      de content niet direct linkt naar een artikel. Ook zijn de elementen erg simpel
+      en werkt makkelijker om er een UL van te maken. -->
+
+      <section class="categorieen">
+        <h2>Blader door onze categorieën</h2>
+        <ul>
+          <li>
+            <a>
+              <img
+                src="images/categorieen_computers_tablets.jpg"
+                alt="wel logo"
+              />
+              <h3>Computers & Tablets</h3>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <img src="images/categorieen_beeld_geluid.jpg" alt="wel logo" />
+              <h3>Beeld & geluid</h3>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <img src="images/categorieen_telefonie.jpg" alt="wel logo" />
+              <h3>Telefonie</h3>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <img
+                src="images/categorieen_huishuiden_wonen.jpg"
+                alt="wel logo"
+              />
+              <h3>Huishouden & wonen</h3>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <img src="images/categorieen_keuken.jpg" alt="wel logo" />
+              <h3>Keuken</h3>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <img
+                src="images/categorieen_sport_verzorging.jpg"
+                alt="wel logo"
+              />
+              <h3>Sport & verzorging</h3>
+            </a>
+            <!-- </li>
+          <li> <a> bekijk het volledige assortiment</a>
+          </li> -->
+          </li>
+        </ul>
+      </section>
+
+      <section class="ontdek">
+        <h2>Ontdek de verschillende merken</h2>
+        <article>
+          <ul>
+            <li>
+              <a>
+                <img src="images/ontdekheader.avif" alt="asdf" />
+                <h3>Bekijk de wereld van Apple</h3>
+
+                <p>
+                  Bij Apple weet je een ding zeker: alles werkt zoals het hoort.
+                  Dankzij het Apple ecosysteem werken de producten onderling
+                  naadloos met elkaar samen.
+                </p>
+              </a>
+              <ul>
+                <li><a href="#"> Macbook</a></li>
+                <li><a href="#"> Mac</a></li>
+                <li><a href="#"> Ipad</a></li>
+                <li><a href="#"> Apple watch</a></li>
+                <li><a href="#"> Iphone</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a>
+                <img src="images/ontdekheader.avif" alt="asdf" />
+                <h3>Bekijk de wereld van Apple</h3>
+
+                <p>
+                  Bij Apple weet je een ding zeker: alles werkt zoals het hoort.
+                  Dankzij het Apple ecosysteem werken de producten onderling
+                  naadloos met elkaar samen.
+                </p>
+              </a>
+              <ul>
+                <li><a href="#"> Macbook</a></li>
+                <li><a href="#"> Mac</a></li>
+                <li><a href="#"> Ipad</a></li>
+                <li><a href="#"> Apple watch</a></li>
+                <li><a href="#"> Iphone</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a>
+                <img src="images/ontdekheader.avif" alt="asdf" />
+                <h3>Bekijk de wereld van Apple</h3>
+
+                <p>
+                  Bij Apple weet je een ding zeker: alles werkt zoals het hoort.
+                  Dankzij het Apple ecosysteem werken de producten onderling
+                  naadloos met elkaar samen.
+                </p>
+              </a>
+              <ul>
+                <li><a href="#"> Macbook</a></li>
+                <li><a href="#"> Mac</a></li>
+                <li><a href="#"> Ipad</a></li>
+                <li><a href="#"> Apple watch</a></li>
+                <li><a href="#"> Iphone</a></li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Nadat ik dit had gemaakt kwam ik erachter dat dit 
+      niet zo goed had opgelost. Achteraf dacht ik dat met grid 
+      een nettere manier zou zijn. IOM docent heb ik besloten
+      om dit zo te laten en te focussen op Accessibility -->
+      <section class="studenten">
+        <h2>Heb jij onze topdeals al gezien?</h2>
+        <p>
+          We hebben de beste aanbiedingen voor je op een rijtje gezet. Sla snel
+          je slag.
+        </p>
+        <ul>
+          <li>
+            <a>
+              <article>
+                <img src="images/oven.avif" alt="asdf" />
+                <span>aanbieding</span>
+                <h3>Beko FSM67010GX</h3>
+
+                <!-- Ik moet checken met docent of hier een strong tag gebruikt mag worden of een span -->
+                <!-- In overleg met docent strong gekozen -->
+
+                <span>Adviesprijs</span>
+                <span>609,-</span>
+                <strong>499,-</strong>
+
+                <p>De zachtsluitende ovendeur klapt nooit te hard dicht.</p>
+              </article>
+            </a>
+
+            <a>
+              <ul>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <!-- COOLBLUE IS ILLEGAL!! 
+                  Coolblue heeft een link in een grotere link geplaatst.
+                  Als ik dit google geven ze aan dat dit niet hoort.
+                  Dus vedorie coolblue... 
+                https://stackoverflow.com/questions/9882916/are-you-allowed-to-nest-a-link-inside-of-a-link -->
+
+                  <!-- De twee elementen een A omheen zetten en dan met grid en z-index en 
+                positie positioneren, op advies van docent -->
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <article>
+                <img src="images/oven.avif" alt="asdf" />
+                <span>aanbieding</span>
+                <h3>Beko FSM67010GX</h3>
+
+                <span>Adviesprijs</span>
+                <span>609,-</span>
+                <strong>499,-</strong>
+
+                <p>De zachtsluitende ovendeur klapt nooit te hard dicht.</p>
+              </article>
+            </a>
+
+            <a>
+              <ul>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <article>
+                <img src="images/oven.avif" alt="asdf" />
+                <span>aanbieding</span>
+                <h3>Beko FSM67010GX</h3>
+
+                <span>Adviesprijs</span>
+                <span>609,-</span>
+                <strong>499,-</strong>
+
+                <p>De zachtsluitende ovendeur klapt nooit te hard dicht.</p>
+              </article>
+            </a>
+            <a>
+              <ul>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <article>
+                <img src="images/oven.avif" alt="asdf" />
+                <span>aanbieding</span>
+                <h3>Beko FSM67010GX</h3>
+
+                <span>Adviesprijs</span>
+                <span>609,-</span>
+                <strong>499,-</strong>
+
+                <p>De zachtsluitende ovendeur klapt nooit te hard dicht.</p>
+              </article>
+            </a>
+
+            <a>
+              <ul>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="vacature">
+        <h2>werken bij coolblue</h2>
+        <article>
+          <ul>
+            <li>
+              <h3>WERKEN BIJ COOLBLUE <span> .</span></h3>
+              <h4>Vrienden gezocht.</h4>
+              <p>
+                Wil je weten wat werken bij cool blue écht zo leuk maakt? Lees
+                dan alles over onze vrienden cultuur.
+              </p>
+              <a> <img src="images/menu-icon.svg" alt="#" /> meer</a>
+            </li>
+
+            <li>
+              <img src="images/werken_afbeelding_1.avif" alt="asdf" />
+
+              <h3>kom werken bij coolblue</h3>
+              <p>
+                Wil jij de zwarte band klanten blij maken? Solliciteer dan op
+                een van onze banen.
+              </p>
+            </li>
+
+            <li>
+              <img src="images/werken_afbeelding_1.avif" alt="asdf" />
+
+              <h3>Word bezorger</h3>
+              <p>
+                Wil jij met je vrienden werken en € 15,04 per gewerkt uur
+                verdienen? Start dan als bezorger.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
 
     <script defer src="scripts/script.js"></script>
   </body>
