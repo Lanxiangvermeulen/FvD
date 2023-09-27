@@ -38,12 +38,12 @@ https://www.coolblue.nl
 #### Screenshot(s) van de eerste pagina (small screen):
 
 Homepagina
-<img src="/images/coolblue_homepagina.png" width="375px" alt="">
+<img src="/readme-images/coolblue_homepagina.png" width="375px" alt="">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 
 Winkelmandje
-<img src="/images/producttoevoegen_winkelmand.png" width="375px" alt="omschrijving van de pagina">
+<img src="/readme-images/producttoevoegen_winkelmand.png" width="375px" alt="omschrijving van de pagina">
 
 </details>
 
@@ -106,13 +106,13 @@ Contrast checken & bevindingen
 
 ### Homepagina schetsen
 
-  <img src="/images/breakdownschetsen3.PNG" width="375px" alt="breakdown van de hele pagina">
-    <img src="/images/breakdownschetsen4.PNG" width="375px" alt="breakdown van de hele pagina">
+  <img src="/readme-images/breakdownschetsen3.PNG" width="375px" alt="breakdown van de hele pagina">
+    <img src="/readme-images/breakdownschetsen4.PNG" width="375px" alt="breakdown van de hele pagina">
 
 ### Winkelwagen schetsen
 
-  <img src="/images/breakdownschetsen1.JPG" width="375px" alt="breakdown van de hele pagina">
-    <img src="/images/breakdownschetsen2.JPG" width="375px" alt="breakdown van de hele pagina">
+  <img src="/readme-images/breakdownschetsen1.JPG" width="375px" alt="breakdown van de hele pagina">
+    <img src="/readme-images/breakdownschetsen2.JPG" width="375px" alt="breakdown van de hele pagina">
 
 ### Winkelwagen leeg:
 

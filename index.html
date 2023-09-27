@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <!-- Hier komt h1 -->
     <header>
       <nav>
         <ul>
@@ -50,7 +51,11 @@
         <!-- Aria label  -->
         <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
         <form>
-          <input type="zoekbalk homepage" placeholder="Zoeken naar..." />
+          <input
+            for="zoekbalk homepage"
+            type="zoekbalk homepage"
+            placeholder="Zoeken naar..."
+          />
           <button class="search-button" aria-label="Zoeken">
             <img src="images/zoekeniconen.png" />
           </button>
@@ -61,9 +66,18 @@
       omdat het valt niet onder een P of header. Het helpt niet om te navigeren.
       Het is eerder een extratje.  -->
       <ul id="tekst-carousel">
-        <li>Voor 23.59 uur besteld, morgen gratis bezorgd</li>
-        <li>Gratis ruilen</li>
-        <li>Beste winkelweb 2022</li>
+        <li>
+          <img src="/images/check-mark.png" alt="vinkje" /> Voor
+          <span> 23.59 </span> uur besteld, morgen <span>gratis</span> bezorgd
+        </li>
+        <li>
+          <img src="/images/check-mark.png" alt="vinkje" />
+          <span> Gratis </span>ruilen
+        </li>
+        <li>
+          <img src="/images/check-mark.png" alt="vinkje" />
+          <span> Beste</span> winkelweb 2022
+        </li>
       </ul>
 
       <ul id="foto-carousel">
@@ -85,6 +99,8 @@
                 <span>Adviesprijs</span>
                 <span>499,-</span>
                 <strong>429,-</strong>
+
+                <span>Aanbieding</span>
               </a>
 
               <a>
@@ -103,6 +119,8 @@
                 <span>Adviesprijs</span>
                 <span>499,-</span>
                 <strong>429,-</strong>
+
+                <span>Aanbieding</span>
               </a>
 
               <a>
@@ -121,6 +139,8 @@
                 <span>Adviesprijs</span>
                 <span>499,-</span>
                 <strong>429,-</strong>
+
+                <span>Aanbieding</span>
               </a>
 
               <a>
@@ -198,10 +218,35 @@
 
       <section class="ontdek">
         <h2>Ontdek de verschillende merken</h2>
-        <article>
-          <ul>
-            <li>
-              <a>
+
+        <ul>
+          <li>
+            <a>
+              <article>
+                <img src="images/ontdekheader.avif" alt="asdf" />
+
+                <h3>Bekijk de wereld van Apple</h3>
+
+                <p>
+                  Bij Apple weet je een ding zeker: alles werkt zoals het hoort.
+                  Dankzij het Apple ecosysteem werken de producten onderling
+                  naadloos met elkaar samen.
+                </p>
+              </article>
+            </a>
+
+            <ul>
+              <li><a href="#"> Macbook</a></li>
+              <li><a href="#"> Mac</a></li>
+              <li><a href="#"> Ipad</a></li>
+              <li><a href="#"> Apple watch</a></li>
+              <li><a href="#"> Iphone</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a>
+              <article>
                 <img src="images/ontdekheader.avif" alt="asdf" />
                 <h3>Bekijk de wereld van Apple</h3>
 
@@ -210,18 +255,20 @@
                   Dankzij het Apple ecosysteem werken de producten onderling
                   naadloos met elkaar samen.
                 </p>
-              </a>
-              <ul>
-                <li><a href="#"> Macbook</a></li>
-                <li><a href="#"> Mac</a></li>
-                <li><a href="#"> Ipad</a></li>
-                <li><a href="#"> Apple watch</a></li>
-                <li><a href="#"> Iphone</a></li>
-              </ul>
-            </li>
+              </article>
+            </a>
+            <ul>
+              <li><a href="#"> Macbook</a></li>
+              <li><a href="#"> Mac</a></li>
+              <li><a href="#"> Ipad</a></li>
+              <li><a href="#"> Apple watch</a></li>
+              <li><a href="#"> Iphone</a></li>
+            </ul>
+          </li>
 
-            <li>
-              <a>
+          <li>
+            <a>
+              <article>
                 <img src="images/ontdekheader.avif" alt="asdf" />
                 <h3>Bekijk de wereld van Apple</h3>
 
@@ -230,49 +277,181 @@
                   Dankzij het Apple ecosysteem werken de producten onderling
                   naadloos met elkaar samen.
                 </p>
-              </a>
-              <ul>
-                <li><a href="#"> Macbook</a></li>
-                <li><a href="#"> Mac</a></li>
-                <li><a href="#"> Ipad</a></li>
-                <li><a href="#"> Apple watch</a></li>
-                <li><a href="#"> Iphone</a></li>
-              </ul>
-            </li>
+              </article>
+            </a>
+            <ul>
+              <li><a href="#"> Macbook</a></li>
+              <li><a href="#"> Mac</a></li>
+              <li><a href="#"> Ipad</a></li>
+              <li><a href="#"> Apple watch</a></li>
+              <li><a href="#"> Iphone</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
 
-            <li>
-              <a>
-                <img src="images/ontdekheader.avif" alt="asdf" />
-                <h3>Bekijk de wereld van Apple</h3>
+      <!-- Dit anders doen, vorige uitvoering was niet zo goed.
+      Maar die mag ik laten staan. En bij deze wil ik correct doen -->
+      <section class="onlangsbekeken">
+        <h2>Dit heb je eerder bekeken</h2>
+        <ul>
+          <li>
+            <a>
+              <article>
+                <img src="images/koffieautomaat.avif" alt="asdf" />
+                <span> 100 koffiecups voor € 5,-</span>
+                <h3>Magimix Nespresso CitiZ M196 CN Zwart</h3>
 
-                <p>
-                  Bij Apple weet je een ding zeker: alles werkt zoals het hoort.
-                  Dankzij het Apple ecosysteem werken de producten onderling
-                  naadloos met elkaar samen.
-                </p>
-              </a>
+                <strong>€149,-</strong>
+                <span> Morgen bezorgd</span>
+              </article>
+            </a>
+
+            <a>
               <ul>
-                <li><a href="#"> Macbook</a></li>
-                <li><a href="#"> Mac</a></li>
-                <li><a href="#"> Ipad</a></li>
-                <li><a href="#"> Apple watch</a></li>
-                <li><a href="#"> Iphone</a></li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <span> 751 reviews</span>
+                </li>
               </ul>
-            </li>
-          </ul>
-        </article>
+            </a>
+          </li>
+          <li>
+            <a>
+              <article>
+                <img src="images/koffieautomaat.avif" alt="asdf" />
+                <span> 100 koffiecups voor € 5,-</span>
+                <h3>Magimix Nespresso CitiZ M196 CN Zwart</h3>
+
+                <strong>€149,-</strong>
+                <span> Morgen bezorgd</span>
+              </article>
+            </a>
+
+            <a>
+              <ul>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <article>
+                <img src="images/koffieautomaat.avif" alt="asdf" />
+                <span> 100 koffiecups voor € 5,-</span>
+                <h3>Magimix Nespresso CitiZ M196 CN Zwart</h3>
+
+                <strong>€149,-</strong>
+                <span> Morgen bezorgd</span>
+              </article>
+            </a>
+            <a>
+              <ul>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <article>
+                <img src="images/koffieautomaat.avif" alt="asdf" />
+                <span> 100 koffiecups voor € 5,-</span>
+                <h3>Magimix Nespresso CitiZ M196 CN Zwart</h3>
+
+                <strong>€149,-</strong>
+                <span> Morgen bezorgd</span>
+              </article>
+            </a>
+
+            <a>
+              <ul>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <img src="images/stargreen.svg" alt="Star" />
+                </li>
+                <li>
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <!-- Nadat ik dit had gemaakt kwam ik erachter dat dit 
       niet zo goed had opgelost. Achteraf dacht ik dat met grid 
       een nettere manier zou zijn. IOM docent heb ik besloten
       om dit zo te laten en te focussen op Accessibility -->
-      <section class="studenten">
+
+      <section class="studentenkoptekst">
         <h2>Heb jij onze topdeals al gezien?</h2>
         <p>
           We hebben de beste aanbiedingen voor je op een rijtje gezet. Sla snel
           je slag.
         </p>
+      </section>
+      <section class="studenten">
         <ul>
           <li>
             <a>
@@ -323,7 +502,6 @@
               </ul>
             </a>
           </li>
-
           <li>
             <a>
               <article>
@@ -453,7 +631,7 @@
                 Wil je weten wat werken bij cool blue écht zo leuk maakt? Lees
                 dan alles over onze vrienden cultuur.
               </p>
-              <a> <img src="images/menu-icon.svg" alt="#" /> meer</a>
+              <a> <img src="/images/arrow-up.png" alt="#" /> Lees meer</a>
             </li>
 
             <li>

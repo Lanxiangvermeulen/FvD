@@ -17,7 +17,8 @@
 	--coolblue-grey: #f2f7fc;
 	--coolblue-omlijning-dikte: 1px solid #ddd;
 	--border-radius-elementen: 0.25em;
-	;
+	--coolblue-dark-grey: #ddd;
+	--coolblue-oranje: #FF6600;
 }
 
 ul::-webkit-scrollbar {
@@ -31,6 +32,7 @@ ul::-webkit-scrollbar {
 /* jouw code */
 
 body {
+	color: #111111;
 	margin: auto;
 	font-family: "Open Sans";
 }
@@ -45,7 +47,8 @@ main {
 }
 
 /* Dit is algemene styling */
-ul {
+ul, menu {
+	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
@@ -72,8 +75,13 @@ p {
 	font-size: 0.8em;
 }
 
-/* Vanaf hier de navigatie */
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
 
+/* Vanaf hier de navigatie */
 header>nav>ul {
 	display: flex;
 	margin: 0;
@@ -81,7 +89,6 @@ header>nav>ul {
 	overflow: hidden;
 	background-color: var(--coolblue-blue);
 	height: 2.75em;
-
 }
 
 header>nav>ul>li {
@@ -91,7 +98,6 @@ header>nav>ul>li {
 header>nav>ul>li:first-of-type {
 	margin-right: auto;
 }
-
 
 /* Coolblue logo */
 header>nav>ul>li:nth-of-type(2) {
@@ -117,6 +123,11 @@ header>nav>form>input {
 	text-indent: 1em;
 	border: var(--coolblue-omlijning-dikte);
 	border-radius: var(--border-radius-elementen);
+
+}
+
+header>nav>form>input:focus {
+	background-color: rgb(61, 61, 220);
 }
 
 header form button {
@@ -133,7 +144,19 @@ header form button img {
 
 
 header>ul:nth-of-type(1)>li {
-	text-align: center;
+	font-size: 0.8em;
+	display: flex;
+	justify-content: center;
+	gap: 0.3em;
+}
+
+header>ul:nth-of-type(1)>li>img {
+	width: 5%;
+}
+
+header ul:nth-of-type(1) span {
+	font-weight: bold;
+	color: var(--coolblue-oranje);
 }
 
 header>ul:last-of-type,
@@ -147,11 +170,21 @@ header>ul:nth-of-type(1) {
 	grid-template-columns: repeat(3, 1fr);
 }
 
+
+/* ITS NOT WORKING  */
 header>ul:nth-of-type(1)>li,
 header>ul>li>img {
 	width: 100vw;
 	scroll-snap-align: center;
 }
+
+
+
+
+
+
+
+
 
 /* Aanbevelingen start hier */
 .aanbevelingen ul {
@@ -166,11 +199,11 @@ header>ul>li>img {
 .aanbevelingen ul li {
 	border: var(--coolblue-omlijning-dikte);
 	border-radius: 0.2em;
-	width: 15em;
+	width: 19em;
 	display: grid;
-	grid-template-columns: 1fr 5em;
-	padding: 1em;
-
+	grid-template-columns: 1fr 7em;
+	padding: 0.5em;
+	position: relative;
 }
 
 .aanbevelingen ul li a:first-of-type img {
@@ -179,7 +212,7 @@ header>ul>li>img {
 }
 
 .aanbevelingen ul li a:last-of-type img {
-	width: 5em;
+	width: 7em;
 }
 
 .aanbevelingen h3 {
@@ -198,6 +231,20 @@ header>ul>li>img {
 
 .aanbevelingen strong {
 	font-size: 0.5em;
+}
+
+.aanbevelingen span:last-of-type {
+	right: 10em;
+	color: #fff;
+	bottom: 1.5em;
+	padding: 0.25em 0.35em;
+	position: absolute;
+	background: var(--coolblue-oranje);
+
+	font-size: 0.5em;
+	font-family: "Kameron";
+	font-weight: 700;
+	border-radius: var(--border-radius-elementen);
 }
 
 
@@ -242,13 +289,179 @@ Nog even checken bij de docent!! */
 }
 
 /* Ontdek verschillende merken  */
-.ontdek ul {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+.ontdek>ul {
 	gap: 1em;
+	margin: 0 -0.8em;
+	padding: 0 1em;
+	display: grid;
+	overflow: scroll;
+	scroll-snap-type: x mandatory;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 
+.ontdek>ul>li {
+	border: var(--coolblue-omlijning-dikte);
+	border-radius: var(--border-radius-elementen);
+	scroll-snap-align: center;
+}
+
+.ontdek>ul:nth-of-type(3)>li {
+	color: #262728;
+}
+
+.ontdek img {
+	width: 18em;
+	border-radius: 0.25em 0.25em 0em 0em;
+}
+
+/* .ontdek ul li ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.5em;
+} */
+
+.ontdek>ul>li>ul {
+	gap: 0.5em;
+	width: 80%;
+	padding: 1em;
+	padding-top: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ontdek>ul>li>a>article {
+	padding: 1em;
+	padding-bottom: 0;
+}
+
+/* https://stackoverflow.com/questions/8684917/is-it-bad-practice-to-use-negative-margins-or-padding-in-css */
+
+.ontdek>ul>li>a>article>img {
+	margin: -1em;
+	margin-bottom: 0;
+}
+
+
+/* .ontdek ul li ul li {
+	font-size: 0.8em;
+} */
+
+.ontdek>ul>li>ul>li {
+	font-size: 0.8em;
+	border: 1px solid #ddd;
+	border-width: 0 1px 0 0;
+	padding-right: 0.5em;
+}
+
+.ontdek>ul>li>ul>li:last-of-type {
+	border: none;
+}
+
+.ontdek>ul>li>ul>li>a {
+	color: var(--coolblue-blue);
+	text-decoration: none;
+}
+
+/* Start: dit heb je eerder bekeken */
+
+.onlangsbekeken {
+	margin: 0 -0.8em;
+	padding: 1em;
+	padding-right: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 8em;
+}
+
+.onlangsbekeken>ul>li {
+	position: relative;
+}
+
+.onlangsbekeken>ul>li>a>ul {
+	width: 10em;
+	left: 1.6em;
+	display: flex;
+	position: absolute;
+	top: 12.75em;
+	text-wrap: nowrap;
+}
+
+
+.onlangsbekeken>ul>li>a>article {
+	width: 15rem;
+	padding: 1.6em;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+}
+
+.onlangsbekeken>ul>li>a>article>img {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.onlangsbekeken>ul>li>a>article>h3 {
+	margin-bottom: 4em;
+}
+
+.onlangsbekeken>ul>li>a>article>span:nth-of-type(1) {
+	color: var(--coolblue-oranje);
+	padding: 0.25em 0.35em;
+	margin-right: auto;
+	background: #fef1e8;
+	font-size: 0.8125em;
+	font-family: "Kameron";
+	font-weight: 700;
+	border-radius: var(--border-radius-elementen);
+}
+
+
+.onlangsbekeken>ul>li>a>article>ul {
+	display: flex;
+}
+
+.onlangsbekeken>ul>li>a>article>ul>li>img {
+	width: 1em;
+}
+
+.onlangsbekeken>ul {
+	gap: 2em;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: repeat(4, 1fr);
+	scroll-snap-type: x mandatory;
+	padding-right: 15em;
+	margin-bottom: -8em;
+
+}
+
+.onlangsbekeken>ul>li {
+	scroll-snap-align: center;
+}
+
+.onlangsbekeken ul {
+	display: grid;
+}
+
+
+
+
+/* starten  */
+
+.studentenkoptekst {
+	height: 7em;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
+.studentenkoptekst h2,
+.studentenkoptekst p {
+	margin: 0.2em;
+}
 
 .studenten {
 	/* Wit ruimte die ik heb toegevoegd aan de body, heb ik hier 
@@ -277,6 +490,9 @@ Nog even checken bij de docent!! */
 	text-wrap: nowrap;
 }
 
+
+
+
 /* DIT NIET MEER */
 
 .studenten>ul>li>a>article {
@@ -302,7 +518,7 @@ Nog even checken bij de docent!! */
 
 /* Aanbiedingen kopje */
 .studenten>ul>li>a>article>span:nth-of-type(1) {
-	color: #FF6600;
+	color: var(--coolblue-oranje);
 	padding: 0.25em 0.35em;
 	margin-right: auto;
 	background: #fef1e8;
@@ -366,7 +582,7 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 .vacature article li:nth-of-type(1) h3 span {
-	color: #FF6600;
+	color: var(--coolblue-oranje);
 	font-size: 1.3em;
 	margin-left: -0.2em;
 }
@@ -381,11 +597,20 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	align-items: center;
 	height: 2em;
 	color: white;
+	font-size: 0.8em;
+}
+
+.vacature article li:nth-of-type(1) p {
+	color: white;
+}
+
+.vacature article li:nth-of-type(2) p,
+.vacature article li:nth-of-type(3) p {
+	margin: 0;
 }
 
 .vacature article li:nth-of-type(1) a img {
-	height: 1em;
-	width: 2em;
+	width: 1.2em;
 }
 
 .vacature>article>ul>li:nth-of-type(2),
@@ -399,4 +624,274 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 .vacature>article>ul>li:nth-of-type(3) img {
 	grid-row-start: 1;
 	grid-row-end: 3;
+}
+
+/* Hier strart de winkelwagen pagina */
+
+.winkelwagen .vol {
+	margin: 0 -0.8em;
+	border: solid var(--coolblue-dark-grey);
+	padding: 1em;
+	border-width: 0 0 0.1em 0;
+	height: 10em;
+}
+
+.winkelwagen .vol h2 {
+	color: #285DAB;
+	font-size: 1.4em;
+}
+
+.winkelwagen .vol>span {
+	color: #0090e3;
+	font-family: 'kameron';
+	font-size: 1.1em;
+}
+
+.winkelwagen .vol h2,
+.winkelwagen .vol>span {
+	margin: 0;
+	line-height: 1;
+}
+
+.winkelwagen .vol img {
+	width: 1em;
+	margin-right: 0.3em;
+}
+
+.winkelwagen .vol ul li {
+	font-size: 0.8em;
+	margin-bottom: 0.5em;
+
+}
+
+.winkelwagen .vol span:first-child,
+.winkelwagen .vol ul li span {
+	color: var(--coolblue-oranje);
+	font-weight: bold;
+}
+
+
+.product {
+	margin: 0 -0.8em;
+	border: solid var(--coolblue-dark-grey);
+	padding: 1em;
+	border-width: 0 0 0.1em 0;
+}
+
+.product>li>section {
+	gap: 0.5em;
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-template-columns: auto auto auto;
+}
+
+.product>li>section>menu {
+	display: grid;
+	grid-column-start: 2;
+	grid-template-columns: 2em 2em 2em auto;
+}
+
+.product>li>section>menu>li>input,
+.product>li>section>menu>li>button {
+	border: solid var(--coolblue-dark-grey) 1px;
+	width: 100%;
+	padding: 0.5em;
+}
+
+.product>li>section>menu>li>input {
+	border-width: 1px 0;
+}
+
+.product>li>section>menu>li:nth-of-type(1)>button {
+	border-radius: 4px 0px 0px 4px;
+}
+
+.product>li>section>menu>li:nth-of-type(3)>button {
+	border-radius: 0px 4px 4px 0px;
+}
+
+.product>li>section>menu>li:nth-of-type(4)>button {
+	width: 2em;
+	border: none;
+	margin-left: 0.75em;
+}
+
+.product>li>section>img {
+	width: 6em;
+	height: 6em;
+	grid-row: 1/3;
+}
+
+
+
+
+.product>li>section>fieldset {
+	grid-row-start: 3;
+	grid-column: 1/3;
+}
+
+.product>li>section>fieldset>legend {
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.product>li>section>fieldset>ul {
+	gap: 0.5em;
+
+	/* DIT MOET GRID GEMAAKT WORDEN */
+	display: flex;
+	flex-direction: column;
+}
+
+.product>li>section>fieldset>ul>li {
+	gap: 0.125em;
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+.product>li>section>fieldset>ul>li>a,
+.product>li>section>fieldset>ul>li>label,
+.product>li>section>fieldset>ul>li>span {
+	grid-column-start: 2;
+	font-size: 0.8em;
+}
+
+.product>li>section>fieldset>legend {
+	margin-bottom: 0.5em;
+}
+
+.product>li>section>fieldset>ul>li>a {
+	color: var(--coolblue-blue);
+	text-decoration: none;
+}
+
+.product>li>section>fieldset>ul>li>span {
+	color: #999999;
+
+}
+
+
+
+/* https://stackoverflow.com/questions/4148499/how-to-style-a-checkbox-using-css */
+
+
+.product>li>section>fieldset>ul>li>input {
+	display: none;
+}
+
+.product>li>section>fieldset>ul>li>span:first-of-type {
+	margin: 0 0.25em 0 0;
+	grid-column-start: 1;
+	height: 1.25em;
+	width: 1.25em;
+	border: solid #BBBBBB 1px;
+	border-radius: 50px;
+	position: relative;
+}
+
+.product>li>section>fieldset>ul>li>input:checked+span {
+	border-color: var(--coolblue-blue);
+	background-color: var(--coolblue-blue);
+}
+
+.product>li>section>fieldset>ul>li>input:checked+span:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 1em;
+}
+
+.kosten>a {
+	gap: 1em;
+	height: 3.5em;
+	background-color: green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--border-radius-elementen);
+	color: white;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+.kosten>a>img {
+	width: 1.6em;
+}
+
+
+.kosten>ul:first-of-type {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+.kosten>ul:first-of-type>li:last-of-type>p {
+	text-align: end;
+}
+
+
+/* 
+Je kan hier beter display flex gebruiken, maar ik vond het zelf fijn om te experimenteren
+met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat niet?  */
+/* .betaalbutton {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.betaalbutton li:nth-of-type(2) {
+	grid-column-start: 2;
+}
+
+.betaalbutton li:nth-of-type(3) {
+	grid-column-start: 3;
+}
+
+.betaalbutton li:nth-of-type(4) {
+	grid-column-start: 4;
+}
+
+.betaalbutton li:nth-of-type(5) {
+	grid-column-start: 5;
+}
+
+.betaalbutton>li>img {
+	width: 80%;
+} */
+
+
+
+.kosten ul:last-of-type {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.kosten>ul:last-of-type>li>img {
+	width: 3em;
+	height: auto;
+}
+
+.hebjehieraangedacht>ul {
+	display: flex;
+}
+
+.hebjehieraangedacht>ul>li>img {
+	width: 70%;
+}
+
+.hebjehieraangedacht ul li ul li {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.hebjehieraangedacht ul li h3 {
+	margin-bottom: 3em;
 }

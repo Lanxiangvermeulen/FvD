@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="jouw naam" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Coolblue - winkelwagen</title>
+
+    <link href="styles/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  </head>
+
+  <body class="winkelwagen">
+    <!-- Hier komt h1 -->
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <button><img src="images/menu-icon.svg" alt="wel logo" /></button>
+          </li>
+
+          <li>
+            <button>
+              <img src="images/coolblue.png" alt="Het logo van Coolblue" />
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <img src="images/account_goed.svg" alt="wel logo" />
+            </button>
+          </li>
+          <li>
+            <button><img src="images/heart_goed.svg" alt="wel logo" /></button>
+          </li>
+          <li>
+            <button>
+              <img src="images/winkelmandje_goed.svg" alt="wel logo" />
+            </button>
+          </li>
+        </ul>
+
+        <!-- Ik had hier eerst een Li-tag omheen gezet. Maar op de site van NDM stond dat 
+        een LI nooit los mag staan, er moet altijd een UL omheen. 
+        Hierdoor heb ik verder onderzoek gedaan en heb ik de formtag ontdekt. 
+        Een formtag is bedoeld voor het versturen van data. 
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li -->
+
+        <!-- Aria label  -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
+        <form>
+          <input type="zoekbalk homepage" placeholder="Zoeken naar..." />
+          <button class="search-button" aria-label="Zoeken">
+            <img src="images/zoekeniconen.png" />
+          </button>
+        </form>
+      </nav>
+    </header>
+
+    <main>
+      <section class="vol">
+        <h2>WINKELWAGEN<span>.</span></h2>
+
+        <!-- Ik gebruik hier een span omdat het geen meer waarde heef.
+        Het voegt niets toe als je navigeert door de website.  -->
+        <span>Productenpolonais </span>
+        <ul>
+          <li>
+            <img src="/images/check-mark.png" alt="vinkje" /> Voor
+            <span> 23.59 </span> uur besteld, morgen <span>gratis</span> bezorgd
+          </li>
+          <li>
+            <img src="/images/check-mark.png" alt="vinkje" />
+            <span> Gratis </span> ophalen bij PostNL-ophaalpunten of
+            Coolblue-winkels.
+          </li>
+        </ul>
+      </section>
+
+      <!-- <section class="product"> -->
+
+      <!-- Ik heb er een ul van gemaakt omdat dit eigenlijk een lijst is.
+        Je kan namelijk meerdere producten toevoegen.  -->
+      <ul class="product">
+        <li>
+          <section>
+            <img src="images/camera.avif" alt="wel logo" />
+            <h3>
+              Canon EOS 2000D + EF-S 18-55mm f/3.5-5.6 DC III + EF 75-300mm
+              f/4-5.6 DC III
+            </h3>
+
+            <button><img src="#" alt="kruis" /></button>
+            <!-- Alleen knoppen en inputs
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu -->
+            <menu>
+              <li><button>-</button></li>
+              <li><input type="number" /></li>
+              <li><button>+</button></li>
+              <li><button><3</button></li>
+            </menu>
+
+            <strong>€ 799,00</strong>
+
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
+            <fieldset>
+              <legend>Kies je verzekering</legend>
+
+              <ul>
+                <li>
+                  <input
+                    type="radio"
+                    id="geen_zekering"
+                    name="verzekering"
+                    checked
+                  />
+                  <!-- Dit word de radio button -->
+                  <span></span>
+
+                  <label for="geen_zekering"
+                    >Nee, schade en diefstal wil ik niet verzekeren
+                  </label>
+                </li>
+
+                <li>
+                  <input
+                    type="radio"
+                    id="2_jaar_verzekering_schae"
+                    name="verzekering"
+                  />
+                  <span></span>
+
+                  <label for="2_jaar_verzekering_schae"
+                    >2 jaar Zekerheidspakket Schade</label
+                  >
+
+                  <a
+                    href="https://www.coolblue.nl/verzekeringsinformatie/862657/858691?package=0"
+                    >Uitleg</a
+                  >
+
+                  <span>59,90 eenmalig</span>
+                </li>
+
+                <li>
+                  <input
+                    type="radio"
+                    id="2_jaar_verzekering_compleet"
+                    name="verzekering"
+                  />
+                  <span></span>
+
+                  <label for="2_jaar_verzekering_compleet"
+                    >2 jaar Zekerheidspakket Compleet</label
+                  >
+                  <a
+                    href="https://www.coolblue.nl/verzekeringsinformatie/862657/858691?package=0"
+                    >Uitleg</a
+                  >
+                  <span>74,90 eenmalig</span>
+                </li>
+
+                <li>
+                  <input
+                    type="radio"
+                    id="3_jaar_verzekering_schade"
+                    name="verzekering"
+                  />
+                  <span></span>
+
+                  <label for="3_jaar_verzekering_schade"
+                    >3 jaar Zekerheidspakket Schade</label
+                  >
+                  <a
+                    href="https://www.coolblue.nl/verzekeringsinformatie/862657/858691?package=0"
+                    >Uitleg</a
+                  >
+                  <span>84,90 eenmalig</span>
+                </li>
+
+                <li>
+                  <input
+                    type="radio"
+                    id="3_jaar_verzekering_compleet"
+                    name="verzekering"
+                  />
+                  <span></span>
+
+                  <label for="3_jaar_verzekering_compleet"
+                    >3 jaar Zekerheidspakket Compleet</label
+                  >
+                  <a
+                    href="https://www.coolblue.nl/verzekeringsinformatie/862657/858691?package=0"
+                    >Uitleg</a
+                  >
+                  <span>109,90 eenmalig </span>
+                </li>
+              </ul>
+            </fieldset>
+          </section>
+        </li>
+      </ul>
+
+      <section class="kosten">
+        <ul>
+          <li>
+            <h3>Bezorging</h3>
+            <h3>Totaalbedrag</h3>
+            <p>Inclusief btw</p>
+          </li>
+
+          <li>
+            <p>Gratis</p>
+            <p>€858,90</p>
+          </li>
+        </ul>
+
+        <a><img src="images/betaalicoon.svg" /> In winkelwagen</a>
+
+        <ul>
+          <li><img src="images/ideallogo.png" /></li>
+          <li><img src="images/ideallogo.png" /></li>
+          <li><img src="images/ideallogo.png" /></li>
+          <li><img src="images/ideallogo.png" /></li>
+        </ul>
+      </section>
+
+      <section class="hebjehieraangedacht">
+        <h2>Heb je hier al aan gedacht?</h2>
+
+        <ul>
+          <li>
+            <img src="images/batterij.avif" />
+            <h3>Jupio LP-E10 (1020 mAh)</h3>
+
+            <ul>
+              <li>
+                <span>Adviesprijs 609,-</span>
+              </li>
+
+              <li>
+                <strong>499,-</strong>
+                <button>WINKEL</button>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <img src="images/batterij.avif" />
+            <h3>Jupio LP-E10 (1020 mAh)</h3>
+
+            <ul>
+              <li>
+                <span>Adviesprijs 609,-</span>
+              </li>
+
+              <li>
+                <strong>499,-</strong>
+                <button>WINKEL</button>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <img src="images/batterij.avif" />
+            <h3>Jupio LP-E10 (1020 mAh)</h3>
+
+            <ul>
+              <li>
+                <span>Adviesprijs 609,-</span>
+              </li>
+
+              <li>
+                <strong>499,-</strong>
+                <button>WINKEL</button>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <img src="images/batterij.avif" />
+            <h3>Jupio LP-E10 (1020 mAh)</h3>
+
+            <ul>
+              <li>
+                <span>Adviesprijs 609,-</span>
+              </li>
+
+              <li>
+                <strong>499,-</strong>
+                <button>WINKEL</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script defer src="scripts/script.js"></script>
+  </body>
+</html>
