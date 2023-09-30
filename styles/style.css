@@ -1,29 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /**************/
-/* CSS EMEDY */
+/* CSS REMEDY */
 /**************/
 *, *::after, *::before {
 	box-sizing: border-box;
 }
 
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-
+	--coolblue-wit: #fff;
+	--coolblue-zwart: #000;
 	--coolblue-blue: #0090e3;
 	--coolblue-grey: #f2f7fc;
+	--coolblue-light-oranje: #fef1e8;
 	--coolblue-omlijning-dikte: 1px solid #ddd;
 	--border-radius-elementen: 0.25em;
 	--coolblue-dark-grey: #ddd;
 	--coolblue-oranje: #FF6600;
 	--coolblue-green: #008500;
-}
-
-ul::-webkit-scrollbar {
-	display: none;
 }
 
 /****************/
@@ -47,10 +44,15 @@ main {
 }
 
 /* Dit is algemene styling */
+
 ul, menu {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+}
+
+ul::-webkit-scrollbar {
+	display: none;
 }
 
 button {
@@ -60,6 +62,18 @@ button {
 
 img {
 	width: 100%;
+}
+
+/* Dit is voor de screenreader zodat mensen die niet kunnen zien meer context krijgen over de pagina */
+/* https://webaim.org/techniques/css/invisiblecontent/ */
+
+h1 {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 h2 {
@@ -80,11 +94,26 @@ a {
 	color: black;
 }
 
-button:active,
-button:focus {
-	outline: 2px dotted #fff;
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
 }
 
+/* Vanaf hier active / focus states  */
+
+button:active,
+button:focus {
+	outline: 3px dotted var(--coolblue-wit);
+}
+
+input:active,
+input:focus {
+	outline: 3px dotted var(--coolblue-blue);
+}
+
+
+/* Als iets deze class heeft is het altijd verstopt */
 .verstopt-alles {
 	display: none;
 }
@@ -94,23 +123,7 @@ button:focus {
 	display: none;
 }
 
-/* https://webaim.org/techniques/css/invisiblecontent/ */
-h1 {
-	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-}
-
-fieldset {
-	border: none;
-	margin: 0;
-	padding: 0;
-}
-
-/* Vanaf hier de navigatie */
+/* Vanaf hier de navigatie van elke pagina */
 header>nav:first-of-type>ul {
 	display: flex;
 	margin: 0;
@@ -139,7 +152,6 @@ header>nav:first-of-type>ul>li:nth-of-type(2) {
 	transform: translateX(-50%);
 }
 
-
 /* Verstop de "bekijk hele assortiment" op mobiel */
 header>nav:first-of-type>ul>li:nth-of-type(3),
 header>nav:first-of-type>ul>li:nth-of-type(4) {
@@ -156,6 +168,7 @@ header>nav:first-of-type>ul>li:nth-of-type(7)>a>img {
 	width: 1.75em;
 }
 
+/* Dit gaat om het zoek formulier */
 header>nav:first-of-type>form {
 	display: flex;
 	justify-content: center;
@@ -165,21 +178,32 @@ header>nav:first-of-type>form {
 	padding: 0.3em;
 }
 
-
 header>nav:first-of-type>form>input {
 	width: 95%;
 	height: 2.5em;
-	outline: none;
 	text-indent: 1em;
 	border: var(--coolblue-omlijning-dikte);
 	border-radius: var(--border-radius-elementen);
-
 }
 
-header>nav:first-of-type>form>input:focus {
-	background-color: rgb(61, 61, 220);
+header>nav:first-of-type>form>button {
+	background-color: var(--coolblue-blue);
+	height: 2.5em;
+	width: 3.5em;
+	border-radius: 0em 0.25em 0.25em 0em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
+header>nav:first-of-type>form>button>svg {
+	height: 2.1em;
+	width: 1.5em;
+	fill: var(--coolblue-wit);
+}
+
+
+/* Dit is de styling for het hamburger / 2e menu */
 header>nav:nth-of-type(2),
 header>div {
 	top: 0;
@@ -190,20 +214,16 @@ header>div {
 	position: fixed;
 }
 
+/* Dit is de achtergrond van het hamburger menu */
 header>div {
 	right: 0;
 	opacity: 0.65;
-	background-color: #000;
+	background-color: var(--coolblue-zwart);
 }
 
 header>nav:nth-of-type(2)>ul {
 	height: 100%;
-	width: 100%;
-	background-color: #fff;
-}
-
-header>nav:nth-of-type(2)>ul>li:first-of-type {
-	background-color: var(--coolblue-blue);
+	background-color: var(--coolblue-wit);
 }
 
 header>nav:nth-of-type(2)>ul>li {
@@ -211,22 +231,23 @@ header>nav:nth-of-type(2)>ul>li {
 	border-width: 0 0 1px;
 }
 
-header>nav:nth-of-type(2)>ul>li>a {
-	color: #000;
-	font-size: 0.8em;
-	text-decoration: none;
-	display: grid;
-	align-items: center;
-	grid-template-columns: 6.5em auto 1.5em 1em;
-}
-
 header>nav:nth-of-type(2)>ul>li:first-of-type {
-	color: #fff;
+	color: var(--coolblue-wit);
 	height: 3.25em;
 	display: grid;
 	align-items: center;
 	justify-items: center;
 	grid-template-columns: auto 2em;
+	background-color: var(--coolblue-blue);
+}
+
+header>nav:nth-of-type(2)>ul>li>a {
+	color: var(--coolblue-zwart);
+	font-size: 0.8em;
+	text-decoration: none;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 6.5em auto 1.5em 1em;
 }
 
 header>nav:nth-of-type(2)>ul>li>a>img:first-of-type {
@@ -238,25 +259,11 @@ header>nav:nth-of-type(2)>ul>li>h2 {
 	margin: 0;
 }
 
-
-
-header form button {
-	background-color: var(--coolblue-blue);
-	height: 2.5em;
-	width: 3.5em;
-	border-radius: 0em 0.25em 0.25em 0em;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/* Dit is de styling for carousels */
+header>ul {
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
-
-header form button svg {
-	height: 2.1em;
-	width: 1.5em;
-	fill: #fff;
-}
-
 
 header>ul:nth-of-type(1)>li {
 	font-size: 0.8em;
@@ -270,7 +277,7 @@ header>ul:nth-of-type(1)>li>img {
 	height: 1.5em;
 }
 
-header ul:nth-of-type(1) span {
+header>ul:nth-of-type(1)>li>span {
 	font-weight: bold;
 	color: var(--coolblue-oranje);
 }
@@ -286,22 +293,14 @@ header>ul:nth-of-type(1) {
 	grid-template-columns: repeat(3, 1fr);
 }
 
-
-/* ITS NOT WORKING  */
 header>ul:nth-of-type(1)>li,
 header>ul>li>img {
 	width: 100vw;
 	scroll-snap-align: center;
 }
 
-header>ul {
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
-
-
-
-
+/* Dit is styling voor de "Bekijk het volledige assortiment" en "Bekijk alle merken" */
+/* De kleine <a> linkjes */
 section>a {
 	color: var(--coolblue-blue);
 	display: block;
@@ -315,11 +314,8 @@ section>a>svg {
 	height: 0.75em;
 }
 
-
-
-
 /* Aanbevelingen start hier */
-.aanbevelingen ul {
+.homepagina>main>section:first-of-type ul {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1em;
@@ -328,7 +324,7 @@ section>a>svg {
 	padding-left: 1em;
 }
 
-.aanbevelingen ul li {
+.homepagina>main>section:first-of-type>article>ul>li {
 	border: var(--coolblue-omlijning-dikte);
 	border-radius: 0.2em;
 	width: 19em;
@@ -338,40 +334,40 @@ section>a>svg {
 	position: relative;
 }
 
-.aanbevelingen ul li a:first-of-type img {
+.homepagina>main>section:first-of-type>article>ul>li>a:first-of-type>img {
 	width: 3em;
 	margin-bottom: 1em;
 }
 
-.aanbevelingen article ul li:nth-of-type(2) a:last-of-type img {
+.homepagina>main>section:first-of-type>article>ul>li:nth-of-type(2)>a:last-of-type>div>img {
 	width: 5em;
 }
 
-.aanbevelingen article ul li:nth-of-type(3) a:last-of-type img {
+.homepagina>main>section:first-of-type>article>ul>li:nth-of-type(3)>a:last-of-type>div>img {
 	width: 4em;
 }
 
-.aanbevelingen h3 {
+.homepagina>main>section:first-of-type>article>ul>li>a>h3 {
 	font-size: 0.6em;
 	margin: 0;
 }
 
-.aanbevelingen p {
+.homepagina>main>section:first-of-type>article>ul>li>a>p {
 	margin: 0;
 	font-size: 0.7em;
 }
 
-.aanbevelingen span {
+.homepagina>main>section:first-of-type>article>ul>li>a>span {
 	font-size: 0.6em;
 }
 
-.aanbevelingen strong {
+.homepagina>main>section:first-of-type>article>ul>li>a>strong {
 	font-size: 0.5em;
 }
 
-.aanbevelingen span:nth-of-type(3) {
+.homepagina>main>section:first-of-type>article>ul>li>a>span:nth-of-type(3) {
 	right: 10em;
-	color: #fff;
+	color: var(--coolblue-wit);
 	bottom: 1.5em;
 	padding: 0.25em 0.35em;
 	position: absolute;
@@ -385,47 +381,39 @@ section>a>svg {
 
 
 /* Blader door onze categorieën */
-
-/* Ik had hier eerst alleen een section staan, maar doordat ik later 
-nog meer sections wil toevoegen is dit super onoverzichtelijk en op deze
-manier zijn de codes makkelijker leesbaar voor mezelf en anderen. 
-Nog even checken bij de docent!! */
-
-.categorieen>ul {
+.homepagina>main>section:nth-of-type(2)>ul {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1em;
 }
 
-.categorieen>ul>li {
+.homepagina>main>section:nth-of-type(2)>ul>li {
 	background-color: var(--coolblue-grey);
 	border: var(--coolblue-omlijning-dikte);
 	border-radius: 0.2em;
 }
 
-
 /* Ik wilde eerst de grid toepassen op de Li, maar dit bleek niet te werken  */
 /* omdat de Image en de H3 in de a zitten.  */
-
-.categorieen>ul>li>a {
+.homepagina>main>section:nth-of-type(2)>ul>li>a {
 	display: grid;
 	height: 100%;
 	grid-template-rows: 1fr 1fr;
 }
 
-.categorieen>ul>li>a>h3 {
+.homepagina>main>section:nth-of-type(2)>ul>li>a>h3 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 0;
 	font-size: 0.8em;
 	text-align: center;
-	background: #fff;
+	background: var(--coolblue-wit);
 	color: var(--coolblue-blue);
 }
 
 /* Ontdek verschillende merken  */
-.ontdek>ul {
+.homepagina>main>section:nth-of-type(3)>ul {
 	gap: 1em;
 	margin: 0 -0.8em;
 	padding: 0 1em;
@@ -435,29 +423,18 @@ Nog even checken bij de docent!! */
 	grid-template-columns: repeat(3, 1fr);
 }
 
-
-.ontdek>ul>li {
+.homepagina>main>section:nth-of-type(3)>ul>li {
 	border: var(--coolblue-omlijning-dikte);
 	border-radius: var(--border-radius-elementen);
 	scroll-snap-align: center;
 }
 
-.ontdek>ul:nth-of-type(3)>li {
-	color: #262728;
-}
-
-.ontdek img {
+.homepagina>main>section:nth-of-type(3)>ul>li>a>article>img {
 	width: 18em;
 	border-radius: 0.25em 0.25em 0em 0em;
 }
 
-/* .ontdek ul li ul {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 0.5em;
-} */
-
-.ontdek>ul>li>ul {
+.homepagina>main>section:nth-of-type(3)>ul>li>ul {
 	gap: 0.5em;
 	width: 80%;
 	padding: 1em;
@@ -466,42 +443,37 @@ Nog even checken bij de docent!! */
 	flex-wrap: wrap;
 }
 
-.ontdek>ul>li>a>article {
+.homepagina>main>section:nth-of-type(3)>ul>li>a>article {
 	padding: 1em;
 	padding-bottom: 0;
 }
 
 /* https://stackoverflow.com/questions/8684917/is-it-bad-practice-to-use-negative-margins-or-padding-in-css */
 
-.ontdek>ul>li>a>article>img {
+.homepagina>main>section:nth-of-type(3)>ul>li>a>article>img {
 	margin: -1em;
 	margin-bottom: 0;
 }
 
-
-/* .ontdek ul li ul li {
+.homepagina>main>section:nth-of-type(3)>ul>li>ul>li {
 	font-size: 0.8em;
-} */
-
-.ontdek>ul>li>ul>li {
-	font-size: 0.8em;
-	border: 1px solid #ddd;
+	border: var(--coolblue-omlijning-dikte);
 	border-width: 0 1px 0 0;
 	padding-right: 0.5em;
 }
 
-.ontdek>ul>li>ul>li:last-of-type {
+.homepagina>main>section:nth-of-type(3)>ul>li>ul>li:last-of-type {
 	border: none;
 }
 
-.ontdek>ul>li>ul>li>a {
+.homepagina>main>section:nth-of-type(3)>ul>li>ul>li>a {
 	color: var(--coolblue-blue);
 	text-decoration: none;
 }
 
 /* Start: dit heb je eerder bekeken */
 
-.onlangsbekeken {
+.homepagina>main>section:nth-of-type(4) {
 	margin: 0 -0.8em;
 	padding: 1em;
 	padding-right: 0;
@@ -510,72 +482,7 @@ Nog even checken bij de docent!! */
 	margin-bottom: 8em;
 }
 
-.onlangsbekeken>ul>li {
-	position: relative;
-}
-
-.onlangsbekeken>ul>li>a>ul {
-	width: 11em;
-	display: flex;
-	position: absolute;
-	top: 15.25em;
-	text-wrap: nowrap;
-	gap: 0.2em;
-}
-
-.onlangsbekeken>ul>li>a>ul>li {
-	display: flex;
-	align-items: center;
-}
-
-.onlangsbekeken>ul>li>a>ul>li:last-of-type>span {
-	color: var(--coolblue-blue);
-	font-size: 0.8em;
-}
-
-
-.onlangsbekeken>ul>li>a>article {
-	width: 15em;
-	padding: 1em 1em 1em 0em;
-	flex-direction: column;
-	background: #fff;
-	gap: 0.2em;
-	display: grid;
-	grid-template-rows: 7em 1.5em 8em auto auto;
-}
-
-.onlangsbekeken>ul>li>a>article>img {
-	width: 8em;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.onlangsbekeken>ul>li>a>article>h3 {
-	margin-bottom: 3.4em;
-	font-size: 0.9em;
-}
-
-.onlangsbekeken>ul>li>a>article>span:nth-of-type(1) {
-	color: var(--coolblue-oranje);
-	padding: 0.25em 0.35em;
-	margin-right: auto;
-	background: #fef1e8;
-	font-size: 0.8125em;
-	font-family: "Kameron";
-	font-weight: 700;
-	border-radius: var(--border-radius-elementen);
-}
-
-
-.onlangsbekeken>ul>li>a>article>ul {
-	display: flex;
-}
-
-.onlangsbekeken>ul>li>a>article>ul>li>img {
-	width: 1em;
-}
-
-.onlangsbekeken>ul {
+.homepagina>main>section:nth-of-type(4)>ul {
 	gap: 2em;
 	display: grid;
 	overflow: scroll;
@@ -586,25 +493,80 @@ Nog even checken bij de docent!! */
 
 }
 
-.onlangsbekeken>ul>li {
+.homepagina>main>section:nth-of-type(4)>ul>li {
+	position: relative;
 	scroll-snap-align: start;
 }
 
-.onlangsbekeken ul {
-	display: grid;
+.homepagina>main>section:nth-of-type(4)>ul>li>a>ul {
+	width: 11em;
+	display: flex;
+	position: absolute;
+	top: 15.25em;
+	text-wrap: nowrap;
+	gap: 0.2em;
 }
 
-.onlangsbekeken>ul>li>a>article>span:last-of-type {
+.homepagina>main>section:nth-of-type(4)>ul>li>a>ul>li {
+	display: flex;
+	align-items: center;
+}
+
+.homepagina>main>section:nth-of-type(4)>ul>li>a>ul>li:last-of-type>span {
+	color: var(--coolblue-blue);
+	font-size: 0.8em;
+}
+
+
+.homepagina>main>section:nth-of-type(4)>ul>li>a>article {
+	width: 15em;
+	padding: 1em 1em 1em 0em;
+	flex-direction: column;
+	background: var(--coolblue-wit);
+	gap: 0.2em;
+	display: grid;
+	grid-template-rows: 7em 1.5em 8em auto auto;
+}
+
+.homepagina>main>section:nth-of-type(4)>ul>li>a>article>img {
+	width: 8em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.homepagina>main>section:nth-of-type(4)>ul>li>a>article>h3 {
+	margin-bottom: 3.4em;
+	font-size: 0.9em;
+}
+
+.homepagina>main>section:nth-of-type(4)>ul>li>a>article>span:nth-of-type(1) {
+	color: var(--coolblue-oranje);
+	padding: 0.25em 0.35em;
+	margin-right: auto;
+	background: var(--coolblue-light-oranje);
+	font-size: 0.8125em;
+	font-family: "Kameron";
+	font-weight: 700;
+	border-radius: var(--border-radius-elementen);
+}
+
+
+.homepagina>main>section:nth-of-type(4)>ul>li>a>article>ul {
+	display: flex;
+}
+
+.homepagina>main>section:nth-of-type(4)>ul>li>a>article>ul>li>img {
+	width: 1em;
+}
+
+.homepagina>main>section:nth-of-type(4)>ul>li>a>article>span:last-of-type {
 	color: var(--coolblue-green);
 	font-weight: bold;
 	font-size: 0.8em;
 }
 
-
-
-/* starten  */
-
-.studentenkoptekst {
+/* Heb jij onze topdeals al gezien kopje */
+.homepagina>main>section:nth-of-type(5) {
 	height: 7em;
 	display: flex;
 	justify-content: center;
@@ -612,111 +574,30 @@ Nog even checken bij de docent!! */
 }
 
 
-.studentenkoptekst h2,
-.studentenkoptekst p {
+.homepagina>main>section:nth-of-type(5)>h2,
+.homepagina>main>section:nth-of-type(5)>p {
 	margin: 0.2em;
 }
 
-.studenten {
-	/* Wit ruimte die ik heb toegevoegd aan de body, heb ik hier 
-	uitgezet */
+/* Heb jij onze topdeals al gezien content */
+.homepagina>main>section:nth-of-type(6) {
+	/* Wit ruimte die ik heb toegevoegd aan de body, heb ik hier uitgezet */
 	margin: 0 -0.8em;
 	padding: 1em;
 	padding-right: 0;
-	background-image: url(images/aanbevelingen.avif);
+	background-image: url("/images/aanbevelingen.avif");
 	background-position: center;
 	background-repeat: no-repeat;
 	padding-top: 11em;
 	margin-bottom: 12em;
 }
 
-/* DIT IS NIEUW */
-.studenten>ul>li {
-	position: relative;
-}
-
-.studenten>ul>li>a>ul {
-	width: 10em;
-	left: 1.6em;
-	display: flex;
-	position: absolute;
-	top: 14em;
-	gap: 0.2em;
-	text-wrap: nowrap;
-}
-
-.studenten>ul>li>a>ul>li {
-	display: flex;
-	align-items: center;
-}
-
-.studenten>ul>li>a>ul>li:last-of-type>span {
-	color: var(--coolblue-blue);
-	font-size: 0.8em;
-}
-
-
-
-/* DIT NIET MEER */
-
-.studenten>ul>li>a>article {
-	width: 15em;
-	padding: 1.6em;
-	display: grid;
-	grid-template-rows: 7em auto 6em auto auto auto auto;
-	flex-direction: column;
-	border-radius: var(--border-radius-elementen);
-	background: #fff;
-	border: var(--coolblue-omlijning-dikte);
-}
-
-.studenten>ul>li>a>article>img {
-	width: 40%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* DIT IS NIEUW */
-.studenten>ul>li>a>article>h3 {
-	margin-bottom: 4em;
-}
-
-/* Aanbiedingen kopje */
-.studenten>ul>li>a>article>span:nth-of-type(1) {
-	color: var(--coolblue-oranje);
-	padding: 0.25em 0.35em;
-	margin-right: auto;
-	background: #fef1e8;
-	font-size: 0.8125em;
-	font-family: "Kameron";
-	font-weight: 700;
-	border-radius: var(--border-radius-elementen);
-}
-
-.studenten>ul>li>a>article>span:nth-of-type(2) {
-	font-size: 0.8em;
-	opacity: 0.8;
-}
-
-.studenten>ul>li>a>article>span:nth-of-type(3) {
-	text-decoration: line-through;
-}
-
-
-.studenten>ul>li>a>article>ul {
-	display: flex;
-}
-
-.studenten>ul>li>a>article>ul>li>img {
-	width: 1em;
-}
-
 /* Het lukte mij niet om autorepeat toe te passen. De flexbox is in 
 dit geval ook korter en beter te begrijpen voor mij. */
-/* 
-Ik heb met student assistent gezeten en zij heeft mij laten zien 
+
+/* Ik heb met student assistent gezeten en zij heeft mij laten zien 
 hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
-.studenten>ul {
+.homepagina>main>section:nth-of-type(6)>ul {
 	gap: 2em;
 	display: grid;
 	overflow: scroll;
@@ -734,40 +615,113 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 
 }
 
-.studenten>ul>li {
+.homepagina>main>section:nth-of-type(6)>ul>li {
+	position: relative;
 	scroll-snap-align: center;
 }
 
-.vacature ul {
+.homepagina>main>section:nth-of-type(6)>ul>li>a>ul {
+	width: 10em;
+	left: 1.6em;
+	display: flex;
+	position: absolute;
+	top: 14em;
+	gap: 0.2em;
+	text-wrap: nowrap;
+}
+
+.homepagina>main>section:nth-of-type(6)>ul>li>a>ul>li {
+	display: flex;
+	align-items: center;
+}
+
+.homepagina>main>section:nth-of-type(6)>ul>li>a>ul>li:last-of-type>span {
+	color: var(--coolblue-blue);
+	font-size: 0.8em;
+}
+
+.homepagina>main>section:nth-of-type(6)>ul>li>a>article {
+	width: 15em;
+	padding: 1.6em;
+	display: grid;
+	grid-template-rows: 7em auto 6em auto auto auto auto;
+	flex-direction: column;
+	border-radius: var(--border-radius-elementen);
+	background: var(--coolblue-wit);
+	border: var(--coolblue-omlijning-dikte);
+}
+
+.homepagina>main>section:nth-of-type(6)>ul>li>a>article>img {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.homepagina>main>section:nth-of-type(6)>ul>li>a>article>h3 {
+	margin-bottom: 4em;
+}
+
+/* Aanbiedingen kopje */
+.homepagina>main>section:nth-of-type(6)>ul>li>a>article>span:nth-of-type(1) {
+	color: var(--coolblue-oranje);
+	padding: 0.25em 0.35em;
+	margin-right: auto;
+	background: var(--coolblue-light-oranje);
+	font-size: 0.8125em;
+	font-family: "Kameron";
+	font-weight: 700;
+	border-radius: var(--border-radius-elementen);
+}
+
+.homepagina>main>section:nth-of-type(6)>ul>li>a>article>span:nth-of-type(2) {
+	font-size: 0.8em;
+	opacity: 0.8;
+}
+
+.homepagina>main>section:nth-of-type(6)>ul>li>a>article>span:nth-of-type(3) {
+	text-decoration: line-through;
+}
+
+
+.homepagina>main>section:nth-of-type(6)>ul>li>a>article>ul {
+	display: flex;
+}
+
+.homepagina>main>section:nth-of-type(6)>ul>li>a>article>ul>li>img {
+	width: 1em;
+}
+
+/* Vacature sectie */
+.homepagina>main>section:nth-of-type(7)>article>ul {
 	display: grid;
 	gap: 1em;
 	padding-bottom: 1.2em;
 }
 
-.vacature article li:first-of-type {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:first-of-type {
 	background-color: var(--coolblue-blue);
 	border-radius: var(--border-radius-elementen);
 	padding: 2em;
 }
 
-.vacature article li:nth-of-type(1) h3 {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(1)>h3 {
 	color: white;
 	font-size: 1.3em;
 	margin: 0;
 }
 
-.vacature article li:nth-of-type(1) h3 span {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(1) h3 span {
 	color: var(--coolblue-oranje);
 	font-size: 1.3em;
 	margin-left: -0.2em;
 }
 
-.vacature article li:nth-of-type(1) h4 {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(1) h4 {
 	color: rgb(209, 239, 255);
 	margin: 0;
 }
 
-.vacature article li:nth-of-type(1) a {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(1) a {
 	display: flex;
 	align-items: center;
 	height: 2em;
@@ -775,66 +729,61 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	font-size: 0.8em;
 }
 
-.vacature article li:nth-of-type(1) p {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(1) p {
 	color: white;
 }
 
-.vacature article li:nth-of-type(2) p,
-.vacature article li:nth-of-type(3) p {
-	margin: 0;
-}
-
-.vacature article li:nth-of-type(1) a img {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(1)>a>img {
 	width: 1.2em;
 }
 
-.vacature>article>ul>li:nth-of-type(2),
-.vacature>article>ul>li:nth-of-type(3) {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(2),
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(3) {
 	gap: 0.75em;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 2em 1fr;
 }
 
-.vacature>article>ul>li:nth-of-type(2) img,
-.vacature>article>ul>li:nth-of-type(3) img {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(2) img,
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(3) img {
 	grid-row-start: 1;
 	grid-row-end: 3;
 }
 
-.vacature>article>ul>li:nth-of-type(2) h3,
-.vacature>article>ul>li:nth-of-type(3) h3 {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(2) h3,
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(3) h3 {
 	margin: 0 1em;
 }
 
-.vacature>article>ul>li:nth-of-type(2) p,
-.vacature>article>ul>li:nth-of-type(3) p {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(2) p,
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(3) p {
 	margin: 0 1em 1em;
 }
 
 
 /* Hier strart de winkelwagen pagina */
 
-.winkelwagen .vol {
+.winkelwagen>main>section:first-of-type {
 	margin: 0 -0.8em;
 	border: solid var(--coolblue-dark-grey);
 	padding: 1em;
 	border-width: 0 0 0.1em 0;
 }
 
-.winkelwagen .vol h2 {
+.winkelwagen>main>section:first-of-type>h2 {
 	color: #285DAB;
 	font-size: 1.4em;
 }
 
 
-.winkelwagen .vol h2,
-.winkelwagen .vol>span {
+.winkelwagen>main>section:first-of-type>h2,
+.winkelwagen>main>section:first-of-type>span {
 	margin: 0;
 	line-height: 1;
 }
 
-.winkelwagen .vol>span {
+.winkelwagen>main>section:first-of-type>span {
 	color: #0090e3;
 	/* Zonder display block werkt de padding niet */
 	display: block;
@@ -843,53 +792,59 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	padding-bottom: 0.5em;
 }
 
-.winkelwagen .vol img {
+.winkelwagen>main>section:first-of-type>ul>li>img {
 	width: 1em;
 	margin-right: 0.3em;
 }
 
-.winkelwagen .vol ul li {
+.winkelwagen>main>section:first-of-type>ul>li {
 	font-size: 0.8em;
 	margin-bottom: 0.5em;
 
 }
 
-.winkelwagen .vol span:first-child,
-.winkelwagen .vol ul li span {
+.winkelwagen>main>section:first-of-type>h2>span:first-child,
+.winkelwagen>main>section:first-of-type>ul>li>span {
 	color: var(--coolblue-oranje);
 	font-weight: bold;
 }
 
-
-.product {
+/* Hier start de inhoud van het winkel mandje / de canon camera */
+.winkelwagen>main>ul {
 	margin: 0 -0.8em;
 	border: solid var(--coolblue-dark-grey);
 	padding: 1em;
 	border-width: 0 0 0.1em 0;
 }
 
-.product>li>section {
+.winkelwagen>main>ul>li>section {
 	gap: 0.5em;
 	display: grid;
 	grid-template-rows: auto auto auto;
 	grid-template-columns: 7em auto auto;
 }
 
-.product>li>section>button {
+.winkelwagen>main>ul>li>section>img {
+	width: 6em;
+	height: 6em;
+	grid-row: 1/3;
+}
+
+.winkelwagen>main>ul>li>section>button {
 	width: 2.5em;
 	margin-top: 1em;
 	margin-left: auto;
 	margin-bottom: auto;
 }
 
-.product>li>section>menu {
+.winkelwagen>main>ul>li>section>menu {
 	display: grid;
 	grid-column-start: 2;
 	grid-template-columns: 2em 2em 2em auto;
 }
 
-.product>li>section>menu>li>input,
-.product>li>section>menu>li>button {
+.winkelwagen>main>ul>li>section>menu>li>input,
+.winkelwagen>main>ul>li>section>menu>li>button {
 	color: var(--coolblue-blue);
 	border: solid var(--coolblue-dark-grey) 1px;
 	width: 100%;
@@ -897,22 +852,22 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	font-weight: bold;
 }
 
-.product>li>section>menu>li>input {
-	color: #000;
+.winkelwagen>main>ul>li>section>menu>li>input {
+	color: var(--coolblue-zwart);
 	font-weight: normal;
 	text-align: center;
 	border-width: 1px 0;
 }
 
-.product>li>section>menu>li:nth-of-type(1)>button {
+.winkelwagen>main>ul>li>section>menu>li:nth-of-type(1)>button {
 	border-radius: 4px 0px 0px 4px;
 }
 
-.product>li>section>menu>li:nth-of-type(3)>button {
+.winkelwagen>main>ul>li>section>menu>li:nth-of-type(3)>button {
 	border-radius: 0px 4px 4px 0px;
 }
 
-.product>li>section>menu>li:nth-of-type(4)>button {
+.winkelwagen>main>ul>li>section>menu>li:nth-of-type(4)>button {
 	width: 1.75em;
 	border: none;
 	padding: 0;
@@ -921,70 +876,56 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	margin-left: 0.75em;
 }
 
-.product>li>section>img {
-	width: 6em;
-	height: 6em;
-	grid-row: 1/3;
-}
 
-
-
-
-.product>li>section>fieldset {
+.winkelwagen>main>ul>li>section>fieldset {
 	grid-row-start: 3;
 	grid-column: 1/3;
 }
 
-.product>li>section>fieldset>legend {
+.winkelwagen>main>ul>li>section>fieldset>legend {
 	font-weight: bold;
 	font-size: 0.8em;
 }
 
-.product>li>section>fieldset>ul {
+.winkelwagen>main>ul>li>section>fieldset>ul {
 	gap: 0.5em;
-
-	/* DIT MOET GRID GEMAAKT WORDEN */
 	display: flex;
 	flex-direction: column;
 }
 
-.product>li>section>fieldset>ul>li {
+.winkelwagen>main>ul>li>section>fieldset>ul>li {
 	gap: 0.125em;
 	display: grid;
 	grid-template-columns: auto 1fr;
 }
 
-.product>li>section>fieldset>ul>li>a,
-.product>li>section>fieldset>ul>li>label,
-.product>li>section>fieldset>ul>li>span {
+.winkelwagen>main>ul>li>section>fieldset>ul>li>a,
+.winkelwagen>main>ul>li>section>fieldset>ul>li>label,
+.winkelwagen>main>ul>li>section>fieldset>ul>li>span {
 	grid-column-start: 2;
 	font-size: 0.8em;
 }
 
-.product>li>section>fieldset>legend {
+.winkelwagen>main>ul>li>section>fieldset>legend {
 	margin-bottom: 0.5em;
 }
 
-.product>li>section>fieldset>ul>li>a {
+.winkelwagen>main>ul>li>section>fieldset>ul>li>a {
 	color: var(--coolblue-blue);
 	text-decoration: none;
 }
 
-.product>li>section>fieldset>ul>li>span {
+.winkelwagen>main>ul>li>section>fieldset>ul>li>span {
 	color: #999999;
-
 }
 
-
-
 /* https://stackoverflow.com/questions/4148499/how-to-style-a-checkbox-using-css */
-
-
-.product>li>section>fieldset>ul>li>input {
+/* https://markheath.net/post/customize-radio-button-css */
+.winkelwagen>main>ul>li>section>fieldset>ul>li>input {
 	display: none;
 }
 
-.product>li>section>fieldset>ul>li>span:first-of-type {
+.winkelwagen>main>ul>li>section>fieldset>ul>li>span:first-of-type {
 	margin: 0 0.25em 0 0;
 	grid-column-start: 1;
 	height: 1.25em;
@@ -994,34 +935,30 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	position: relative;
 }
 
-.product>li>section>fieldset>ul>li>input:checked+span {
+.winkelwagen>main>ul>li>section>fieldset>ul>li>input:checked+span {
 	border-color: var(--coolblue-blue);
 	background-color: var(--coolblue-blue);
 }
 
-.product>li>section>fieldset>ul>li>input:checked+span:after {
+.winkelwagen>main>ul>li>section>fieldset>ul>li>input:checked+span:after {
 	content: "";
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	background: #fff;
+	background: var(--coolblue-wit);
 	width: 0.5em;
 	height: 0.5em;
 	border-radius: 1em;
 }
 
-.kosten {
+/* Dit bevat de bestellen knop / totaal prijs */
+
+.winkelwagen>main>section:nth-of-type(2) {
 	display: inline;
 }
 
-.kosten>div {
-	/* margin: 0 -0.8em; */
-	/* padding: .4em 0.8em; */
-	/* box-shadow: 0 0 8px 0 #0003; */
-}
-
-.kosten>a {
+.winkelwagen>main>section:nth-of-type(2)>a {
 	gap: 1em;
 	height: 3.5em;
 	background-color: var(--coolblue-green);
@@ -1036,46 +973,46 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	bottom: 1em
 }
 
-.kosten>a>img {
+.winkelwagen>main>section:nth-of-type(2)>a>img {
 	width: 1.6em;
 }
 
 
-.kosten>ul:first-of-type {
+.winkelwagen>main>section:nth-of-type(2)>ul:first-of-type {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 
 }
 
-.kosten>ul:first-of-type>li:last-of-type>p {
+.winkelwagen>main>section:nth-of-type(2)>ul:first-of-type>li:last-of-type>p {
 	text-align: end;
 }
 
-.winkelwagen_leeg main section {
+.winkelwagen_leeg>main>section {
 	width: 100%;
 	flex-direction: column;
 	align-items: center;
 	display: flex;
 }
 
-.winkelwagen_leeg main h2 {
+.winkelwagen_leeg>main>section>h2 {
 	color: #285dab;
 	font-size: 1.25em;
 	margin-right: auto;
 }
 
-.winkelwagen_leeg main p {
+.winkelwagen_leeg>main>section>p {
 	margin-top: 0;
 	margin-bottom: 2em;
 	margin-right: auto;
 }
 
-.winkelwagen_leeg main a {
+.winkelwagen_leeg>main>section>div>a {
 	padding: 1.35em;
 	width: 100%;
 	background: rgb(0, 185, 0);
-	color: #fff;
+	color: var(--coolblue-wit);
 	font-weight: bold;
 	font-size: 0.8em;
 	text-align: center;
@@ -1083,28 +1020,28 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	box-shadow: inset 0 -2px 0 0 #090;
 }
 
-.winkelwagen_leeg main div {
+.winkelwagen_leeg>main>section>div {
 	width: 100%;
 	gap: 1em;
 	display: flex;
 	flex-direction: column;
 }
 
-.winkelwagen_leeg main a:nth-of-type(2) {
-	background: #fff;
+.winkelwagen_leeg>main>section>div>a:nth-of-type(2) {
+	background: var(--coolblue-wit);
 	color: rgb(0, 144, 227);
 	box-shadow: inset 0 -2px 0 0 rgb(141, 200, 234);
 	border: 1px solid rgb(0, 144, 227);
 }
 
-.winkelwagen_leeg main img {
+.winkelwagen_leeg>main>section>img {
 	margin-top: 1em;
 	width: 20em;
 }
 
-/* 
-Je kan hier beter display flex gebruiken, maar ik vond het zelf fijn om te experimenteren
+/* Je kan hier beter display flex gebruiken, maar ik vond het zelf fijn om te experimenteren
 met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat niet?  */
+
 /* .betaalbutton {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
@@ -1130,33 +1067,32 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 	width: 80%;
 } */
 
-
-
-.kosten ul:last-of-type {
+.winkelwagen>main>section:nth-of-type(2)>ul:last-of-type {
 	gap: 1em;
 	display: flex;
+	margin-top: 0.5em;
 	align-items: center;
 	justify-content: center;
 }
 
 
-.kosten>ul:last-of-type>li>img {
+.winkelwagen>main>section:nth-of-type(2)>ul:last-of-type>li>img {
 	width: 3em;
 	height: auto;
 }
-
 
 /* START MEDIA QUERIES */
 
 /* Grote Apparaten (Desktops) */
 @media (min-width: 992px) {
 
-	main {
-		padding: 0 1.2em;
-	}
-
+	/* Dit zorgt ervoor dat je het menu wel ziet op mobiel  */
 	.verstopt-alleen-mobiel {
 		display: block;
+	}
+
+	main {
+		padding: 0 1.2em;
 	}
 
 	header>nav:first-of-type>ul {
@@ -1176,7 +1112,6 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 		left: 0;
 		position: relative;
 		transform: none;
-
 	}
 
 	/* Laat "bekijk het hele assortiment" zien */
@@ -1191,13 +1126,13 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 	}
 
 	header>nav:first-of-type>ul>li:nth-of-type(3)>button {
-		color: #fff;
+		color: var(--coolblue-wit);
 		text-align: left;
 	}
 
 	header>nav:first-of-type>ul>li:nth-of-type(3)>button>span {
 		gap: 0.5em;
-		color: #fff;
+		color: var(--coolblue-wit);
 		display: flex;
 		font-weight: bold;
 		align-items: center;
@@ -1206,7 +1141,7 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 	header>nav:first-of-type>ul>li:nth-of-type(3)>button>span>svg {
 		width: 0.85em;
 		height: 0.85em;
-		fill: #fff;
+		fill: var(--coolblue-wit);
 	}
 
 	header>nav:first-of-type>ul>li:nth-of-type(3)>ul {
@@ -1218,7 +1153,7 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 		left: 1em;
 		z-index: 4;
 		right: 0;
-		background-color: #fff;
+		background-color: var(--coolblue-wit);
 		box-shadow: 0 1px 5px #32323299;
 	}
 
@@ -1233,7 +1168,7 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 	}
 
 	header>nav:first-of-type>ul>li:nth-of-type(4)>a {
-		color: #fff;
+		color: var(--coolblue-wit);
 		font-weight: bold;
 		margin-right: 1em;
 	}
@@ -1253,7 +1188,7 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 	}
 
 	header>nav:first-of-type>form>button {
-		background-color: #fff;
+		background-color: var(--coolblue-wit);
 		border-radius: 0em 0.25em 0.25em 0em;
 		border: var(--coolblue-omlijning-dikte);
 		height: 2.5em;
@@ -1342,18 +1277,18 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 		margin-bottom: 1em;
 	}
 
-	.aanbevelingen ul li {
+	.homepagina>main>section:first-of-type>article>ul>li {
 		width: 100%;
 	}
 
-	.categorieen>ul {
+	.homepagina>main>section:nth-of-type(2)>ul {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		gap: 1em;
 	}
 
 
-	.studenten {
+	.homepagina>main>section:nth-of-type(6) {
 		margin: 0;
 		padding: 1em;
 		padding-left: 12em;
@@ -1361,24 +1296,24 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 		border-radius: 0.5em;
 	}
 
-	.studenten>ul {
+	.homepagina>main>section:nth-of-type(6)>ul {
 		gap: 1em;
 		margin: 0;
 		padding-right: 0;
 	}
 
 
-	.vacature>article>ul {
+	.homepagina>main>section:nth-of-type(7)>article>ul {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto auto;
 	}
 
-	.vacature ul>li:first-of-type {
+	.homepagina>main>section:nth-of-type(7)>article>ul>li:first-of-type {
 		grid-column: 1/3;
 	}
 
-	.vacature>article>ul>li:nth-of-type(2),
-	.vacature>article>ul>li:nth-of-type(3) {
+	.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(2),
+	.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(3) {
 		overflow: hidden;
 		border-radius: var(--border-radius-elementen);
 		grid-template-columns: 1fr;
@@ -1394,99 +1329,22 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 		grid-template-rows: auto auto;
 	}
 
-	.winkelwagen main .vol {
+	.winkelwagen>main>section:first-of-type {
 		grid-column: 1/3;
 	}
 
-	.winkelwagen main .product {
+	.winkelwagen>main>ul {
 		padding-top: 0;
 		border: none;
 	}
 
-
-
-	/* 
-	.studenten {
-	 Wit ruimte die ik heb toegevoegd aan de body, heb ik hier 
-		uitgezet
-		margin: 2 -0.8em;
-		padding: 1em;
-		padding-right: 0;
-		background-image: url(images/aanbevelingen.avif);
-		background-color: red;
-		background-size: cover;
-		padding-top: 5em;
-		margin-bottom: 10em;
-	} */
-
-	/* DIT IS NIEUW */
-	/* .studenten>ul>li {
-		position: relative;
-	} */
-	/* 
-	.studenten>ul>li>a>ul {
-		width: 10em;
-		left: 1.6em;
-		display: flex;
-		position: absolute;
-		top: 12.75em;
-		text-wrap: nowrap;
-	} */
-
-
-	/* 
-
-	.studenten>ul>li>a>article {
-		width: 15em;
-		padding: 1.6em;
-		display: flex;
-		flex-direction: column;
-		border-radius: var(--border-radius-elementen);
-		background: #fff;
-		border: var(--coolblue-omlijning-dikte);
-	}
-
-	.studenten>ul>li>a>article>img {
-		width: 40%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-
-	.studenten>ul>li>a>article>h3 {
-		margin-bottom: 4em;
-	}
-
-
-	.studenten>ul>li>a>article>span:nth-of-type(1) {
-		color: var(--coolblue-oranje);
-		padding: 0.25em 0.35em;
-		margin-right: auto;
-		background: #fef1e8;
-		font-size: 0.8125em;
-		font-family: "Kameron";
-		font-weight: 700;
-		border-radius: var(--border-radius-elementen);
-	}
-
-
-	.studenten>ul>li>a>article>ul {
-		display: flex;
-	}
-
-	.studenten>ul>li>a>article>ul>li>img {
-		width: 1em;
-	} */
-
-	.winkelwagen_leeg main p,
-	.winkelwagen_leeg main h2 {
+	.winkelwagen_leeg>main>section>p,
+	.winkelwagen_leeg>main>section>h2 {
 		margin-right: 0;
 	}
 
-	.winkelwagen_leeg main div {
+	.winkelwagen_leeg>main>section>div {
 		width: 50%;
 		flex-direction: row;
 	}
-
-
 }
