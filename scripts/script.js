@@ -2,7 +2,7 @@
 var eenAfbeelding = window.innerWidth;
 
 // Hiermee spreek je de volledige UL aan in de HTML
-var carousel = document.querySelector("#foto-carousel");
+var carousel = document.querySelector("body>header>ul:nth-of-type(2)");
 
 if (carousel) {
   // Met de Scrollwidth pak je de hele carousel, dus ook wat je iet op het scherm ziet

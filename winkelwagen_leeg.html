@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="jouw naam" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Lanxiang Vermeulen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Coolblue - winkelwagen</title>
 
-    <link href="styles/style.css" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link href="styles/style.css" rel="stylesheet">
   </head>
 
   <body class="winkelwagen_leeg">
     <!-- Hier komt h1 -->
     <header>
-      <nav>
+      <nav aria-label="Hoofdnavigatie">
         <ul>
           <li>
-            <button aria-label="navigeer naar de producten">
-              <img src="images/header_hamburgermenu.svg" alt="" />
+            <button aria-label="Open hamburger menu">
+              <img src="images/header_hamburgermenu.svg" alt="Menu icoon">
             </button>
           </li>
 
           <li>
+            <!-- Op GitHub eindigt de URL met /FvD dus daar link ik ook terug naar -->
             <a href="/FvD">
-              <img src="images/header_coolblue_logo.png" alt="" />
+              <img src="images/header_coolblue_logo.png" alt="Coolblue logo">
             </a>
           </li>
 
@@ -40,12 +40,10 @@
                   height="800px"
                   width="800px"
                   version="1.1"
-                  id="Layer_1"
                   viewBox="0 0 330 330"
                   xml:space="preserve"
                 >
                   <path
-                    id="XMLID_225_"
                     d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
                   c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
                   s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
@@ -96,20 +94,29 @@
           </li>
 
           <li>
-            <button aria-label="navigeer naar jouw account">
-              <img src="images/header_jouw_account.svg" alt="" />
+            <button aria-label="Navigeer naar jouw account">
+              <img
+                src="images/header_jouw_account.svg"
+                alt="Gebruikers icoon"
+              >
             </button>
           </li>
 
           <li>
-            <button aria-label="navigeer naar jouw favoriete producten">
-              <img src="images/header_favorieten.svg" alt="" />
+            <button aria-label="Navigeer naar jouw favoriete producten">
+              <img src="images/header_favorieten.svg" alt="Favorieten icoon">
             </button>
           </li>
 
           <li>
-            <a href="winkelwagen.html">
-              <img src="images/header_winkelmandje.svg" alt="" />
+            <a
+              aria-label="Navigeer naar jouw winkelwagen"
+              href="winkelwagen.html"
+            >
+              <img
+                src="images/header_winkelmandje.svg"
+                alt="Winkelwagen icoon"
+              >
             </a>
           </li>
         </ul>
@@ -123,12 +130,12 @@
 
         <!-- Aria label  -->
         <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
-        <form>
+        <form aria-label="Zoek formulier">
           <input
-            for="zoekbalk homepage"
-            type="zoekbalk homepage"
+            type="text"
+            aria-label="Zoekveld"
             placeholder="Zoeken naar..."
-          />
+          >
           <button aria-label="Zoekopdracht versturen">
             <!-- https://icons8.com/icons/set/search -->
             <svg
@@ -153,127 +160,140 @@
             <!-- <nav> tag mag headers bevatten -->
             <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav  -->
             <h2>Menu</h2>
-            <button><img src="images/header_kruisje.png" /></button>
+            <button aria-label="Sluit hamburger menu">
+              <img src="images/header_kruisje.png" alt="Sluit icoon">
+            </button>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518828"
-              />Computers & tablets
+                alt="Een grijze Windows computer met een zwarte Android tablet ernaast"
+                src="images/navigatie_computer_tablets.avif"
+              >Computers & tablets
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518832"
-              />Beeld & geluid
+                src="images/navigatie_beeld_geluid.avif"
+                alt="Een flatscreen TV met een zwarte koptelefoon ernaast"
+              >Beeld & geluid
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518833"
-              />Telefonie
+                src="images/navigatie_telefonie.avif"
+                alt="Een zwarte Android en iPhone naast elkaar"
+              >Telefonie
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518834"
-              />Huishouden & wonen
+                src="images/navigatie_huishouden_wonen.avif"
+                alt="Een witte wasmachine met een zwarte stofzuiger ernaast"
+              >Huishouden & wonen
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518835"
-              />Keuken
+                src="images/navigatie_keuken.avif"
+                alt="Een grijze koelkast met een zwarte mixer ernaast"
+              >Keuken
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/534644"
-              />Sport en verzorging
+                src="images/navigatie_sport_verzorging.avif"
+                alt="Een donkergrijze scheeraparaat met een zwarte smartwatch ernaast"
+              >Sport en verzorging
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518838"
-              />Foto & video
+                src="images/navigatie_foto_video.avif"
+                alt="Een zwarte camera lens naast een Canon camera"
+              >Foto & video
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoono"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518837"
-              />Navigatie, reizen & fashion
+                src="images/navigatie_navigatie_reizen.avif"
+                alt="Een zwarte Northface tas met een GPS ernaast"
+              >Navigatie, reizen & fashion
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoono"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#">
               <img
-                src="https://image.coolblue.nl/transparent/content/518839"
-              />Tuin & klussen
+                src="images/navigatie_tuin_klussen.avif"
+                alt="Een blauwe boormachine met een groene BBQ ernaast"
+              >Tuin & klussen
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/555194"
-              />Coolblue Energie
+                src="images/navigatie_energie.avif"
+                alt="Het Cooleblue Energie logo"
+              >Coolblue Energie
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#">
               <img
-                src="https://image.coolblue.nl/transparent/content/518841"
-              />Acties
+                src="images/navigatie_acties.avif"
+                alt="Een selectie smart apparaten met een kortings teken ernaast"
+              >Acties
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
         </ul>
@@ -290,7 +310,7 @@
           <a href="index.html">Inloggen</a>
         </div>
 
-        <img src="images/winkelwagen_leeg.jpg" alt="winkelwagen leeg" />
+        <img src="images/winkelwagen_leeg.jpg" alt="Winkelwagen leeg icoon">
       </section>
     </main>
 

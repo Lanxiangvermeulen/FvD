@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="jouw naam" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Lanxiang Vermeulen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Coolblue</title>
 
-    <link href="styles/style.css" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link href="styles/style.css" rel="stylesheet">
   </head>
 
   <body class="homepagina">
@@ -16,17 +15,18 @@
 
     <!-- BEGIN HEADER -->
     <header>
-      <nav>
+      <nav aria-label="Hoofdnavigatie">
         <ul>
           <li>
-            <button aria-label="navigeer naar de producten">
-              <img src="images/header_hamburgermenu.svg" alt="" />
+            <button aria-label="Open hamburger menu">
+              <img src="images/header_hamburgermenu.svg" alt="Menu icoon">
             </button>
           </li>
 
           <li>
+            <!-- Op GitHub eindigt de URL met /FvD dus daar link ik ook terug naar -->
             <a href="/FvD">
-              <img src="images/header_coolblue_logo.png" alt="" />
+              <img src="images/header_coolblue_logo.png" alt="Coolblue logo">
             </a>
           </li>
 
@@ -42,12 +42,10 @@
                   height="800px"
                   width="800px"
                   version="1.1"
-                  id="Layer_1"
                   viewBox="0 0 330 330"
                   xml:space="preserve"
                 >
                   <path
-                    id="XMLID_225_"
                     d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
                   c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
                   s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
@@ -98,20 +96,29 @@
           </li>
 
           <li>
-            <button aria-label="navigeer naar jouw account">
-              <img src="images/header_jouw_account.svg" alt="" />
+            <button aria-label="Navigeer naar jouw account">
+              <img
+                src="images/header_jouw_account.svg"
+                alt="Gebruikers icoon"
+              >
             </button>
           </li>
 
           <li>
-            <button aria-label="navigeer naar jouw favoriete producten">
-              <img src="images/header_favorieten.svg" alt="" />
+            <button aria-label="Navigeer naar jouw favoriete producten">
+              <img src="images/header_favorieten.svg" alt="Favorieten icoon">
             </button>
           </li>
 
           <li>
-            <a href="winkelwagen.html">
-              <img src="images/header_winkelmandje.svg" alt="" />
+            <a
+              aria-label="Navigeer naar jouw winkelwagen"
+              href="winkelwagen.html"
+            >
+              <img
+                src="images/header_winkelmandje.svg"
+                alt="Winkelwagen icoon"
+              >
             </a>
           </li>
         </ul>
@@ -125,12 +132,12 @@
 
         <!-- Aria label  -->
         <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
-        <form>
+        <form aria-label="Zoek formulier">
           <input
-            for="zoekbalk homepage"
-            type="zoekbalk homepage"
+            type="text"
+            aria-label="Zoekveld"
             placeholder="Zoeken naar..."
-          />
+          >
           <button aria-label="Zoekopdracht versturen">
             <!-- https://icons8.com/icons/set/search -->
             <svg
@@ -155,127 +162,140 @@
             <!-- <nav> tag mag headers bevatten -->
             <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav  -->
             <h2>Menu</h2>
-            <button><img src="images/header_kruisje.png" /></button>
+            <button aria-label="Sluit hamburger menu">
+              <img src="images/header_kruisje.png" alt="Sluit icoon">
+            </button>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518828"
-              />Computers & tablets
+                alt="Een grijze Windows computer met een zwarte Android tablet ernaast"
+                src="images/navigatie_computer_tablets.avif"
+              >Computers & tablets
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518832"
-              />Beeld & geluid
+                src="images/navigatie_beeld_geluid.avif"
+                alt="Een flatscreen TV met een zwarte koptelefoon ernaast"
+              >Beeld & geluid
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518833"
-              />Telefonie
+                src="images/navigatie_telefonie.avif"
+                alt="Een zwarte Android en iPhone naast elkaar"
+              >Telefonie
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518834"
-              />Huishouden & wonen
+                src="images/navigatie_huishouden_wonen.avif"
+                alt="Een witte wasmachine met een zwarte stofzuiger ernaast"
+              >Huishouden & wonen
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518835"
-              />Keuken
+                src="images/navigatie_keuken.avif"
+                alt="Een grijze koelkast met een zwarte mixer ernaast"
+              >Keuken
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/534644"
-              />Sport en verzorging
+                src="images/navigatie_sport_verzorging.avif"
+                alt="Een donkergrijze scheeraparaat met een zwarte smartwatch ernaast"
+              >Sport en verzorging
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518838"
-              />Foto & video
+                src="images/navigatie_foto_video.avif"
+                alt="Een zwarte camera lens naast een Canon camera"
+              >Foto & video
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoono"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/518837"
-              />Navigatie, reizen & fashion
+                src="images/navigatie_navigatie_reizen.avif"
+                alt="Een zwarte Northface tas met een GPS ernaast"
+              >Navigatie, reizen & fashion
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoono"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#">
               <img
-                src="https://image.coolblue.nl/transparent/content/518839"
-              />Tuin & klussen
+                src="images/navigatie_tuin_klussen.avif"
+                alt="Een blauwe boormachine met een groene BBQ ernaast"
+              >Tuin & klussen
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="https://image.coolblue.nl/transparent/content/555194"
-              />Coolblue Energie
+                src="images/navigatie_energie.avif"
+                alt="Het Cooleblue Energie logo"
+              >Coolblue Energie
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
           <li>
             <a href="#">
               <img
-                src="https://image.coolblue.nl/transparent/content/518841"
-              />Acties
+                src="images/navigatie_acties.avif"
+                alt="Een selectie smart apparaten met een kortings teken ernaast"
+              >Acties
               <img
                 src="images/pijlnaarlinks_navigatie.png"
-                alt="doorverwijzing icoon"
-              />
+                alt="Doorverwijzing icoon"
+              >
             </a>
           </li>
         </ul>
@@ -284,36 +304,45 @@
       <!-- Ik heb ervoor gekozen om dit stukjes tekst direct in de Li toe te voegen
       omdat het valt niet onder een P of header. Het helpt niet om te navigeren.
       Het is eerder een extratje.  -->
-      <ul id="tekst-carousel">
+      <ul>
         <li>
-          <img src="images/tekst_carousel_checkmark.png" alt="" /> Voor
-          <span> Voor 23.59 </span> uur besteld, morgen
+          <img
+            src="images/tekst_carousel_checkmark.png"
+            alt="Checkmark icoon"
+          >
+          Voor <span> Voor 23.59 </span> uur besteld, morgen
           <span>gratis</span> bezorgd
         </li>
         <li>
-          <img src="images/tekst_carousel_checkmark.png" alt="" />
-          <span> Gratis </span>ruilen
+          <img
+            src="images/tekst_carousel_checkmark.png"
+            alt="Checkmark icoon"
+          >
+          <span>Gratis</span>ruilen
         </li>
         <li>
-          <img src="images/tekst_carousel_checkmark.png" alt="" />
-          <span> Beste</span> winkelweb 2022
+          <img
+            src="images/tekst_carousel_checkmark.png"
+            alt="Checkmark icoon"
+          >
+          <span>Beste</span> winkelweb 2022
         </li>
       </ul>
 
-      <ul id="foto-carousel">
+      <ul>
         <!-- Ik had liever de beide afbeeldingen geprogrammeerd met HTML en CSS. Het zijn twee advertenties die verder niet essentieel zijn voor de website dus ik 
 heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeelding te houden. -->
         <li>
           <img
             src="images/header_foto2.png"
-            alt="Zwarte was machine van Samsung afgeprijsd van €949 naar €819"
-          />
+            alt="Zwarte wasmachine van Samsung afgeprijsd van €949 naar €819"
+          >
         </li>
         <li>
           <img
             src="images/header_foto1.avif"
-            alt="Pre-order voor de grijze titanium iphone 15 "
-          />
+            alt="Pre-order voor de grijze titanium iPhone 15 "
+          >
         </li>
       </ul>
     </header>
@@ -321,7 +350,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
     <!-- START MAIN -->
     <main>
       <!-- START AANBEVELINGEN -->
-      <section>
+      <section aria-label="Aanbevelingen">
         <article>
           <ul>
             <li>
@@ -329,7 +358,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                 <img
                   src="images/aanbevelingen_chromebook_logo.png"
                   alt="Logo van Chromebook"
-                />
+                >
                 <h3>Acer Chromebook Spin 513 CP...</h3>
 
                 <p>Nu met €70,- korting.</p>
@@ -345,7 +374,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                   <img
                     src="images/aanbevelingen_laptop.png"
                     alt="De grijs gekleurde Acer Chromebook spin 513 C"
-                  />
+                  >
                 </div>
               </a>
             </li>
@@ -355,7 +384,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                 <img
                   src="images/aanbevelingen_samsung_logo.png"
                   alt="Logo van Samsung"
-                />
+                >
                 <h3>Samsung WW90TA049AE EcoBubble</h3>
 
                 <p>Nu met €70,- korting.</p>
@@ -371,7 +400,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                   <img
                     src="images/aanbevelingen_wasmachine.avif"
                     alt="Witte samsung wasmachine WW90TA049AE EcoBubble"
-                  />
+                  >
                 </div>
               </a>
             </li>
@@ -380,8 +409,8 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
               <a href="#">
                 <img
                   src="images/aanbevelingen_philips_logo.png"
-                  alt=" Philips logo"
-                />
+                  alt="Philips logo"
+                >
                 <h3>Philips FC9334/09 PowerPro Compact</h3>
 
                 <p>Nu met €70,- korting.</p>
@@ -392,8 +421,8 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                 <div>
                   <img
                     src="images/aanbevelingen_stofzuiger.avif"
-                    alt=" De Philips FC9334/09 PowerPro Compact stofzuiger in het zwart met blauwe details"
-                  />
+                    alt="De Philips FC9334/09 PowerPro Compact stofzuiger in het zwart met blauwe details"
+                  >
                 </div>
               </a>
             </li>
@@ -412,8 +441,8 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             <a href="#">
               <img
                 src="images/categorieen_computers_tablets.jpg"
-                alt=" HP laptop met grijze toetsenbord en zwarte tablett"
-              />
+                alt="HP laptop met grijze toetsenbord en zwarte tablett"
+              >
               <h3>Computers & Tablets</h3>
             </a>
           </li>
@@ -422,8 +451,8 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             <a href="#">
               <img
                 src="images/categorieen_beeld_geluid.jpg"
-                alt=" Televesiescherm met daarvoor een koptelefoon"
-              />
+                alt="Televesiescherm met daarvoor een koptelefoon"
+              >
               <h3>Beeld & geluid</h3>
             </a>
           </li>
@@ -433,7 +462,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
               <img
                 src="images/categorieen_telefonie.jpg"
                 alt="Groene en zwarte telefoon"
-              />
+              >
               <h3>Telefonie</h3>
             </a>
           </li>
@@ -443,7 +472,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
               <img
                 src="images/categorieen_huishuiden_wonen.jpg"
                 alt="Witte wasmachine en zwarte stofzuiger"
-              />
+              >
               <h3>Huishouden & wonen</h3>
             </a>
           </li>
@@ -453,7 +482,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
               <img
                 src="images/categorieen_keuken.jpg"
                 alt="Koelkast en keukengerei"
-              />
+              >
               <h3>Keuken</h3>
             </a>
           </li>
@@ -462,13 +491,10 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             <a href="#">
               <img
                 src="images/categorieen_sport_verzorging.jpg"
-                alt="Scheerapparaat en horloge "
-              />
+                alt="Scheerapparaat en horloge"
+              >
               <h3>Sport & verzorging</h3>
             </a>
-            <!-- </li>
-          <li> <a> bekijk het volledige assortiment</a>
-          </li> -->
           </li>
         </ul>
 
@@ -480,12 +506,10 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             height="800px"
             width="800px"
             version="1.1"
-            id="Layer_1"
             viewBox="0 0 330 330"
             xml:space="preserve"
           >
             <path
-              id="XMLID_222_"
               d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001  c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213  C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606  C255,161.018,253.42,157.202,250.606,154.389z"
             />
           </svg>
@@ -504,7 +528,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                 <img
                   src="images/ontdek_apple_apparaten.avif"
                   alt="Alle populaire Apple apparaten op een rij"
-                />
+                >
 
                 <h3>Bekijk de wereld van Apple</h3>
 
@@ -531,7 +555,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                 <img
                   src="images/ontdek_samsung_apparaten.avif"
                   alt="Alle populaire Samsung apparaten op een rij"
-                />
+                >
                 <h3>Bekijk de wereld van Samsung</h3>
 
                 <p>
@@ -554,7 +578,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                 <img
                   src="images/ontdenk_sonos_apparaten.avif"
                   alt="Alle populaire Sonos apparaten op een rij"
-                />
+                >
                 <h3>Bekijk de wereld van Sonos</h3>
 
                 <p>
@@ -579,12 +603,10 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             height="800px"
             width="800px"
             version="1.1"
-            id="Layer_1"
             viewBox="0 0 330 330"
             xml:space="preserve"
           >
             <path
-              id="XMLID_222_"
               d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001  c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213  C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606  C255,161.018,253.42,157.202,250.606,154.389z"
             />
           </svg>
@@ -601,13 +623,13 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
               <article>
                 <img
                   src="images/onlangsbekeken_product_koffieautomaat.avif"
-                  alt="zwarte Magimix Nespresso CitiZ M196 CN koffiemachine"
-                />
+                  alt="Zwarte Magimix Nespresso CitiZ M196 CN koffiemachine"
+                >
                 <span> 100 koffiecups voor € 5,-</span>
                 <h3>Magimix Nespresso CitiZ M196 CN Zwart</h3>
 
                 <strong>€149,-</strong>
-                <span> Morgen bezorgd</span>
+                <span>Morgen bezorgd</span>
               </article>
             </a>
 
@@ -617,19 +639,34 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             >
               <ul>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
                   <span> 751 reviews</span>
@@ -643,9 +680,9 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
               <article>
                 <img
                   src="images/onlangsbeken_product_canon_camera.avif"
-                  alt="zwarte canon EOS 2000D camera met EF-S 18-55mm f/3.5-5.6 DC III en EF 75-300mm
-                  f/4-5.6 DC III lenzen  "
-                />
+                  alt="Zwarte canon EOS 2000D camera met EF-S 18-55mm f/3.5-5.6 DC III en EF 75-300mm
+                  f/4-5.6 DC III lenzen"
+                >
                 <span> 100 koffiecups voor € 5,-</span>
                 <h3>
                   Canon EOS 2000D + EF-S 18-55mm f/3.5-5.6 DC III + EF 75-300mm
@@ -663,19 +700,34 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             >
               <ul>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
                   <span> 751 reviews</span>
@@ -690,7 +742,7 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                 <img
                   src="images/onlangsbeken_product_lg_televisie.avif"
                   alt="Een zwarte LG monitor met grijze stang"
-                />
+                >
                 <span>onweerstaanbaar</span>
                 <h3>LG 27UL550P-W - 27 inch - 3840 x 2160 (Ultra HD 4K)</h3>
 
@@ -704,19 +756,34 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             >
               <ul>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
                   <span> 751 reviews</span>
@@ -741,15 +808,19 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
         </p>
       </section>
 
+      <!-- Ik wou deze twee sections eigenlijk combineren maar
+        kwam hier niet uit qua styling, maar deze h2 is alleen
+        te zien voor screenreaders -->
       <section>
+        <h2>Een selectie producten met korting</h2>
         <ul>
           <li>
             <a href="#">
               <article>
                 <img
                   src="images/topdeals_product_horloge.avif"
-                  alt="een Samsung Galaxy Watch5 Pro 45mm in het zwart"
-                />
+                  alt="Een Samsung Galaxy Watch5 Pro 45mm in het zwart"
+                >
                 <span>aanbieding</span>
                 <h3>Samsung Galaxy Watch5 Pro Zwart 45mm</h3>
 
@@ -764,19 +835,34 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             <a href="#" aria-label="5 van de 5 sterren gebaseerd op 5 reviews">
               <ul>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
                   <span>5 reviews</span>
@@ -790,8 +876,8 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
               <article>
                 <img
                   src="images/topdeals_product_oven.avif"
-                  alt="zwarte Beko FSM67010GX oven met grijze details"
-                />
+                  alt="Zwarte Beko FSM67010GX oven met grijze details"
+                >
                 <span>aanbieding</span>
                 <h3>Beko FSM67010GX</h3>
 
@@ -809,19 +895,34 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             <a href="#" aria-label="5 van de 5 sterren gebaseerd op 5 reviewss">
               <ul>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
                   <!-- COOLBLUE IS ILLEGAL!! 
@@ -842,8 +943,8 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
               <article>
                 <img
                   src="images/topdeals_product_koptelefoon.avif"
-                  alt="een zwarte SteelSeries Arctis Nova Pro koptelefoon met externe microfoon"
-                />
+                  alt="Een zwarte SteelSeries Arctis Nova Pro koptelefoon met externe microfoon"
+                >
                 <span>aanbieding</span>
                 <h3>SteelSeries Arctis Nova Pro</h3>
 
@@ -858,19 +959,34 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             <a href="#" aria-label="5 van de 5 sterren gebaseerd op 5 reviews">
               <ul>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
                   <span>5 reviews</span>
@@ -884,8 +1000,8 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
               <article>
                 <img
                   src="images/topdeals_product_telefoon.avif"
-                  alt="een Samsung Galaxy S23 256GB in het zwart  "
-                />
+                  alt="Een Samsung Galaxy S23 256GB in het zwart  "
+                >
                 <span>aanbieding</span>
                 <h3>Samsung Galaxy S23 256GB Zwart 5G</h3>
 
@@ -899,19 +1015,34 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
             <a href="#" aria-label="5 van de 5 sterren gebaseerd op 5 reviews">
               <ul>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
-                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                  <img
+                    src="images/onlangsbeken_review_ster.svg"
+                    alt="Ster icoon"
+                  >
                 </li>
                 <li>
                   <span>5 reviews</span>
@@ -935,15 +1066,19 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
                 dan alles over onze vrienden cultuur.
               </p>
               <a href="#">
-                <img src="images/vacature_arrow_up.png" alt="" /> Lees meer
+                <img
+                  src="images/vacature_arrow_up.png"
+                  alt="Pijl naar boven icoon"
+                >
+                Lees meer
               </a>
             </li>
 
             <li>
               <img
-                src="https://image.coolblue.nl/transparent/max/422x390/content/fc77f8f55705aef72f225db5e1ab477f"
-                alt=""
-              />
+                src="images/vacature_komwerken_foto_verkoopmedewerker.avif"
+                alt="Een klant die word geholpen door een Coolblue medewerker"
+              >
 
               <h3>Kom werken bij coolblue</h3>
               <p>
@@ -954,9 +1089,9 @@ heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeeldin
 
             <li>
               <img
-                src="https://image.coolblue.nl/transparent/max/422x390/content/86cf8eaa09dc4952690f3918119893da"
-                alt=""
-              />
+                src="images/vacature_komwerken_foto_bezorger.avif"
+                alt="Twee Coolblue bezorgers die een wasmachine leveren"
+              >
 
               <h3>Word bezorger</h3>
               <p>

@@ -51,13 +51,20 @@ ul, menu {
 	list-style-type: none;
 }
 
+/* https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+/* Dit is voor Chrome en Safari */
 ul::-webkit-scrollbar {
 	display: none;
 }
 
+/* Dit is voor de rest */
+ul {
+	scrollbar-width: none;
+}
+
 button {
 	background-color: transparent;
-	border-color: transparent;
+	border: none;
 }
 
 img {
@@ -67,7 +74,8 @@ img {
 /* Dit is voor de screenreader zodat mensen die niet kunnen zien meer context krijgen over de pagina */
 /* https://webaim.org/techniques/css/invisiblecontent/ */
 
-h1 {
+h1,
+.homepagina>main>section:nth-of-type(6)>h2 {
 	position: absolute;
 	left: -10000px;
 	top: auto;
@@ -183,6 +191,7 @@ header>nav:first-of-type>form>input {
 	width: 95%;
 	height: 2.5em;
 	text-indent: 1em;
+	/* https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables */
 	border: var(--coolblue-omlijning-dikte);
 	border-radius: var(--border-radius-elementen);
 }
@@ -937,7 +946,7 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 .winkelwagen>main>ul>li>section>fieldset>ul>li>input:checked+span {
-	border-color: var(--coolblue-blue);
+	border: none;
 	background-color: var(--coolblue-blue);
 }
 
