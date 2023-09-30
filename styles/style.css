@@ -623,7 +623,7 @@ Nog even checken bij de docent!! */
 	margin: 0 -0.8em;
 	padding: 1em;
 	padding-right: 0;
-	background-image: url(/images/aanbevelingen.avif);
+	background-image: url(images/aanbevelingen.avif);
 	background-position: center;
 	background-repeat: no-repeat;
 	padding-top: 11em;
@@ -1412,7 +1412,7 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 		margin: 2 -0.8em;
 		padding: 1em;
 		padding-right: 0;
-		background-image: url(/images/aanbevelingen.avif);
+		background-image: url(images/aanbevelingen.avif);
 		background-color: red;
 		background-size: cover;
 		padding-top: 5em;
