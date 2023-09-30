@@ -13,13 +13,12 @@
 :root {
 	--coolblue-wit: #fff;
 	--coolblue-zwart: #000;
-	--coolblue-blue: #0090e3;
+	--coolblue-blue: #0075b9;
 	--coolblue-grey: #f2f7fc;
-	--coolblue-light-oranje: #fef1e8;
 	--coolblue-omlijning-dikte: 1px solid #ddd;
 	--border-radius-elementen: 0.25em;
 	--coolblue-dark-grey: #ddd;
-	--coolblue-oranje: #FF6600;
+	--coolblue-oranje: #cf3213;
 	--coolblue-green: #008500;
 }
 
@@ -82,6 +81,9 @@ h1,
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
+
+	/* Dit is zodat de contrast checker niet klaagt */
+	color: #000;
 }
 
 h2 {
@@ -289,7 +291,7 @@ header>ul:nth-of-type(1)>li>img {
 
 header>ul:nth-of-type(1)>li>span {
 	font-weight: bold;
-	color: var(--coolblue-oranje);
+	color: var(--coolblue-blue);
 }
 
 header>ul:last-of-type,
@@ -340,7 +342,7 @@ section>a>svg {
 	width: 19em;
 	display: grid;
 	grid-template-columns: 1fr 7em;
-	padding: 0.5em;
+	padding: 0.65em;
 	position: relative;
 }
 
@@ -364,19 +366,22 @@ section>a>svg {
 
 .homepagina>main>section:first-of-type>article>ul>li>a>p {
 	margin: 0;
+	font-weight: 600;
 	font-size: 0.8em;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li>a>span {
+.homepagina>main>section:first-of-type>article>ul>li>a>span:first-of-type {
 	font-size: 0.8em;
+	text-decoration: line-through;
 }
 
 .homepagina>main>section:first-of-type>article>ul>li>a>strong {
 	font-size: 0.8em;
+	display: block;
 }
 
 .homepagina>main>section:first-of-type>article>ul>li>a>span:nth-of-type(3) {
-	right: 10em;
+	right: 4em;
 	color: var(--coolblue-wit);
 	bottom: 1.5em;
 	padding: 0.25em 0.35em;
@@ -550,11 +555,11 @@ section>a>svg {
 }
 
 .homepagina>main>section:nth-of-type(4)>ul>li>a>article>span:nth-of-type(1) {
-	color: var(--coolblue-oranje);
+	color: var(--coolblue-wit);
 	padding: 0.25em 0.35em;
 	margin-right: auto;
-	background: var(--coolblue-light-oranje);
-	font-size: 0.8125em;
+	background: var(--coolblue-oranje);
+	font-size: 0.8em;
 	font-family: "Kameron";
 	font-weight: 700;
 	border-radius: var(--border-radius-elementen);
@@ -646,8 +651,9 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 .homepagina>main>section:nth-of-type(6)>ul>li>a>ul>li:last-of-type>span {
-	color: var(--coolblue-blue);
+	color: #000000;
 	font-size: 0.8em;
+	/* font-weight: bold; */
 }
 
 .homepagina>main>section:nth-of-type(6)>ul>li>a>article {
@@ -673,10 +679,10 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 
 /* Aanbiedingen kopje */
 .homepagina>main>section:nth-of-type(6)>ul>li>a>article>span:nth-of-type(1) {
-	color: var(--coolblue-oranje);
+	color: var(--coolblue-wit);
 	padding: 0.25em 0.35em;
 	margin-right: auto;
-	background: var(--coolblue-light-oranje);
+	background: var(--coolblue-oranje);
 	font-size: 0.8em;
 	font-family: "Kameron";
 	font-weight: 700;
@@ -727,7 +733,8 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 .homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(1) h4 {
-	color: rgb(209, 239, 255);
+	color: var(--coolblue-wit);
+	font-style: italic;
 	margin: 0;
 }
 
