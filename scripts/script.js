@@ -106,6 +106,6 @@ function minusWinkelwagen() {
     winkelwagenInput.value--;
   } else {
     // https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage
-    window.location.replace("/winkelwagen_leeg.html");
+    window.location.replace("winkelwagen_leeg.html");
   }
 }
