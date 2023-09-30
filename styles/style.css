@@ -35,7 +35,7 @@ body {
 
 
 /* Vanaf hier de navigatie */
-nav ul {
+header>nav>ul {
 	display: flex;
 	margin: 0;
 	padding: 0 0.8em;
@@ -91,6 +91,25 @@ input {
 	height: 2.5em;
 	outline: none;
 	text-indent: 1em;
-	border: 0.0625em solid #ddd;
+	border: 1px solid #ddd;
 	border-radius: 0.25em;
 }
+
+/* Blader door onze categorieën */
+
+section>h2 {
+	text-align: center;
+}
+
+section>ul {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 0;
+	gap: 1em;
+}
+
+section>ul>li {
+	background-color: var(--coolblue-grey);
+	height: 10em;
+}
+
