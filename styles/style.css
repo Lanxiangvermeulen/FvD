@@ -110,19 +110,6 @@ fieldset {
 	padding: 0;
 }
 
-/* Vanaf hier active / focus states  */
-
-button:active,
-button:focus {
-	outline: 3px dotted var(--coolblue-wit);
-}
-
-input:active,
-input:focus {
-	outline: 3px dotted var(--coolblue-blue);
-}
-
-
 /* Als iets deze class heeft is het altijd verstopt */
 .verstopt-alles {
 	display: none;
@@ -169,7 +156,6 @@ header>nav:first-of-type>ul>li:nth-of-type(4) {
 }
 
 header>nav:first-of-type>ul>li:nth-of-type(7)>a {
-	display: block;
 	margin: 0.275em 0 0;
 	margin-left: 0.2em;
 }
@@ -291,7 +277,7 @@ header>ul:nth-of-type(1)>li>img {
 
 header>ul:nth-of-type(1)>li>span {
 	font-weight: bold;
-	color: var(--coolblue-blue);
+	color: var(--coolblue-oranje);
 }
 
 header>ul:last-of-type,
@@ -315,7 +301,6 @@ header>ul>li>img {
 /* De kleine <a> linkjes */
 section>a {
 	color: var(--coolblue-blue);
-	display: block;
 	margin-top: 1em;
 	font-size: 0.8em;
 }
@@ -336,51 +321,51 @@ section>a>svg {
 	padding-left: 1em;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li {
+.homepagina>main>section:first-of-type>article>ul>li>a {
 	border: var(--coolblue-omlijning-dikte);
 	border-radius: 0.2em;
-	width: 19em;
+	min-width: 19em;
 	display: grid;
 	grid-template-columns: 1fr 7em;
 	padding: 0.65em;
 	position: relative;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li>a:first-of-type>img {
+.homepagina>main>section:first-of-type>article>ul>li>a>div:first-of-type>img {
 	width: 3em;
 	margin-bottom: 1em;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li:nth-of-type(2)>a:last-of-type>div>img {
+.homepagina>main>section:first-of-type>article>ul>li:nth-of-type(2)>a>img {
 	width: 5em;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li:nth-of-type(3)>a:last-of-type>div>img {
+.homepagina>main>section:first-of-type>article>ul>li:nth-of-type(3)>a>img {
 	width: 4em;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li>a>h3 {
+.homepagina>main>section:first-of-type>article>ul>li>a>div>h3 {
 	font-size: 0.8em;
 	margin: 0;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li>a>p {
+.homepagina>main>section:first-of-type>article>ul>li>a>div>p {
 	margin: 0;
 	font-weight: 600;
 	font-size: 0.8em;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li>a>span:first-of-type {
+.homepagina>main>section:first-of-type>article>ul>li>a>div>span:first-of-type {
 	font-size: 0.8em;
 	text-decoration: line-through;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li>a>strong {
+.homepagina>main>section:first-of-type>article>ul>li>a>div>strong {
 	font-size: 0.8em;
 	display: block;
 }
 
-.homepagina>main>section:first-of-type>article>ul>li>a>span:nth-of-type(3) {
+.homepagina>main>section:first-of-type>article>ul>li>a>div>span:nth-of-type(3) {
 	right: 4em;
 	color: var(--coolblue-wit);
 	bottom: 1.5em;
@@ -445,7 +430,7 @@ section>a>svg {
 }
 
 .homepagina>main>section:nth-of-type(3)>ul>li>a>article>img {
-	width: 18em;
+	min-width: 18em;
 	border-radius: 0.25em 0.25em 0em 0em;
 }
 
@@ -464,11 +449,6 @@ section>a>svg {
 }
 
 /* https://stackoverflow.com/questions/8684917/is-it-bad-practice-to-use-negative-margins-or-padding-in-css */
-
-.homepagina>main>section:nth-of-type(3)>ul>li>a>article>img {
-	margin: -1em;
-	margin-bottom: 0;
-}
 
 .homepagina>main>section:nth-of-type(3)>ul>li>ul>li {
 	font-size: 0.8em;
@@ -657,7 +637,7 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 .homepagina>main>section:nth-of-type(6)>ul>li>a>article {
-	width: 15em;
+	min-width: 15em;
 	padding: 1.6em;
 	display: grid;
 	grid-template-rows: 7em auto 6em auto auto auto auto;
@@ -754,8 +734,8 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	width: 1.2em;
 }
 
-.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(2),
-.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(3) {
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(2)>a,
+.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(3)>a {
 	gap: 0.75em;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -992,6 +972,11 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	margin: 0 0 0.5em 0;
 	position: sticky;
 	bottom: 1em
+}
+
+.winkelwagen>main>section:nth-of-type(2)>a:active,
+.winkelwagen>main>section:nth-of-type(2)>a:focus {
+	outline-color: var(--coolblue-oranje);
 }
 
 .winkelwagen>main>section:nth-of-type(2)>a>img {
@@ -1248,7 +1233,6 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 	}
 
 	header>nav:nth-of-type(2)>ul>li>a {
-		display: block;
 		color: var(--coolblue-blue);
 		font-size: 0.8em;
 		font-weight: 600;
@@ -1335,8 +1319,8 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 		grid-column: 1/3;
 	}
 
-	.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(2),
-	.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(3) {
+	.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(2)>a,
+	.homepagina>main>section:nth-of-type(7)>article>ul>li:nth-of-type(3)>a {
 		overflow: hidden;
 		border-radius: var(--border-radius-elementen);
 		grid-template-columns: 1fr;
@@ -1370,4 +1354,62 @@ met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat ni
 		width: 50%;
 		flex-direction: row;
 	}
+}
+
+/* Vanaf hier active / focus states  */
+
+a,
+input,
+button {
+	display: block;
+
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset */
+	outline-offset: -4px;
+}
+
+a:focus,
+a:active,
+input:focus,
+input:active,
+button:active,
+button:focus {
+	outline: 3px dotted var(--coolblue-wit);
+}
+
+a:hover,
+input:hover,
+button:hover {
+	outline: 2px solid var(--coolblue-wit);
+}
+
+form button:focus,
+form button:hover,
+form button:active,
+form input:focus,
+form input:hover,
+form input:active {
+	outline-color: var(--coolblue-zwart);
+}
+
+main a:focus,
+main a:active,
+main a:hover,
+main button:active,
+main button:focus,
+main button:hover,
+header>nav:nth-of-type(1)>ul>li:nth-of-type(3) a:focus,
+header>nav:nth-of-type(1)>ul>li:nth-of-type(3) a:active,
+header>nav:nth-of-type(1)>ul>li:nth-of-type(3) a:hover,
+header>nav:nth-of-type(2)>ul a:focus,
+header>nav:nth-of-type(2)>ul a:active,
+header>nav:nth-of-type(2)>ul a:hover,
+header>nav:nth-of-type(2)>ul button:active,
+header>nav:nth-of-type(2)>ul button:focus,
+header>nav:nth-of-type(2)>ul button:hover {
+	outline-color: var(--coolblue-zwart);
+}
+
+input:active,
+input:focus {
+	outline: 3px dotted var(--coolblue-blue);
 }
