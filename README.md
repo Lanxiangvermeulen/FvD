@@ -169,7 +169,7 @@ Deze week heeft de content erin zetten vooral prioriteit zodat ik daar later ver
 <details>
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
-Tijdens de derde week heb grootte stappen gemaakt. Mijn focus lag vooral op de content plaatsen en vormgeven.
+Tijdens de derde week heb grootte stappen gemaakt. Mijn focus lag vooral op het plaatsen van content en vormgeven.
 Het was een hele uitdaging en hieronder heb ik mijn bevindingen van de week uitgeschreven.
 
 Homepagina
@@ -189,9 +189,13 @@ Verder heb ik ontdekt dat je bij een button een aria label kan zetten zodat scre
 Ik vind het erg leuk om meer bezig te zijn met toegankelijkheid van website, het is belangrijk om iets te maken waar iedereen gebruik van kan maken. Dit vak zorgt ervoor dat ik mij meer bewust ben van verschillende groepen mensen waar je rekening mee moet houden.
 
 Carousel
+
 <img src="/readme-images/carousel1.png" width="375px" alt="Carousel HTML ">
+
 <img src="/readme-images/carousel2.png" width="375px" alt="Carousel javscript">
+
 <img src="/readme-images/carousel3.jpg" width="375px" alt="Carousel op de server">
+
 <img src="/readme-images/carousel4.png" width="375px" alt="Carousel begrijpen">
 
 categorien
@@ -213,11 +217,8 @@ Het kom werken section is op de coolblue website niet gecodeerd maar het is een 
 <img src="/readme-images/Komwerken-plaatje.png" width="375px" alt="Vacature van coolblue">
 <img src="/readme-images/Komwerken-plaatje2.png" width="375px" alt="Vacature van Coolblue">
 
-Grid werkte niet
-Ik probeerde een grid toe te passen op 
-
 Autorepeat
-
+Tijdens de werkgroep vroeg de docent bij een element waarom ik geen autorepeat had gebruikt. Ik begreep niet helemaal wat hij bedoelde en kwam je een soort shortcuts heb met grid.
 
 Winkelmandje
 Grid (Winkelwagen)
@@ -229,7 +230,7 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 
 ### Agenda voor meeting
 
-Voorbereidende vragen
+- Ik had wat vragen over
 
 ### Verslag van meeting
 
@@ -269,9 +270,10 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
 
 ### Stand van zaken
 
--media queries
-
-- focus op discability
+- media queries
+- hamburger menu / responsive
+- Winkelmand
+-
 
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 

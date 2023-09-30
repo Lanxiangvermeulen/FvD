@@ -17,27 +17,100 @@
       <nav>
         <ul>
           <li>
-            <button><img src="images/menu-icon.svg" alt="wel logo" /></button>
-          </li>
-
-          <li>
-            <button>
-              <img src="images/coolblue.png" alt="Het logo van Coolblue" />
+            <button aria-label="navigeer naar de producten">
+              <img src="images/header_hamburgermenu.svg" alt="" />
             </button>
           </li>
 
           <li>
+            <a href="#">
+              <img src="images/header_coolblue_logo.png" alt="" />
+            </a>
+          </li>
+
+          <li>
+            <!-- https://www.svgrepo.com/svg/80156/down-arrow -->
             <button>
-              <img src="images/account_goed.svg" alt="wel logo" />
+              Bekijk hele
+              <span
+                >assortiment<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#000000"
+                  height="800px"
+                  width="800px"
+                  version="1.1"
+                  id="Layer_1"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                >
+                  <path
+                    id="XMLID_225_"
+                    d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <ul class="verstopt-alles">
+              <li>
+                <a href="#"> Computers & tablets </a>
+              </li>
+              <li>
+                <a href="#"> Beeld & geluid </a>
+              </li>
+              <li>
+                <a href="#"> Telefonie </a>
+              </li>
+              <li>
+                <a href="#"> Huishouden & wonen </a>
+              </li>
+              <li>
+                <a href="#"> Keuken </a>
+              </li>
+              <li>
+                <a href="#"> Sport & verzorging </a>
+              </li>
+              <li>
+                <a href="#"> Foto & video </a>
+              </li>
+              <li>
+                <a href="#"> Navigatie, reizen & fashion </a>
+              </li>
+              <li>
+                <a href="#"> Tuin & klussen </a>
+              </li>
+              <li>
+                <a href="#"> Coolblue Energie </a>
+              </li>
+              <li>
+                <a href="#"> Acties </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">English</a>
+          </li>
+
+          <li>
+            <button aria-label="navigeer naar jouw account">
+              <img src="images/header_jouw_account.svg" alt="" />
             </button>
           </li>
+
           <li>
-            <button><img src="images/heart_goed.svg" alt="wel logo" /></button>
-          </li>
-          <li>
-            <button>
-              <img src="images/winkelmandje_goed.svg" alt="wel logo" />
+            <button aria-label="navigeer naar jouw favoriete producten">
+              <img src="images/header_favorieten.svg" alt="" />
             </button>
+          </li>
+
+          <li>
+            <a href="/winkelwagen.html">
+              <img src="images/header_winkelmandje.svg" alt="" />
+            </a>
           </li>
         </ul>
 
@@ -51,11 +124,159 @@
         <!-- Aria label  -->
         <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
         <form>
-          <input type="zoekbalk homepage" placeholder="Zoeken naar..." />
-          <button class="search-button" aria-label="Zoeken">
-            <img src="images/zoekeniconen.png" />
+          <input
+            for="zoekbalk homepage"
+            type="zoekbalk homepage"
+            placeholder="Zoeken naar..."
+          />
+          <button class="search-button" aria-label="Zoekopdracht versturen">
+            <!-- https://icons8.com/icons/set/search -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 50"
+              width="50px"
+              height="50px"
+            >
+              <path
+                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"
+              />
+            </svg>
           </button>
         </form>
+      </nav>
+
+      <div class="verstopt-alleen-mobiel"></div>
+
+      <nav class="verstopt-alleen-mobiel">
+        <ul>
+          <li>
+            <!-- <nav> tag mag headers bevatten -->
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav  -->
+            <h2>Menu</h2>
+            <button>x</button>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518828"
+              />Computers & tablets
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518832"
+              />Beeld & geluid
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518833"
+              />Telefonie
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518834"
+              />Huishouden & wonen
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518835"
+              />Keuken
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/534644"
+              />Sport en verzorging
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518838"
+              />Foto & video
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoono"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518837"
+              />Navigatie, reizen & fashion
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoono"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="https://image.coolblue.nl/transparent/content/518839"
+              />Tuin & klussen
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/555194"
+              />Coolblue Energie
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="https://image.coolblue.nl/transparent/content/518841"
+              />Acties
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -68,11 +289,11 @@
         <span>Productenpolonais </span>
         <ul>
           <li>
-            <img src="/images/check-mark.png" alt="vinkje" /> Voor
+            <img src="/images/tekst_carousel_checkmark.png" alt="" /> Voor
             <span> 23.59 </span> uur besteld, morgen <span>gratis</span> bezorgd
           </li>
           <li>
-            <img src="/images/check-mark.png" alt="vinkje" />
+            <img src="/images/tekst_carousel_checkmark.png" alt="" />
             <span> Gratis </span> ophalen bij PostNL-ophaalpunten of
             Coolblue-winkels.
           </li>
@@ -87,19 +308,22 @@
         <li>
           <section>
             <img src="images/camera.avif" alt="wel logo" />
-            <h3>
-              Canon EOS 2000D + EF-S 18-55mm f/3.5-5.6 DC III + EF 75-300mm
-              f/4-5.6 DC III
-            </h3>
+            <h3>Canon EOS 2000D + EF-S 18-55mm f/3.5-5.6 DC III</h3>
 
-            <button><img src="#" alt="kruis" /></button>
+            <button>
+              <img src="/images/winkelwagen_verwijderen.png" alt="kruis" />
+            </button>
             <!-- Alleen knoppen en inputs
             https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu -->
             <menu>
               <li><button>-</button></li>
-              <li><input type="number" /></li>
+              <li><input type="number" value="1" /></li>
               <li><button>+</button></li>
-              <li><button><3</button></li>
+              <li>
+                <button>
+                  <img src="/images/winkelwagen_heart.png" />
+                </button>
+              </li>
             </menu>
 
             <strong>€ 799,00</strong>
@@ -217,83 +441,13 @@
           </li>
         </ul>
 
-        <a><img src="images/betaalicoon.svg" /> In winkelwagen</a>
+        <a href="#"><img src="images/betaalicoon.svg" /> In winkelwagen</a>
 
         <ul>
           <li><img src="images/ideallogo.png" /></li>
-          <li><img src="images/ideallogo.png" /></li>
-          <li><img src="images/ideallogo.png" /></li>
-          <li><img src="images/ideallogo.png" /></li>
-        </ul>
-      </section>
-
-      <section class="hebjehieraangedacht">
-        <h2>Heb je hier al aan gedacht?</h2>
-
-        <ul>
-          <li>
-            <img src="images/batterij.avif" />
-            <h3>Jupio LP-E10 (1020 mAh)</h3>
-
-            <ul>
-              <li>
-                <span>Adviesprijs 609,-</span>
-              </li>
-
-              <li>
-                <strong>499,-</strong>
-                <button>WINKEL</button>
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <img src="images/batterij.avif" />
-            <h3>Jupio LP-E10 (1020 mAh)</h3>
-
-            <ul>
-              <li>
-                <span>Adviesprijs 609,-</span>
-              </li>
-
-              <li>
-                <strong>499,-</strong>
-                <button>WINKEL</button>
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <img src="images/batterij.avif" />
-            <h3>Jupio LP-E10 (1020 mAh)</h3>
-
-            <ul>
-              <li>
-                <span>Adviesprijs 609,-</span>
-              </li>
-
-              <li>
-                <strong>499,-</strong>
-                <button>WINKEL</button>
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <img src="images/batterij.avif" />
-            <h3>Jupio LP-E10 (1020 mAh)</h3>
-
-            <ul>
-              <li>
-                <span>Adviesprijs 609,-</span>
-              </li>
-
-              <li>
-                <strong>499,-</strong>
-                <button>WINKEL</button>
-              </li>
-            </ul>
-          </li>
+          <li><img src="images/winkelmand_mastercard.png" /></li>
+          <li><img src="images/winkelwagen_via_logo.png" /></li>
+          <li><img src="images/winkelwagen_apple_pay.png" /></li>
         </ul>
       </section>
     </main>
