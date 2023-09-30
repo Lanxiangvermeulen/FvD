@@ -164,6 +164,7 @@ header>nav:first-of-type>ul>li:nth-of-type(7)>a {
 	margin-left: 0.2em;
 }
 
+header>nav:first-of-type>ul>li>button>img,
 header>nav:first-of-type>ul>li:nth-of-type(7)>a>img {
 	width: 1.75em;
 }
@@ -237,7 +238,7 @@ header>nav:nth-of-type(2)>ul>li:first-of-type {
 	display: grid;
 	align-items: center;
 	justify-items: center;
-	grid-template-columns: auto 2em;
+	grid-template-columns: auto 2.5em;
 	background-color: var(--coolblue-blue);
 }
 
@@ -585,7 +586,7 @@ section>a>svg {
 	margin: 0 -0.8em;
 	padding: 1em;
 	padding-right: 0;
-	background-image: url("/images/aanbevelingen.avif");
+	background-image: url("/FvD/images/aanbevelingen.avif");
 	background-position: center;
 	background-repeat: no-repeat;
 	padding-top: 11em;
