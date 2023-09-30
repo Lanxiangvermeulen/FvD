@@ -789,7 +789,7 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 .winkelwagen>main>section:first-of-type>h2 {
-	color: #285DAB;
+	color: var(--coolblue-blue);
 	font-size: 1.4em;
 }
 
@@ -801,7 +801,10 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 .winkelwagen>main>section:first-of-type>span {
-	color: #0090e3;
+	color: var(--coolblue-blue);
+	font-style: italic;
+	font-weight: 600;
+
 	/* Zonder display block werkt de padding niet */
 	display: block;
 	font-family: 'kameron';
@@ -933,7 +936,8 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 .winkelwagen>main>ul>li>section>fieldset>ul>li>span {
-	color: #999999;
+	font-style: italic;
+	font-weight: 500;
 }
 
 /* https://stackoverflow.com/questions/4148499/how-to-style-a-checkbox-using-css */
@@ -1014,7 +1018,7 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 .winkelwagen_leeg>main>section>h2 {
-	color: #285dab;
+	color: var(--coolblue-blue);
 	font-size: 1.25em;
 	margin-right: auto;
 }
@@ -1028,7 +1032,7 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 .winkelwagen_leeg>main>section>div>a {
 	padding: 1.35em;
 	width: 100%;
-	background: rgb(0, 185, 0);
+	background: var(--coolblue-green);
 	color: var(--coolblue-wit);
 	font-weight: bold;
 	font-size: 0.8em;
@@ -1046,9 +1050,11 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 
 .winkelwagen_leeg>main>section>div>a:nth-of-type(2) {
 	background: var(--coolblue-wit);
-	color: rgb(0, 144, 227);
+	color: var(--coolblue-blue);
+
+	/* Ik heb dit met de inspector tool van de Coolblue website gekopieert */
 	box-shadow: inset 0 -2px 0 0 rgb(141, 200, 234);
-	border: 1px solid rgb(0, 144, 227);
+	border: 1px solid var(--coolblue-blue);
 }
 
 .winkelwagen_leeg>main>section>img {
