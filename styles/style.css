@@ -1,13 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 /**************/
-/* CSS REMEDY */
+/* CSS EMEDY */
 /**************/
 *, *::after, *::before {
 	box-sizing: border-box;
 }
-
-
-
-
 
 
 /*********************/
@@ -15,13 +13,18 @@
 /*********************/
 :root {
 
-	--coolblue-color: #0090e3;
+	--coolblue-blue: #0090e3;
 	--coolblue-grey: #f2f7fc;
+	--coolblue-omlijning-dikte: 1px solid #ddd;
+	--border-radius-elementen: 0.25em;
+	--coolblue-dark-grey: #ddd;
+	--coolblue-oranje: #FF6600;
+	--coolblue-green: #008500;
 }
 
-
-
-
+ul::-webkit-scrollbar {
+	display: none;
+}
 
 /****************/
 /* JOUW STYLING */
@@ -30,31 +33,25 @@
 /* jouw code */
 
 body {
+	color: #111111;
 	margin: auto;
+	font-family: "Open Sans";
 }
 
+/* Ik heb op de main een padding gedaan zodat er niet op elke element 
+apart een padding toevoegd hoeft te worden. Dit leek mij meer 
+toepasselijker omdat het anders te complex werd */
 
-/* Vanaf hier de navigatie */
-header>nav>ul {
-	display: flex;
-	margin: 0;
+main {
 	padding: 0 0.8em;
-	align-items: center;
-	overflow: hidden;
-	background-color: var(--coolblue-color);
-	height: 2.75em;
 }
 
-
-li {
+/* Dit is algemene styling */
+ul, menu {
+	margin: 0;
+	padding: 0;
 	list-style-type: none;
 }
-
-li:first-of-type {
-	margin-right: auto;
-}
-
-
 
 button {
 	background-color: transparent;
@@ -65,51 +62,1431 @@ img {
 	width: 100%;
 }
 
-/* Alle icoontjes in de nav */
-nav>ul>li {
+h2 {
+	font-size: 1em;
+}
+
+h3 {
+	font-size: 0.8em;
+	color: var(--coolblue-blue);
+}
+
+p {
+	font-size: 0.8em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+button:active,
+button:focus {
+	outline: 2px dotted #fff;
+}
+
+.verstopt-alles {
+	display: none;
+}
+
+/* Als iets deze class heeft is het alleen verstopt op mobiel en altijd zichtbaar op desktop */
+.verstopt-alleen-mobiel {
+	display: none;
+}
+
+/* https://webaim.org/techniques/css/invisiblecontent/ */
+h1 {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Vanaf hier de navigatie */
+header>nav:first-of-type>ul {
+	display: flex;
+	margin: 0;
+	align-items: center;
+	overflow: hidden;
+	background-color: var(--coolblue-blue);
+	height: 2.75em;
+	position: relative;
+}
+
+header>nav:first-of-type>ul>li {
 	width: 2.4em;
 }
 
+header>nav:first-of-type>ul>li:first-of-type {
+	margin-right: auto;
+}
+
 /* Coolblue logo */
-nav>ul>li:nth-of-type(2) {
+header>nav:first-of-type>ul>li:nth-of-type(2) {
 	width: 5.5em;
-	margin-right: 1em;
+
+	/* https://stackoverflow.com/questions/32206116/position-absolute-left50-does-not-position-span-in-the-middle */
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 
-nav>li {
+/* Verstop de "bekijk hele assortiment" op mobiel */
+header>nav:first-of-type>ul>li:nth-of-type(3),
+header>nav:first-of-type>ul>li:nth-of-type(4) {
+	display: none;
+}
+
+header>nav:first-of-type>ul>li:nth-of-type(7)>a {
+	display: block;
+	margin: 0.275em 0 0;
+	margin-left: 0.2em;
+}
+
+header>nav:first-of-type>ul>li:nth-of-type(7)>a>img {
+	width: 1.75em;
+}
+
+header>nav:first-of-type>form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--coolblue-grey);
 	height: 3em;
+	padding: 0.3em;
 }
 
 
-input {
+header>nav:first-of-type>form>input {
 	width: 95%;
 	height: 2.5em;
 	outline: none;
 	text-indent: 1em;
-	border: 1px solid #ddd;
-	border-radius: 0.25em;
+	border: var(--coolblue-omlijning-dikte);
+	border-radius: var(--border-radius-elementen);
+
 }
+
+header>nav:first-of-type>form>input:focus {
+	background-color: rgb(61, 61, 220);
+}
+
+header>nav:nth-of-type(2),
+header>div {
+	top: 0;
+	left: 0;
+	right: 3em;
+	bottom: 0;
+	z-index: 1;
+	position: fixed;
+}
+
+header>div {
+	right: 0;
+	opacity: 0.65;
+	background-color: #000;
+}
+
+header>nav:nth-of-type(2)>ul {
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+}
+
+header>nav:nth-of-type(2)>ul>li:first-of-type {
+	background-color: var(--coolblue-blue);
+}
+
+header>nav:nth-of-type(2)>ul>li {
+	border: var(--coolblue-dark-grey) 1px solid;
+	border-width: 0 0 1px;
+}
+
+header>nav:nth-of-type(2)>ul>li>a {
+	color: #000;
+	font-size: 0.8em;
+	text-decoration: none;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 6.5em auto 1.5em 1em;
+}
+
+header>nav:nth-of-type(2)>ul>li:first-of-type {
+	color: #fff;
+	height: 3.25em;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	grid-template-columns: auto 2em;
+}
+
+header>nav:nth-of-type(2)>ul>li>a>img:first-of-type {
+	width: 100%;
+	padding: 1em 1em 0 1em;
+}
+
+header>nav:nth-of-type(2)>ul>li>h2 {
+	margin: 0;
+}
+
+
+
+header form button {
+	background-color: var(--coolblue-blue);
+	height: 2.5em;
+	width: 3.5em;
+	border-radius: 0em 0.25em 0.25em 0em;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header form button svg {
+	height: 2.1em;
+	width: 1.5em;
+	fill: #fff;
+}
+
+
+header>ul:nth-of-type(1)>li {
+	font-size: 0.8em;
+	display: flex;
+	justify-content: center;
+	gap: 0.3em;
+}
+
+header>ul:nth-of-type(1)>li>img {
+	width: auto;
+	height: 1.5em;
+}
+
+header ul:nth-of-type(1) span {
+	font-weight: bold;
+	color: var(--coolblue-oranje);
+}
+
+header>ul:last-of-type,
+header>ul:nth-of-type(1) {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	overflow: scroll;
+}
+
+header>ul:nth-of-type(1) {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* ITS NOT WORKING  */
+header>ul:nth-of-type(1)>li,
+header>ul>li>img {
+	width: 100vw;
+	scroll-snap-align: center;
+}
+
+header>ul {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+
+
+
+section>a {
+	color: var(--coolblue-blue);
+	display: block;
+	margin-top: 1em;
+	font-size: 0.8em;
+}
+
+section>a>svg {
+	fill: var(--coolblue-blue);
+	width: 0.75em;
+	height: 0.75em;
+}
+
+
+
+
+/* Aanbevelingen start hier */
+.aanbevelingen ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1em;
+	overflow: scroll;
+	margin-left: -0.8em;
+	padding-left: 1em;
+}
+
+.aanbevelingen ul li {
+	border: var(--coolblue-omlijning-dikte);
+	border-radius: 0.2em;
+	width: 19em;
+	display: grid;
+	grid-template-columns: 1fr 7em;
+	padding: 0.5em;
+	position: relative;
+}
+
+.aanbevelingen ul li a:first-of-type img {
+	width: 3em;
+	margin-bottom: 1em;
+}
+
+.aanbevelingen article ul li:nth-of-type(2) a:last-of-type img {
+	width: 5em;
+}
+
+.aanbevelingen article ul li:nth-of-type(3) a:last-of-type img {
+	width: 4em;
+}
+
+.aanbevelingen h3 {
+	font-size: 0.6em;
+	margin: 0;
+}
+
+.aanbevelingen p {
+	margin: 0;
+	font-size: 0.7em;
+}
+
+.aanbevelingen span {
+	font-size: 0.6em;
+}
+
+.aanbevelingen strong {
+	font-size: 0.5em;
+}
+
+.aanbevelingen span:nth-of-type(3) {
+	right: 10em;
+	color: #fff;
+	bottom: 1.5em;
+	padding: 0.25em 0.35em;
+	position: absolute;
+	background: var(--coolblue-oranje);
+
+	font-size: 0.5em;
+	font-family: "Kameron";
+	font-weight: 700;
+	border-radius: var(--border-radius-elementen);
+}
+
 
 /* Blader door onze categorieën */
 
-section>h2 {
-	text-align: center;
-}
+/* Ik had hier eerst alleen een section staan, maar doordat ik later 
+nog meer sections wil toevoegen is dit super onoverzichtelijk en op deze
+manier zijn de codes makkelijker leesbaar voor mezelf en anderen. 
+Nog even checken bij de docent!! */
 
-section>ul {
-	display:grid;
-	grid-template-columns: 1fr 1fr;
-	padding: 0;
+.categorieen>ul {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	gap: 1em;
 }
 
-section>ul>li {
+.categorieen>ul>li {
 	background-color: var(--coolblue-grey);
-	height: 10em;
+	border: var(--coolblue-omlijning-dikte);
+	border-radius: 0.2em;
 }
 
+
+/* Ik wilde eerst de grid toepassen op de Li, maar dit bleek niet te werken  */
+/* omdat de Image en de H3 in de a zitten.  */
+
+.categorieen>ul>li>a {
+	display: grid;
+	height: 100%;
+	grid-template-rows: 1fr 1fr;
+}
+
+.categorieen>ul>li>a>h3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	font-size: 0.8em;
+	text-align: center;
+	background: #fff;
+	color: var(--coolblue-blue);
+}
+
+/* Ontdek verschillende merken  */
+.ontdek>ul {
+	gap: 1em;
+	margin: 0 -0.8em;
+	padding: 0 1em;
+	display: grid;
+	overflow: scroll;
+	scroll-snap-type: x mandatory;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+
+.ontdek>ul>li {
+	border: var(--coolblue-omlijning-dikte);
+	border-radius: var(--border-radius-elementen);
+	scroll-snap-align: center;
+}
+
+.ontdek>ul:nth-of-type(3)>li {
+	color: #262728;
+}
+
+.ontdek img {
+	width: 18em;
+	border-radius: 0.25em 0.25em 0em 0em;
+}
+
+/* .ontdek ul li ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.5em;
+} */
+
+.ontdek>ul>li>ul {
+	gap: 0.5em;
+	width: 80%;
+	padding: 1em;
+	padding-top: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ontdek>ul>li>a>article {
+	padding: 1em;
+	padding-bottom: 0;
+}
+
+/* https://stackoverflow.com/questions/8684917/is-it-bad-practice-to-use-negative-margins-or-padding-in-css */
+
+.ontdek>ul>li>a>article>img {
+	margin: -1em;
+	margin-bottom: 0;
+}
+
+
+/* .ontdek ul li ul li {
+	font-size: 0.8em;
+} */
+
+.ontdek>ul>li>ul>li {
+	font-size: 0.8em;
+	border: 1px solid #ddd;
+	border-width: 0 1px 0 0;
+	padding-right: 0.5em;
+}
+
+.ontdek>ul>li>ul>li:last-of-type {
+	border: none;
+}
+
+.ontdek>ul>li>ul>li>a {
+	color: var(--coolblue-blue);
+	text-decoration: none;
+}
+
+/* Start: dit heb je eerder bekeken */
+
+.onlangsbekeken {
+	margin: 0 -0.8em;
+	padding: 1em;
+	padding-right: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 8em;
+}
+
+.onlangsbekeken>ul>li {
+	position: relative;
+}
+
+.onlangsbekeken>ul>li>a>ul {
+	width: 11em;
+	display: flex;
+	position: absolute;
+	top: 15.25em;
+	text-wrap: nowrap;
+	gap: 0.2em;
+}
+
+.onlangsbekeken>ul>li>a>ul>li {
+	display: flex;
+	align-items: center;
+}
+
+.onlangsbekeken>ul>li>a>ul>li:last-of-type>span {
+	color: var(--coolblue-blue);
+	font-size: 0.8em;
+}
+
+
+.onlangsbekeken>ul>li>a>article {
+	width: 15em;
+	padding: 1em 1em 1em 0em;
+	flex-direction: column;
+	background: #fff;
+	gap: 0.2em;
+	display: grid;
+	grid-template-rows: 7em 1.5em 8em auto auto;
+}
+
+.onlangsbekeken>ul>li>a>article>img {
+	width: 8em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.onlangsbekeken>ul>li>a>article>h3 {
+	margin-bottom: 3.4em;
+	font-size: 0.9em;
+}
+
+.onlangsbekeken>ul>li>a>article>span:nth-of-type(1) {
+	color: var(--coolblue-oranje);
+	padding: 0.25em 0.35em;
+	margin-right: auto;
+	background: #fef1e8;
+	font-size: 0.8125em;
+	font-family: "Kameron";
+	font-weight: 700;
+	border-radius: var(--border-radius-elementen);
+}
+
+
+.onlangsbekeken>ul>li>a>article>ul {
+	display: flex;
+}
+
+.onlangsbekeken>ul>li>a>article>ul>li>img {
+	width: 1em;
+}
+
+.onlangsbekeken>ul {
+	gap: 2em;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: repeat(4, 1fr);
+	scroll-snap-type: x mandatory;
+	padding-right: 15em;
+	margin-bottom: -8em;
+
+}
+
+.onlangsbekeken>ul>li {
+	scroll-snap-align: start;
+}
+
+.onlangsbekeken ul {
+	display: grid;
+}
+
+.onlangsbekeken>ul>li>a>article>span:last-of-type {
+	color: var(--coolblue-green);
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+
+
+/* starten  */
+
+.studentenkoptekst {
+	height: 7em;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
+.studentenkoptekst h2,
+.studentenkoptekst p {
+	margin: 0.2em;
+}
+
+.studenten {
+	/* Wit ruimte die ik heb toegevoegd aan de body, heb ik hier 
+	uitgezet */
+	margin: 0 -0.8em;
+	padding: 1em;
+	padding-right: 0;
+	background-image: url(/images/aanbevelingen.avif);
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 11em;
+	margin-bottom: 12em;
+}
+
+/* DIT IS NIEUW */
+.studenten>ul>li {
+	position: relative;
+}
+
+.studenten>ul>li>a>ul {
+	width: 10em;
+	left: 1.6em;
+	display: flex;
+	position: absolute;
+	top: 14em;
+	gap: 0.2em;
+	text-wrap: nowrap;
+}
+
+.studenten>ul>li>a>ul>li {
+	display: flex;
+	align-items: center;
+}
+
+.studenten>ul>li>a>ul>li:last-of-type>span {
+	color: var(--coolblue-blue);
+	font-size: 0.8em;
+}
+
+
+
+/* DIT NIET MEER */
+
+.studenten>ul>li>a>article {
+	width: 15em;
+	padding: 1.6em;
+	display: grid;
+	grid-template-rows: 7em auto 6em auto auto auto auto;
+	flex-direction: column;
+	border-radius: var(--border-radius-elementen);
+	background: #fff;
+	border: var(--coolblue-omlijning-dikte);
+}
+
+.studenten>ul>li>a>article>img {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* DIT IS NIEUW */
+.studenten>ul>li>a>article>h3 {
+	margin-bottom: 4em;
+}
+
+/* Aanbiedingen kopje */
+.studenten>ul>li>a>article>span:nth-of-type(1) {
+	color: var(--coolblue-oranje);
+	padding: 0.25em 0.35em;
+	margin-right: auto;
+	background: #fef1e8;
+	font-size: 0.8125em;
+	font-family: "Kameron";
+	font-weight: 700;
+	border-radius: var(--border-radius-elementen);
+}
+
+.studenten>ul>li>a>article>span:nth-of-type(2) {
+	font-size: 0.8em;
+	opacity: 0.8;
+}
+
+.studenten>ul>li>a>article>span:nth-of-type(3) {
+	text-decoration: line-through;
+}
+
+
+.studenten>ul>li>a>article>ul {
+	display: flex;
+}
+
+.studenten>ul>li>a>article>ul>li>img {
+	width: 1em;
+}
+
+/* Het lukte mij niet om autorepeat toe te passen. De flexbox is in 
+dit geval ook korter en beter te begrijpen voor mij. */
+/* 
+Ik heb met student assistent gezeten en zij heeft mij laten zien 
+hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
+.studenten>ul {
+	gap: 2em;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: repeat(4, 1fr);
+
+	/* display:grid; 
+	grid-template-columns: 1fr, 1fr, 1fr, 1fr auto; */
+	/* 
+	display: flex; */
+
+	/* Ik heb dit van https://css-tricks.com/practical-css-scroll-snapping/ */
+	scroll-snap-type: x mandatory;
+	padding-right: 15em;
+	margin-bottom: -11em;
+
+}
+
+.studenten>ul>li {
+	scroll-snap-align: center;
+}
+
+.vacature ul {
+	display: grid;
+	gap: 1em;
+	padding-bottom: 1.2em;
+}
+
+.vacature article li:first-of-type {
+	background-color: var(--coolblue-blue);
+	border-radius: var(--border-radius-elementen);
+	padding: 2em;
+}
+
+.vacature article li:nth-of-type(1) h3 {
+	color: white;
+	font-size: 1.3em;
+	margin: 0;
+}
+
+.vacature article li:nth-of-type(1) h3 span {
+	color: var(--coolblue-oranje);
+	font-size: 1.3em;
+	margin-left: -0.2em;
+}
+
+.vacature article li:nth-of-type(1) h4 {
+	color: rgb(209, 239, 255);
+	margin: 0;
+}
+
+.vacature article li:nth-of-type(1) a {
+	display: flex;
+	align-items: center;
+	height: 2em;
+	color: white;
+	font-size: 0.8em;
+}
+
+.vacature article li:nth-of-type(1) p {
+	color: white;
+}
+
+.vacature article li:nth-of-type(2) p,
+.vacature article li:nth-of-type(3) p {
+	margin: 0;
+}
+
+.vacature article li:nth-of-type(1) a img {
+	width: 1.2em;
+}
+
+.vacature>article>ul>li:nth-of-type(2),
+.vacature>article>ul>li:nth-of-type(3) {
+	gap: 0.75em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2em 1fr;
+}
+
+.vacature>article>ul>li:nth-of-type(2) img,
+.vacature>article>ul>li:nth-of-type(3) img {
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.vacature>article>ul>li:nth-of-type(2) h3,
+.vacature>article>ul>li:nth-of-type(3) h3 {
+	margin: 0 1em;
+}
+
+.vacature>article>ul>li:nth-of-type(2) p,
+.vacature>article>ul>li:nth-of-type(3) p {
+	margin: 0 1em 1em;
+}
+
+
+/* Hier strart de winkelwagen pagina */
+
+.winkelwagen .vol {
+	margin: 0 -0.8em;
+	border: solid var(--coolblue-dark-grey);
+	padding: 1em;
+	border-width: 0 0 0.1em 0;
+}
+
+.winkelwagen .vol h2 {
+	color: #285DAB;
+	font-size: 1.4em;
+}
+
+
+.winkelwagen .vol h2,
+.winkelwagen .vol>span {
+	margin: 0;
+	line-height: 1;
+}
+
+.winkelwagen .vol>span {
+	color: #0090e3;
+	/* Zonder display block werkt de padding niet */
+	display: block;
+	font-family: 'kameron';
+	font-size: 1.1em;
+	padding-bottom: 0.5em;
+}
+
+.winkelwagen .vol img {
+	width: 1em;
+	margin-right: 0.3em;
+}
+
+.winkelwagen .vol ul li {
+	font-size: 0.8em;
+	margin-bottom: 0.5em;
+
+}
+
+.winkelwagen .vol span:first-child,
+.winkelwagen .vol ul li span {
+	color: var(--coolblue-oranje);
+	font-weight: bold;
+}
+
+
+.product {
+	margin: 0 -0.8em;
+	border: solid var(--coolblue-dark-grey);
+	padding: 1em;
+	border-width: 0 0 0.1em 0;
+}
+
+.product>li>section {
+	gap: 0.5em;
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-template-columns: 7em auto auto;
+}
+
+.product>li>section>button {
+	width: 2.5em;
+	margin-top: 1em;
+	margin-left: auto;
+	margin-bottom: auto;
+}
+
+.product>li>section>menu {
+	display: grid;
+	grid-column-start: 2;
+	grid-template-columns: 2em 2em 2em auto;
+}
+
+.product>li>section>menu>li>input,
+.product>li>section>menu>li>button {
+	color: var(--coolblue-blue);
+	border: solid var(--coolblue-dark-grey) 1px;
+	width: 100%;
+	padding: 0.5em;
+	font-weight: bold;
+}
+
+.product>li>section>menu>li>input {
+	color: #000;
+	font-weight: normal;
+	text-align: center;
+	border-width: 1px 0;
+}
+
+.product>li>section>menu>li:nth-of-type(1)>button {
+	border-radius: 4px 0px 0px 4px;
+}
+
+.product>li>section>menu>li:nth-of-type(3)>button {
+	border-radius: 0px 4px 4px 0px;
+}
+
+.product>li>section>menu>li:nth-of-type(4)>button {
+	width: 1.75em;
+	border: none;
+	padding: 0;
+
+	margin-top: 0.25em;
+	margin-left: 0.75em;
+}
+
+.product>li>section>img {
+	width: 6em;
+	height: 6em;
+	grid-row: 1/3;
+}
+
+
+
+
+.product>li>section>fieldset {
+	grid-row-start: 3;
+	grid-column: 1/3;
+}
+
+.product>li>section>fieldset>legend {
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.product>li>section>fieldset>ul {
+	gap: 0.5em;
+
+	/* DIT MOET GRID GEMAAKT WORDEN */
+	display: flex;
+	flex-direction: column;
+}
+
+.product>li>section>fieldset>ul>li {
+	gap: 0.125em;
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+.product>li>section>fieldset>ul>li>a,
+.product>li>section>fieldset>ul>li>label,
+.product>li>section>fieldset>ul>li>span {
+	grid-column-start: 2;
+	font-size: 0.8em;
+}
+
+.product>li>section>fieldset>legend {
+	margin-bottom: 0.5em;
+}
+
+.product>li>section>fieldset>ul>li>a {
+	color: var(--coolblue-blue);
+	text-decoration: none;
+}
+
+.product>li>section>fieldset>ul>li>span {
+	color: #999999;
+
+}
+
+
+
+/* https://stackoverflow.com/questions/4148499/how-to-style-a-checkbox-using-css */
+
+
+.product>li>section>fieldset>ul>li>input {
+	display: none;
+}
+
+.product>li>section>fieldset>ul>li>span:first-of-type {
+	margin: 0 0.25em 0 0;
+	grid-column-start: 1;
+	height: 1.25em;
+	width: 1.25em;
+	border: solid #BBBBBB 1px;
+	border-radius: 50px;
+	position: relative;
+}
+
+.product>li>section>fieldset>ul>li>input:checked+span {
+	border-color: var(--coolblue-blue);
+	background-color: var(--coolblue-blue);
+}
+
+.product>li>section>fieldset>ul>li>input:checked+span:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 1em;
+}
+
+.kosten {
+	display: inline;
+}
+
+.kosten>div {
+	/* margin: 0 -0.8em; */
+	/* padding: .4em 0.8em; */
+	/* box-shadow: 0 0 8px 0 #0003; */
+}
+
+.kosten>a {
+	gap: 1em;
+	height: 3.5em;
+	background-color: var(--coolblue-green);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--border-radius-elementen);
+	color: white;
+	font-weight: bold;
+	margin: 0 0 0.5em 0;
+	position: sticky;
+	bottom: 1em
+}
+
+.kosten>a>img {
+	width: 1.6em;
+}
+
+
+.kosten>ul:first-of-type {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+.kosten>ul:first-of-type>li:last-of-type>p {
+	text-align: end;
+}
+
+.winkelwagen_leeg main section {
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+}
+
+.winkelwagen_leeg main h2 {
+	color: #285dab;
+	font-size: 1.25em;
+	margin-right: auto;
+}
+
+.winkelwagen_leeg main p {
+	margin-top: 0;
+	margin-bottom: 2em;
+	margin-right: auto;
+}
+
+.winkelwagen_leeg main a {
+	padding: 1.35em;
+	width: 100%;
+	background: rgb(0, 185, 0);
+	color: #fff;
+	font-weight: bold;
+	font-size: 0.8em;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: inset 0 -2px 0 0 #090;
+}
+
+.winkelwagen_leeg main div {
+	width: 100%;
+	gap: 1em;
+	display: flex;
+	flex-direction: column;
+}
+
+.winkelwagen_leeg main a:nth-of-type(2) {
+	background: #fff;
+	color: rgb(0, 144, 227);
+	box-shadow: inset 0 -2px 0 0 rgb(141, 200, 234);
+	border: 1px solid rgb(0, 144, 227);
+}
+
+.winkelwagen_leeg main img {
+	margin-top: 1em;
+	width: 20em;
+}
+
+/* 
+Je kan hier beter display flex gebruiken, maar ik vond het zelf fijn om te experimenteren
+met GRID. Zodat ik goed kan zien wat je ermee kan doen. Wat werkt goed en wat niet?  */
+/* .betaalbutton {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.betaalbutton li:nth-of-type(2) {
+	grid-column-start: 2;
+}
+
+.betaalbutton li:nth-of-type(3) {
+	grid-column-start: 3;
+}
+
+.betaalbutton li:nth-of-type(4) {
+	grid-column-start: 4;
+}
+
+.betaalbutton li:nth-of-type(5) {
+	grid-column-start: 5;
+}
+
+.betaalbutton>li>img {
+	width: 80%;
+} */
+
+
+
+.kosten ul:last-of-type {
+	gap: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.kosten>ul:last-of-type>li>img {
+	width: 3em;
+	height: auto;
+}
+
+
+/* START MEDIA QUERIES */
+
+/* Grote Apparaten (Desktops) */
+@media (min-width: 992px) {
+
+	main {
+		padding: 0 1.2em;
+	}
+
+	.verstopt-alleen-mobiel {
+		display: block;
+	}
+
+	header>nav:first-of-type>ul {
+		padding: 0 1.2em;
+		height: 3.25em;
+		position: static;
+	}
+
+	header>nav>ul>li:first-of-type {
+		display: none;
+	}
+
+	header>nav:first-of-type>ul>li:nth-of-type(2) {
+		margin-right: 1em;
+
+		/* Styling weer terug zetten naar normale instellingen zodat het logo weer met de flex box meegaat  */
+		left: 0;
+		position: relative;
+		transform: none;
+
+	}
+
+	/* Laat "bekijk het hele assortiment" zien */
+	header>nav:first-of-type>ul>li:nth-of-type(3),
+	header>nav:first-of-type>ul>li:nth-of-type(4) {
+		width: auto;
+		display: block;
+	}
+
+	header>nav:first-of-type>ul>li:nth-of-type(3) {
+		margin-right: auto;
+	}
+
+	header>nav:first-of-type>ul>li:nth-of-type(3)>button {
+		color: #fff;
+		text-align: left;
+	}
+
+	header>nav:first-of-type>ul>li:nth-of-type(3)>button>span {
+		gap: 0.5em;
+		color: #fff;
+		display: flex;
+		font-weight: bold;
+		align-items: center;
+	}
+
+	header>nav:first-of-type>ul>li:nth-of-type(3)>button>span>svg {
+		width: 0.85em;
+		height: 0.85em;
+		fill: #fff;
+	}
+
+	header>nav:first-of-type>ul>li:nth-of-type(3)>ul {
+		padding: 0.5em 0;
+		position: absolute;
+		top: 100%;
+		width: 15em;
+		top: 3.25em;
+		left: 1em;
+		z-index: 4;
+		right: 0;
+		background-color: #fff;
+		box-shadow: 0 1px 5px #32323299;
+	}
+
+	header>nav:first-of-type>ul>li:nth-of-type(3)>ul>li {
+		padding: 0.5em 1em;
+	}
+
+	header>nav:first-of-type>ul>li:nth-of-type(3)>ul>li>a {
+		color: var(--coolblue-blue);
+		font-size: 0.85em;
+		text-decoration: none;
+	}
+
+	header>nav:first-of-type>ul>li:nth-of-type(4)>a {
+		color: #fff;
+		font-weight: bold;
+		margin-right: 1em;
+	}
+
+	header>nav:first-of-type>form {
+		top: 0;
+		left: 16em;
+		right: 15em;
+		height: 3.25em;
+		position: absolute;
+		background-color: transparent;
+	}
+
+	header>nav:first-of-type>form>input {
+		border-width: 1px 0 1px 1px;
+		border-radius: 0.25em 0em 0em 0.25em;
+	}
+
+	header>nav:first-of-type>form>button {
+		background-color: #fff;
+		border-radius: 0em 0.25em 0.25em 0em;
+		border: var(--coolblue-omlijning-dikte);
+		height: 2.5em;
+		border-width: 1px 1px 1px 0px;
+
+	}
+
+	header>nav:first-of-type>form>button>svg {
+		fill: var(--coolblue-blue);
+	}
+
+
+
+
+	header>nav:nth-of-type(2),
+	header>div {
+		position: relative;
+	}
+
+	header>nav:nth-of-type(2)>ul {
+		display: grid;
+		padding: 0 1.2em;
+		gap: 1em;
+		grid-template-columns: repeat(11, auto);
+		justify-items: center;
+		align-items: center;
+		background: var(--coolblue-grey);
+		text-align: center;
+		padding: 1.5em;
+	}
+
+	header>nav:nth-of-type(2)>ul>li {
+		border: none;
+	}
+
+	header>nav:nth-of-type(2)>ul>li>a {
+		display: block;
+		color: var(--coolblue-blue);
+		font-size: 0.8em;
+		font-weight: 600;
+	}
+
+	header>nav:nth-of-type(2)>ul>li>a>img,
+	header>nav:nth-of-type(2)>ul>li:first-of-type {
+		display: none;
+	}
+
+
+	header>ul:nth-of-type(1)>li {
+		text-wrap: nowrap;
+		font-size: 0.8em;
+		display: flex;
+		justify-content: center;
+		gap: 0.3em;
+	}
+
+
+	header ul:nth-of-type(1) span {
+		font-weight: bold;
+		color: var(--coolblue-oranje);
+		margin: 0;
+	}
+
+	header>ul:last-of-type,
+	header>ul:nth-of-type(1) {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+
+	}
+
+	header>ul:nth-of-type(1) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	header>ul:nth-of-type(1)>li {
+		width: auto;
+	}
+
+	header>ul>li>img {
+		width: 47vw;
+	}
+
+	header>ul {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	.aanbevelingen ul li {
+		width: 100%;
+	}
+
+	.categorieen>ul {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 1em;
+	}
+
+
+	.studenten {
+		margin: 0;
+		padding: 1em;
+		padding-left: 12em;
+		background: var(--coolblue-blue);
+		border-radius: 0.5em;
+	}
+
+	.studenten>ul {
+		gap: 1em;
+		margin: 0;
+		padding-right: 0;
+	}
+
+
+	.vacature>article>ul {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto;
+	}
+
+	.vacature ul>li:first-of-type {
+		grid-column: 1/3;
+	}
+
+	.vacature>article>ul>li:nth-of-type(2),
+	.vacature>article>ul>li:nth-of-type(3) {
+		overflow: hidden;
+		border-radius: var(--border-radius-elementen);
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, auto);
+		border: var(--coolblue-omlijning-dikte);
+	}
+
+
+	.winkelwagen main {
+		display: grid;
+		gap: 1em;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+	}
+
+	.winkelwagen main .vol {
+		grid-column: 1/3;
+	}
+
+	.winkelwagen main .product {
+		padding-top: 0;
+		border: none;
+	}
+
+
+
+	/* 
+	.studenten {
+	 Wit ruimte die ik heb toegevoegd aan de body, heb ik hier 
+		uitgezet
+		margin: 2 -0.8em;
+		padding: 1em;
+		padding-right: 0;
+		background-image: url(/images/aanbevelingen.avif);
+		background-color: red;
+		background-size: cover;
+		padding-top: 5em;
+		margin-bottom: 10em;
+	} */
+
+	/* DIT IS NIEUW */
+	/* .studenten>ul>li {
+		position: relative;
+	} */
+	/* 
+	.studenten>ul>li>a>ul {
+		width: 10em;
+		left: 1.6em;
+		display: flex;
+		position: absolute;
+		top: 12.75em;
+		text-wrap: nowrap;
+	} */
+
+
+	/* 
+
+	.studenten>ul>li>a>article {
+		width: 15em;
+		padding: 1.6em;
+		display: flex;
+		flex-direction: column;
+		border-radius: var(--border-radius-elementen);
+		background: #fff;
+		border: var(--coolblue-omlijning-dikte);
+	}
+
+	.studenten>ul>li>a>article>img {
+		width: 40%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	.studenten>ul>li>a>article>h3 {
+		margin-bottom: 4em;
+	}
+
+
+	.studenten>ul>li>a>article>span:nth-of-type(1) {
+		color: var(--coolblue-oranje);
+		padding: 0.25em 0.35em;
+		margin-right: auto;
+		background: #fef1e8;
+		font-size: 0.8125em;
+		font-family: "Kameron";
+		font-weight: 700;
+		border-radius: var(--border-radius-elementen);
+	}
+
+
+	.studenten>ul>li>a>article>ul {
+		display: flex;
+	}
+
+	.studenten>ul>li>a>article>ul>li>img {
+		width: 1em;
+	} */
+
+	.winkelwagen_leeg main p,
+	.winkelwagen_leeg main h2 {
+		margin-right: 0;
+	}
+
+	.winkelwagen_leeg main div {
+		width: 50%;
+		flex-direction: row;
+	}
+
+
+}

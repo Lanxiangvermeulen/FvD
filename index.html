@@ -1,71 +1,972 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="jouw naam">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="author" content="jouw naam" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Coolblue</title>
 
-    <link href="styles/style.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="styles/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
 
   <body>
-<header> 
-    <nav>
-      <ul>
-        <li> <button> <img src="images/menu-icon.svg" alt="wel logo"></button></li>
+    <h1>Coolblue, alles voor een glimlach</h1>
 
-        <li> <button> <img
-              src="images/coolblue.png"
-              alt="Het logo van Coolblue" /> </button>
+    <!-- BEGIN HEADER -->
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <button aria-label="navigeer naar de producten">
+              <img src="images/header_hamburgermenu.svg" alt="" />
+            </button>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="images/header_coolblue_logo.png" alt="" />
+            </a>
+          </li>
+
+          <li>
+            <!-- https://www.svgrepo.com/svg/80156/down-arrow -->
+            <button>
+              Bekijk hele
+              <span
+                >assortiment<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#000000"
+                  height="800px"
+                  width="800px"
+                  version="1.1"
+                  id="Layer_1"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                >
+                  <path
+                    id="XMLID_225_"
+                    d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <ul class="verstopt-alles">
+              <li>
+                <a href="#"> Computers & tablets </a>
+              </li>
+              <li>
+                <a href="#"> Beeld & geluid </a>
+              </li>
+              <li>
+                <a href="#"> Telefonie </a>
+              </li>
+              <li>
+                <a href="#"> Huishouden & wonen </a>
+              </li>
+              <li>
+                <a href="#"> Keuken </a>
+              </li>
+              <li>
+                <a href="#"> Sport & verzorging </a>
+              </li>
+              <li>
+                <a href="#"> Foto & video </a>
+              </li>
+              <li>
+                <a href="#"> Navigatie, reizen & fashion </a>
+              </li>
+              <li>
+                <a href="#"> Tuin & klussen </a>
+              </li>
+              <li>
+                <a href="#"> Coolblue Energie </a>
+              </li>
+              <li>
+                <a href="#"> Acties </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">English</a>
+          </li>
+
+          <li>
+            <button aria-label="navigeer naar jouw account">
+              <img src="images/header_jouw_account.svg" alt="" />
+            </button>
+          </li>
+
+          <li>
+            <button aria-label="navigeer naar jouw favoriete producten">
+              <img src="images/header_favorieten.svg" alt="" />
+            </button>
+          </li>
+
+          <li>
+            <a href="/winkelwagen.html">
+              <img src="images/header_winkelmandje.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+
+        <!-- Ik had hier eerst een Li-tag omheen gezet. Maar op de site van NDM stond dat 
+        een LI nooit los mag staan, er moet altijd een UL omheen. 
+        Hierdoor heb ik verder onderzoek gedaan en heb ik de formtag ontdekt. 
+        Een formtag is bedoeld voor het versturen van data. 
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li -->
+
+        <!-- Aria label  -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
+        <form>
+          <input
+            for="zoekbalk homepage"
+            type="zoekbalk homepage"
+            placeholder="Zoeken naar..."
+          />
+          <button class="search-button" aria-label="Zoekopdracht versturen">
+            <!-- https://icons8.com/icons/set/search -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 50"
+              width="50px"
+              height="50px"
+            >
+              <path
+                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"
+              />
+            </svg>
+          </button>
+        </form>
+      </nav>
+
+      <div class="verstopt-alleen-mobiel"></div>
+
+      <nav class="verstopt-alleen-mobiel">
+        <ul>
+          <li>
+            <!-- <nav> tag mag headers bevatten -->
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav  -->
+            <h2>Menu</h2>
+            <button>x</button>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518828"
+              />Computers & tablets
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518832"
+              />Beeld & geluid
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518833"
+              />Telefonie
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518834"
+              />Huishouden & wonen
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518835"
+              />Keuken
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/534644"
+              />Sport en verzorging
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518838"
+              />Foto & video
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoono"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/518837"
+              />Navigatie, reizen & fashion
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoono"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="https://image.coolblue.nl/transparent/content/518839"
+              />Tuin & klussen
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://image.coolblue.nl/transparent/content/555194"
+              />Coolblue Energie
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="https://image.coolblue.nl/transparent/content/518841"
+              />Acties
+              <img
+                src="/images/pijlnaarlinks_navigatie.png"
+                alt="doorverwijzing icoon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Ik heb ervoor gekozen om dit stukjes tekst direct in de Li toe te voegen
+      omdat het valt niet onder een P of header. Het helpt niet om te navigeren.
+      Het is eerder een extratje.  -->
+      <ul id="tekst-carousel">
+        <li>
+          <img src="/images/tekst_carousel_checkmark.png" alt="" /> Voor
+          <span> Voor 23.59 </span> uur besteld, morgen
+          <span>gratis</span> bezorgd
         </li>
-
-        <li> <button> <img src="images/account_goed.svg" alt="wel logo">
-          </button></li>
-        <li> <button> <img src="images/heart_goed.svg" alt="wel logo">
-          </button></li>
-        <li> <button> <img src="images/winkelmandje_goed.svg" alt="wel logo"></button></li>
+        <li>
+          <img src="/images/tekst_carousel_checkmark.png" alt="" />
+          <span> Gratis </span>ruilen
+        </li>
+        <li>
+          <img src="/images/tekst_carousel_checkmark.png" alt="" />
+          <span> Beste</span> winkelweb 2022
+        </li>
       </ul>
 
-      <li> <input type="zoekbalk homepage"  placeholder="Zoeken naar..."></li>
-    </nav>
-  </header>
+      <ul id="foto-carousel">
+        <!-- Ik had liever de beide afbeeldingen geprogrammeerd met HTML en CSS. Het zijn twee advertenties die verder niet essentieel zijn voor de website dus ik 
+heb ervoor gekozen om de carousel wel te maken, maar de content op een afbeelding te houden. -->
+        <li>
+          <img
+            src="/images/header_foto2.png"
+            alt="Zwarte was machine van Samsung afgeprijsd van €949 naar €819"
+          />
+        </li>
+        <li>
+          <img
+            src="/images/header_foto1.avif"
+            alt="Pre-order voor de grijze titanium iphone 15 "
+          />
+        </li>
+      </ul>
+    </header>
 
+    <!-- START MAIN -->
+    <main>
+      <!-- START AANBEVELINGEN -->
+      <section class="aanbevelingen">
+        <article>
+          <ul>
+            <li>
+              <a href="#">
+                <img
+                  src="images/aanbevelingen_chromebook_logo.png"
+                  alt="Logo van Chromebook"
+                />
+                <h3>Acer Chromebook Spin 513 CP...</h3>
 
-  <!-- Voor de categorieën heb ik ervoor gekozen om een UL te gebruiken omdat 
-  de content niet direct linkt naar een artikel. Ook zijn de elementen erg simpel
-  en werkt makkelijker om er een UL van te maken. -->
-<section> 
-  <h2> Blader door onze categorieën
-  </h2>
-  <ul> 
-    <li> <a> <img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets </a>
-    </li>
+                <p>Nu met €70,- korting.</p>
+                <span>Adviesprijs</span>
+                <span>499,-</span>
+                <strong>429,-</strong>
 
-    <li> <a> <img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets</a>
-    </li>
+                <span>Aanbieding</span>
+              </a>
 
-    <li> <a><img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets </a>
-    </li>
+              <a href="#">
+                <div>
+                  <img
+                    src="images/aanbevelingen_laptop.png"
+                    alt="De grijs gekleurde Acer Chromebook spin 513 C"
+                  />
+                </div>
+              </a>
+            </li>
 
-    <li> <a> <img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets
-    </a>
-    </li>
+            <li>
+              <a href="#">
+                <img
+                  src="images/aanbevelingen_samsung_logo.png"
+                  alt="Logo van Samsung"
+                />
+                <h3>Samsung WW90TA049AE EcoBubble</h3>
 
-    <li> <a><img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets </a>
-    </li>
+                <p>Nu met €70,- korting.</p>
+                <span>Adviesprijs</span>
+                <span>625,-</span>
+                <strong>559,-</strong>
 
-    <li> <a> <img src="images/Beeldscherm.jpg" alt="wel logo"> Computers & Tablets
-    </a>
-    </li>
+                <span> nu met 15% korting</span>
+              </a>
 
-  </ul>
+              <a href="#">
+                <div>
+                  <img
+                    src="images/aanbevelingen_wasmachine.avif"
+                    alt="Witte samsung wasmachine WW90TA049AE EcoBubble"
+                  />
+                </div>
+              </a>
+            </li>
 
-</section>
-  
+            <li>
+              <a href="#">
+                <img
+                  src="images/aanbevelingen_philips_logo.png"
+                  alt=" Philips logo"
+                />
+                <h3>Philips FC9334/09 PowerPro Compact</h3>
+
+                <p>Nu met €70,- korting.</p>
+                <strong> €150,- </strong>
+              </a>
+
+              <a href="#">
+                <div>
+                  <img
+                    src="images/aanbevelingen_stofzuiger.avif"
+                    alt=" De Philips FC9334/09 PowerPro Compact stofzuiger in het zwart met blauwe details"
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- START CATEGORIEEN -->
+      <!-- Voor de categorieën heb ik ervoor gekozen om een UL te gebruiken omdat 
+      de content niet direct linkt naar een artikel. Ook zijn de elementen erg simpel
+      en werkt makkelijker om er een UL van te maken. -->
+      <section class="categorieen">
+        <h2>Blader door onze categorieën</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <img
+                src="images/categorieen_computers_tablets.jpg"
+                alt=" HP laptop met grijze toetsenbord en zwarte tablett"
+              />
+              <h3>Computers & Tablets</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img
+                src="images/categorieen_beeld_geluid.jpg"
+                alt=" Televesiescherm met daarvoor een koptelefoon"
+              />
+              <h3>Beeld & geluid</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img
+                src="images/categorieen_telefonie.jpg"
+                alt="Groene en zwarte telefoon"
+              />
+              <h3>Telefonie</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img
+                src="images/categorieen_huishuiden_wonen.jpg"
+                alt="Witte wasmachine en zwarte stofzuiger"
+              />
+              <h3>Huishouden & wonen</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img
+                src="images/categorieen_keuken.jpg"
+                alt="Koelkast en keukengerei"
+              />
+              <h3>Keuken</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img
+                src="images/categorieen_sport_verzorging.jpg"
+                alt="Scheerapparaat en horloge "
+              />
+              <h3>Sport & verzorging</h3>
+            </a>
+            <!-- </li>
+          <li> <a> bekijk het volledige assortiment</a>
+          </li> -->
+          </li>
+        </ul>
+
+        <a href="#"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            fill="#000000"
+            height="800px"
+            width="800px"
+            version="1.1"
+            id="Layer_1"
+            viewBox="0 0 330 330"
+            xml:space="preserve"
+          >
+            <path
+              id="XMLID_222_"
+              d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001  c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213  C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606  C255,161.018,253.42,157.202,250.606,154.389z"
+            />
+          </svg>
+          Bekijk het volledige assortiment
+        </a>
+      </section>
+
+      <!-- START ONTDEK DE MERKEN-->
+      <section class="ontdek">
+        <h2>Ontdek de verschillende merken</h2>
+
+        <ul>
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  src="images/ontdek_apple_apparaten.avif"
+                  alt="Alle populaire Apple apparaten op een rij"
+                />
+
+                <h3>Bekijk de wereld van Apple</h3>
+
+                <p>
+                  Bij Apple weet je een ding zeker: alles werkt zoals het hoort.
+                  Dankzij het Apple ecosysteem werken de producten onderling
+                  naadloos met elkaar samen.
+                </p>
+              </article>
+            </a>
+
+            <ul>
+              <li><a href="#"> Macbook</a></li>
+              <li><a href="#"> Mac</a></li>
+              <li><a href="#"> Ipad</a></li>
+              <li><a href="#"> Apple watch</a></li>
+              <li><a href="#"> Iphone</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  src="images/ontdek_samsung_apparaten.avif"
+                  alt="Alle populaire Samsung apparaten op een rij"
+                />
+                <h3>Bekijk de wereld van Samsung</h3>
+
+                <p>
+                  Bij Samsung vind je allerlei producten: van smartphones tot
+                  televisies. Samsung producten zijn van goede kwaliteit en
+                  bevatten de nieuwste functies.
+                </p>
+              </article>
+            </a>
+            <ul>
+              <li><a href="#"> Samsung smartphones</a></li>
+              <li><a href="#"> Samsung wasmachines</a></li>
+              <li><a href="#"> Samsung tv's</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  src="images/ontdenk_sonos_apparaten.avif"
+                  alt="Alle populaire Sonos apparaten op een rij"
+                />
+                <h3>Bekijk de wereld van Sonos</h3>
+
+                <p>
+                  Als je aan goed geluid denkt, dan denk je aan Sonos. Ontdek
+                  hoe jij in elke kamer het beste van muziek en film kunt
+                  krijgen.
+                </p>
+              </article>
+            </a>
+            <ul>
+              <li><a href="#"> Sonos Soundbars</a></li>
+              <li><a href="#"> Sonos Draadloze Speakers</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <a href="#"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            fill="#000000"
+            height="800px"
+            width="800px"
+            version="1.1"
+            id="Layer_1"
+            viewBox="0 0 330 330"
+            xml:space="preserve"
+          >
+            <path
+              id="XMLID_222_"
+              d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001  c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213  C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606  C255,161.018,253.42,157.202,250.606,154.389z"
+            />
+          </svg>
+          Bekijk alle merken
+        </a>
+      </section>
+
+      <!-- START ONLANGS BEKEKEN -->
+      <section class="onlangsbekeken">
+        <h2>Dit heb je eerder bekeken</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  src="images/onlangsbekeken_product_koffieautomaat.avif"
+                  alt="zwarte Magimix Nespresso CitiZ M196 CN koffiemachine"
+                />
+                <span> 100 koffiecups voor € 5,-</span>
+                <h3>Magimix Nespresso CitiZ M196 CN Zwart</h3>
+
+                <strong>€149,-</strong>
+                <span> Morgen bezorgd</span>
+              </article>
+            </a>
+
+            <a
+              href="#"
+              aria-label="5 van de 5 sterren gebaseerd op 751 reviews"
+            >
+              <ul>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <span> 751 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  src="images/onlangsbeken_product_canon_camera.avif"
+                  alt="zwarte canon EOS 2000D camera met EF-S 18-55mm f/3.5-5.6 DC III en EF 75-300mm
+                  f/4-5.6 DC III lenzen  "
+                />
+                <span> 100 koffiecups voor € 5,-</span>
+                <h3>
+                  Canon EOS 2000D + EF-S 18-55mm f/3.5-5.6 DC III + EF 75-300mm
+                  f/4-5.6 DC III
+                </h3>
+
+                <strong>€149,-</strong>
+                <span> Morgen bezorgd</span>
+              </article>
+            </a>
+
+            <a
+              href="#"
+              aria-label="5 van de 5 sterren gebaseerd op 751 reviews"
+            >
+              <ul>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <span> 751 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" aria-label="5 out of 5 stars based on 751 reviews">
+              <article>
+                <img
+                  src="images/onlangsbeken_product_lg_televisie.avif"
+                  alt="Een zwarte LG monitor met grijze stang"
+                />
+                <span>onweerstaanbaar</span>
+                <h3>LG 27UL550P-W - 27 inch - 3840 x 2160 (Ultra HD 4K)</h3>
+
+                <strong>€149,-</strong>
+                <span> Morgen bezorgd</span>
+              </article>
+            </a>
+            <a
+              href="#"
+              aria-label="5 van de 5 sterren gebaseerd op 751 reviews"
+            >
+              <ul>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <span> 751 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Nadat ik dit had gemaakt kwam ik erachter dat dit 
+      niet zo goed had opgelost. Achteraf dacht ik dat met grid 
+      een nettere manier zou zijn. IOM docent heb ik besloten
+      om dit zo te laten en te focussen op Accessibility -->
+
+      <!-- START ONZE TOP DEALS -->
+      <section class="studentenkoptekst">
+        <h2>Heb jij onze topdeals al gezien?</h2>
+        <p>
+          We hebben de beste aanbiedingen voor je op een rijtje gezet. Sla snel
+          je slag.
+        </p>
+      </section>
+      <section class="studenten">
+        <ul>
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  src="images/topdeals_product_horloge.avif"
+                  alt="een Samsung Galaxy Watch5 Pro 45mm in het zwart"
+                />
+                <span>aanbieding</span>
+                <h3>Samsung Galaxy Watch5 Pro Zwart 45mm</h3>
+
+                <span>Adviesprijs</span>
+                <span>609,-</span>
+                <strong>499,-</strong>
+
+                <p>De zachtsluitende ovendeur klapt nooit te hard dicht.</p>
+              </article>
+            </a>
+
+            <a href="#" aria-label="5 van de 5 sterren gebaseerd op 5 reviews">
+              <ul>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  src="images/topdeals_product_oven.avif"
+                  alt="zwarte Beko FSM67010GX oven met grijze details"
+                />
+                <span>aanbieding</span>
+                <h3>Beko FSM67010GX</h3>
+
+                <!-- Ik moet checken met docent of hier een strong tag gebruikt mag worden of een span -->
+                <!-- In overleg met docent strong gekozen -->
+
+                <span>Adviesprijs</span>
+                <span>609,-</span>
+                <strong>499,-</strong>
+
+                <p>De zachtsluitende ovendeur klapt nooit te hard dicht.</p>
+              </article>
+            </a>
+
+            <a href="#" aria-label="5 van de 5 sterren gebaseerd op 5 reviewss">
+              <ul>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <!-- COOLBLUE IS ILLEGAL!! 
+                  Coolblue heeft een link in een grotere link geplaatst.
+                  Als ik dit google geven ze aan dat dit niet hoort.
+                  Dus vedorie coolblue... 
+                https://stackoverflow.com/questions/9882916/are-you-allowed-to-nest-a-link-inside-of-a-link -->
+
+                  <!-- De twee elementen een A omheen zetten en dan met grid en z-index en 
+                positie positioneren, op advies van docent -->
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  src="images/topdeals_product_koptelefoon.avif"
+                  alt="een zwarte SteelSeries Arctis Nova Pro koptelefoon met externe microfoon"
+                />
+                <span>aanbieding</span>
+                <h3>SteelSeries Arctis Nova Pro</h3>
+
+                <span>Adviesprijs</span>
+                <span>609,-</span>
+                <strong>499,-</strong>
+
+                <p>De zachtsluitende ovendeur klapt nooit te hard dicht.</p>
+              </article>
+            </a>
+
+            <a href="#" aria-label="5 van de 5 sterren gebaseerd op 5 reviews">
+              <ul>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  src="images/topdeals_product_telefoon.avif"
+                  alt="een Samsung Galaxy S23 256GB in het zwart  "
+                />
+                <span>aanbieding</span>
+                <h3>Samsung Galaxy S23 256GB Zwart 5G</h3>
+
+                <span>Adviesprijs</span>
+                <span>609,-</span>
+                <strong>499,-</strong>
+
+                <p>De zachtsluitende ovendeur klapt nooit te hard dicht.</p>
+              </article>
+            </a>
+            <a href="#" aria-label="5 van de 5 sterren gebaseerd op 5 reviews">
+              <ul>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <img src="images/onlangsbeken_review_ster.svg" alt="" />
+                </li>
+                <li>
+                  <span>5 reviews</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- START VACATURE -->
+      <section class="vacature">
+        <h2>Werken bij coolblue</h2>
+        <article>
+          <ul>
+            <li>
+              <h3>WERKEN BIJ COOLBLUE <span> .</span></h3>
+              <h4>Vrienden gezocht.</h4>
+              <p>
+                Wil je weten wat werken bij cool blue écht zo leuk maakt? Lees
+                dan alles over onze vrienden cultuur.
+              </p>
+              <a href="#">
+                <img src="/images/vacature_arrow_up.png" alt="" /> Lees meer
+              </a>
+            </li>
+
+            <li>
+              <img
+                src="https://image.coolblue.nl/transparent/max/422x390/content/fc77f8f55705aef72f225db5e1ab477f"
+                alt=""
+              />
+
+              <h3>Kom werken bij coolblue</h3>
+              <p>
+                Wil jij de zwarte band klanten blij maken? Solliciteer dan op
+                een van onze geweldige banen.
+              </p>
+            </li>
+
+            <li>
+              <img
+                src="https://image.coolblue.nl/transparent/max/422x390/content/86cf8eaa09dc4952690f3918119893da"
+                alt=""
+              />
+
+              <h3>Word bezorger</h3>
+              <p>
+                Wil jij met je vrienden werken en € 15,04 per gewerkt uur
+                verdienen? Start dan als bezorger.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
 
     <script defer src="scripts/script.js"></script>
   </body>
