@@ -107,12 +107,14 @@ Hieronder heb ik mijn bevindingen uitgeschreven:
 ### Homepagina schetsen
 
   <img src="/readme-images/breakdownschetsen3.PNG" width="375px" alt="breakdown van de hele pagina">
-    <img src="/readme-images/breakdownschetsen4.PNG" width="375px" alt="breakdown van de hele pagina">
+  
+  <img src="/readme-images/breakdownschetsen4.PNG" width="375px" alt="breakdown van de hele pagina">
 
 ### Winkelwagen schetsen
 
   <img src="/readme-images/breakdownschetsen1.JPG" width="375px" alt="breakdown van de hele pagina">
-    <img src="/readme-images/breakdownschetsen2.JPG" width="375px" alt="breakdown van de hele pagina">
+  
+  <img src="/readme-images/breakdownschetsen2.JPG" width="375px" alt="breakdown van de hele pagina">
 
 
 </details>
@@ -184,16 +186,19 @@ Voor de categorieën heb ik ervoor gekozen om er alleen een UL-tag om de items h
 studenten
 Coolblue heeft voor de studenten een speciale deal. Toen ik eraan begon dacht ik dat wat ik had gedaan de beste oplossing was, maar ik kwam er algauw achter dat ik beter met Grid had kunnen werken. Maar doordat ik al zo ver was gekomen, heb ik ervoor gekozen om het op te lossen met een twee apparte sections waardoor het kopje boven de afbeelding komt te staan. Dit is zeker niet de meest elegante manier, maar gezien de tijd heb ik ervoor gekozen om te gaan focussen op de accessibility. Mocht ik nog meer tijd hebben zou ik dus het kopje, achtergrond foto en de content verdelen in een grid om het beter te positoneren.
 <img src="/readme-images/studenten.png" width="375px" alt="Categorien html ">
+
 <img src="/readme-images/studenten2.png" width="375px" alt="Categorien html ">
 
 Coolblue is illegal!
 Tijdens het programmeren liep ik erg vast bij de product elementen. Want coolblue had twee verschillende linkejs. Als je op het product blokje klikt ga je naar de pagina met meer informatie over het product, maar als je op de reviews klikt ga je naar de review pagina. Maar de review link stond in een blokje die ook een link was, en ik begreep niet hoe ze dit hadden gedaan. Na wat uitzoek werk, kwam ik erachter dat ze een link in een link hadden gestopt. Dit wilde ik direcht namaken, Ik ging naar de NDM website om naar voorbeelden te zoeken, maar toen ik het ging googlelen kwam er al snel naar boven dat dit echt niet kan en alles behalve semantisch is. Dus hierdoor moest ik een andere oplossing zoeken. Mijn oplossing was om twee apparte A-tjes aan te maken in de een list-item.
 <img src="/readme-images/Illegal.png" width="375px" alt="Categorien html">
+
 <img src="/readme-images/Illegal2.png" width="375px" alt="Categorien op de server">
 
 Kom werken!
 Het kom werken section is op de coolblue website niet gecodeerd maar het is een plaatje en het heeft geen alttext. Hierdoor kunnen mensen met een screenreader niet weten dat je dus kan solliciteren. Dit lijkt mij totaal niet vriendelijk, dus hierdoor heb ik ervoor gekozen om te programmeren.
 <img src="/readme-images/Komwerken-plaatje.png" width="375px" alt="Vacature van coolblue">
+
 <img src="/readme-images/Komwerken-plaatje2.png" width="375px" alt="Vacature van Coolblue">
 
 Autorepeat
@@ -335,6 +340,7 @@ Het is gelukt! Maar het process om dit te maken was niet leuk. Ik vond het best 
 
 - Mijn website is responsive! Ik ben hier echt mega trots op!! Het was vooral in mijn css nogal puzzelen omdat het bestand nog langer word door media quaries, maar het was echt mega leuk toen alles begon te werken
 <img src="readme-images/responsive_telefoon.png" width="375px" alt="bummer">
+
 
 <img src="/readme-images/responsive_laptop.png" width="375px" alt="bummer">
 
