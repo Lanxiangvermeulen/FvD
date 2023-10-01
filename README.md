@@ -277,7 +277,7 @@ Wave is een website die je code checked of ze toegankelijk genoeg zijn en of er 
 - Font groote, op sommige plekken was mijn font slecht leesbaar. Deze heb ik aangepast naar een grotere en dikkere font
 - Kleuren contrast was op sommige plekken niet goed, vooral lichtblauw en lichtoranje kreeg veel meldingen
 - Op sommige plekken was mijn alt-text te lang. Ik heb dit aangepast naar een wat kortere tekst.
-<img src="/readme-images/wave_onderzoek" width="375px" alt="Wave website checker foto">
+<img src="/readme-images/wave_onderzoek.png" width="375px" alt="Wave website checker foto">
 
 
 </details>
@@ -298,9 +298,9 @@ Wanneer je op het hamburger-icoontje tikt, wordt de klasse ”verstopt-alleen-mo
 Ik heb tijdens mijn vorige project een hamburger menu gemaakt, dus dit ging opzich wel soepel met javascript. 
 Met een EventListener en een variabel was dit erg goed te doen. Alleen ik raakte erg in de waar omdat ik de hamburgermenu ook responsive wilde maken en het daar ineens heel anders werd. Ik kon niet alleen display:none doen omdat de hamburger menu op laptop openklapt, maar zoals je eerder hebt gelezen heb ik dit opgelost om in de media quaries een andere stijling te geven. 
 
-<img src="/hamburger_menu_uitleg.png" width="375px" alt="Hamburger menu uitleggen HTML">
+<img src="/readme-images/hamburger_menu_uitleg.png" width="375px" alt="Hamburger menu uitleggen HTML">
 
-<img src="/hamburger_menu_java.png" width="375px" alt="Hamburger menu uitleggen javascript">
+<img src="/readme-images/hamburger_menu_java.png" width="375px" alt="Hamburger menu uitleggen javascript">
 
 
 Uitleg toggle functie (geschreven met ChatGPT) 
@@ -316,7 +316,7 @@ In de winkelwagen hebben we verschillende elementen: een minknop, een plusknop, 
 
 Het is gelukt! Maar het process om dit te maken was niet leuk. Ik vond het best complex omdat ik meerdere elementen wilden laten werken. Maar chatGPT heeft mij goed geholpen met het begrijpen van de code. In het begin kwam ik er echt niet uit, maar uiteindelijk is het mij toch gelukt om het werkend te krijgen en ik kan het zelfds uitleggen! 
 
-<img src="/winkelwagen.png" width="375px" alt="Winkelwawgen uitgwerkt">
+<img src="/readme-images/winkelwagen.png" width="375px" alt="Winkelwawgen uitgwerkt">
 
 
 </details>
@@ -336,26 +336,26 @@ Het is gelukt! Maar het process om dit te maken was niet leuk. Ik vond het best 
 - Mijn website is responsive! Ik ben hier echt mega trots op!! Het was vooral in mijn css nogal puzzelen omdat het bestand nog langer word door media quaries, maar het was echt mega leuk toen alles begon te werken
 <img src="readme-images/responsive_telefoon.png" width="375px" alt="bummer">
 
-<img src="responsive_laptop.png" width="375px" alt="bummer">
+<img src="/readme-images/responsive_laptop.png" width="375px" alt="bummer">
 
 Werken met ROOT was ook echt heel fijn! Aan het einde wilde ik de coolblue kleuren aanpassen en dat ging zo gemakkelijk! Dus dat was super nice! 
-<img src="readme-images/root.png" width="375px" alt="bummer">
+<img src="/readme-images/readme-images/root.png" width="375px" alt="bummer">
 
 Het toevoegen van een focus en active state ging ook erg goed. Ik vond het ook erg leuk om te ontdekken wat je allemaal hebt. Zo heb ik ook een hover toegevoegd om zo de toegankelijkheid te verbeteren
-<img src="readme-images/focus_active.png" width="375px" alt="bummer">
+<img src="/readme-images/readme-images/focus_active.png" width="375px" alt="bummer">
 
 
 ### Dit was lastig/Is niet gelukt:
 
 - Ik vond alles met javascript super lastig en hierdoor wel wat minder leuk om te doen. Ik heb eigenlijk bij elk javascript onderdeeld hulp gehad. En nog steeds vind ik het vrij lastig om het te begrijpen.
-<img src="readme-images/javascript.png" width="375px" alt="bummer">
+<img src="/readme-images/readme-images/javascript.png" width="375px" alt="bummer">
 
 -Vanwege de tijd kon ik niet een footer maken met inschrijven voor een nieuwsbrief
 
 - In de winkelwagen kan je alleen optellen, niet aftrekken. Ik wist even niet meer hoe ik dat snel kon oplossen
 
 - Het behouden van een opgeruimd bestand, dit vond ik oprecht lastig. Op een gegeven moment had ik 1000+ lijnen css, en had ik geen overzicht meer. Het heeft mij een halve dag gekost om dit allemaal op te ruimen.
-<img src="readme-images/winkelwagen_nietgelukt.png" width="375px" alt="bummer">
+<img src="/readme-images/readme-images/winkelwagen_nietgelukt.png" width="375px" alt="bummer">
 
 Bij een element in mijn code wilde ik het graag herschrijven omdat mijn structuur niet goed was. Mijn doel was om dit te doen nadat de toegankelijkheid van mijn site verbeterd was. Maar dit heeft veel meer tijd gekost dan verwacht. Hierdoor heb ik dit niet kunnen verbeteren. 
 <img src="readme-images/foutje_structuur.png" width="375px" alt="bummer">
