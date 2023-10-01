@@ -107,12 +107,14 @@ Hieronder heb ik mijn bevindingen uitgeschreven:
 ### Homepagina schetsen
 
   <img src="/readme-images/breakdownschetsen3.PNG" width="375px" alt="breakdown van de hele pagina">
-    <img src="/readme-images/breakdownschetsen4.PNG" width="375px" alt="breakdown van de hele pagina">
+  
+  <img src="/readme-images/breakdownschetsen4.PNG" width="375px" alt="breakdown van de hele pagina">
 
 ### Winkelwagen schetsen
 
   <img src="/readme-images/breakdownschetsen1.JPG" width="375px" alt="breakdown van de hele pagina">
-    <img src="/readme-images/breakdownschetsen2.JPG" width="375px" alt="breakdown van de hele pagina">
+  
+  <img src="/readme-images/breakdownschetsen2.JPG" width="375px" alt="breakdown van de hele pagina">
 
 
 </details>
@@ -137,7 +139,6 @@ Ik kwam er algauw achter dat de coolblue website heel erg uitgebreid is. Om dit 
 ### Agenda voor meeting
 
 Voorbereidende vragen
-
 - Wanneer kan je het beste flexbox gebruiken? En wanneer grid?
 - Is de structuur van mijn HTML semantisch?
 - Oefeningen doen tijdens de werkgroepen, veel om feedback vragen
@@ -185,16 +186,19 @@ Voor de categorieën heb ik ervoor gekozen om er alleen een UL-tag om de items h
 studenten
 Coolblue heeft voor de studenten een speciale deal. Toen ik eraan begon dacht ik dat wat ik had gedaan de beste oplossing was, maar ik kwam er algauw achter dat ik beter met Grid had kunnen werken. Maar doordat ik al zo ver was gekomen, heb ik ervoor gekozen om het op te lossen met een twee apparte sections waardoor het kopje boven de afbeelding komt te staan. Dit is zeker niet de meest elegante manier, maar gezien de tijd heb ik ervoor gekozen om te gaan focussen op de accessibility. Mocht ik nog meer tijd hebben zou ik dus het kopje, achtergrond foto en de content verdelen in een grid om het beter te positoneren.
 <img src="/readme-images/studenten.png" width="375px" alt="Categorien html ">
+
 <img src="/readme-images/studenten2.png" width="375px" alt="Categorien html ">
 
 Coolblue is illegal!
 Tijdens het programmeren liep ik erg vast bij de product elementen. Want coolblue had twee verschillende linkejs. Als je op het product blokje klikt ga je naar de pagina met meer informatie over het product, maar als je op de reviews klikt ga je naar de review pagina. Maar de review link stond in een blokje die ook een link was, en ik begreep niet hoe ze dit hadden gedaan. Na wat uitzoek werk, kwam ik erachter dat ze een link in een link hadden gestopt. Dit wilde ik direcht namaken, Ik ging naar de NDM website om naar voorbeelden te zoeken, maar toen ik het ging googlelen kwam er al snel naar boven dat dit echt niet kan en alles behalve semantisch is. Dus hierdoor moest ik een andere oplossing zoeken. Mijn oplossing was om twee apparte A-tjes aan te maken in de een list-item.
 <img src="/readme-images/Illegal.png" width="375px" alt="Categorien html">
+
 <img src="/readme-images/Illegal2.png" width="375px" alt="Categorien op de server">
 
 Kom werken!
 Het kom werken section is op de coolblue website niet gecodeerd maar het is een plaatje en het heeft geen alttext. Hierdoor kunnen mensen met een screenreader niet weten dat je dus kan solliciteren. Dit lijkt mij totaal niet vriendelijk, dus hierdoor heb ik ervoor gekozen om te programmeren.
 <img src="/readme-images/Komwerken-plaatje.png" width="375px" alt="Vacature van coolblue">
+
 <img src="/readme-images/Komwerken-plaatje2.png" width="375px" alt="Vacature van Coolblue">
 
 Autorepeat
@@ -202,12 +206,12 @@ Tijdens de werkgroep vroeg de docent bij een element waarom ik geen autorepeat h
 Dus ik heb met een studentassistent opgezocht hoe het werkte. En uiteindelijk is mij ook gelukt om het te gebruiken in mijn code. 
 Ik vond het echt handig en ben het op plekken gaan gebruiken. 
 
-
-
-
-
-Hulp met Java script 
-Carousel
+Moeite met de carousel 
+Ik wilde graag proberen om de carousel te maken. Het is mij gelukt met hulp! Maar ik vind het begrijpen van die code erg lastig. 
+Daarom besloot om het op papier uit te tekenen zodat ik beter begrijp wat er nou precies gebeurd. 
+Nu heb ik dit een aantal keer uitgelegd gekregen en vind het nog steeds best lastig. Ik wilde hem eigenlijk ook eraf halen aangezien ik de code niet goed begrijp. 
+Maar ik heb uiteindelijk toch besloten om het erop te houden omdat de website voor mijn gevoel af is en op deze manier toch een mooie site kan opleveren. Ik heb geprobeerd om 
+de codes beter begrijpbaar voor mezelf te maken door extra veel comments bij te zetten. 
 
 <img src="/readme-images/carousel1.png" width="375px" alt="Carousel HTML ">
 
@@ -217,23 +221,36 @@ Carousel
 
 <img src="/readme-images/carousel4.png" width="375px" alt="Carousel begrijpen">
 
-### Agenda voor meeting
 
+### Agenda voor meeting
+Voorbereidende vragen
+- Wat kan ik doen om mijn accessibility te optimaliseren?
+- Klopt de stuctuur van mijn website nog steeds?
 
 
 ### Verslag van meeting
+Ik had aan het einde van de week een feedback gesprek gehad met een student assistente genaamd Brianne. Wij hebben samen naar mijn codes en readme gekeken. 
+Als eerst kreeg ik het advies om echt mijn readme bij te houden. Spoiler... het was mij niet helemaal gelukt. Ik kreeg wel de tip om steekwoorden en kleine zinnen neer te zetten zodat ik niet vergeet wat er per week gebeurd is. En aangezien ik vaak dingen uitstel, leek mij dit wel echt een hele goede tip. Dus na het gesprek had ik direct alle besproken onderdelen in steekwoorden opgeschreven. 
 
-Feedback/advies Brianne
+Brianne en ik hebben de volgende dingen besproken: 
+- Mijn codes zien er goed uit op het gebied van content, vanaf nu moet ik mij ook wat meer gaan focussen op accessibility, dus denk aan active states, hover states en focus states
+- Een goede ALT-text, op veel plekken stond er nog geen correcte ALT-tekst.
+- Bij de buttons staan er nog geen aria-labels. Echt belangrijk om te doen voor je gebruiker
+- Ik heb nog geen H1
+  
+Plan voor week 4
+De content staat. De aankomende week ga ik focussen op het responsive maken van mijn site en ik ga proberen wat kleine micro-actions toe te voegen aan de site. 
+Om eerlijk te zijn strok ik erg van de moeilijkheidsgraad van de carousel waardoor ik eigenlijk niets meer met Javascript wilde doen. Misschien was het niet zo handig om met de carousel te beginnen. Maar ik ga het toch proberen en hopelijk zijn de andere elementen wat makkelijker te schrijven en begrijpen :) 
 
-- States - focus
-- Active states / hover actives (vb checkbox)
-- Alt text
-- Aria-label
-- Header toevoegen
-- Kloppende hiërarchie
+To lijst (dit moet wel echt werken): 
+- Responsive maken van mijn site met media queries
+- Hamburgermenu werkend maken
+- Winkelmand werkend maken
 
-Plan voor week 3
-
+To do lijst (Leuk als het werkt:
+- Footer met nieuwsbrief aanmelden
+- Kleine verrassing in de code voor de docent
+- De zoekfunctie werkend maken zoals op coolblue
 </details>
 
 ## Toegankelijkheidstest 2/2 (week 4)
@@ -242,13 +259,31 @@ Plan voor week 3
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
 ### Bevindingen
+<a href="/readme-images/WCAG_week4"> WCAG Checklist </a>
+In de vierde week ging ik samen met Charlotte de WCAG lijst doornemen en checken of mijn website volgens de hun regels is gemaakt. 
+Ik had al snel door dat ik heel veel dingen nog niet goed erin had gezet. Ik heb hiervan een lijst gemaakt en toegevoegd aan mijn to do lijst. 
 
-- Input label
-- section moet div worden als er geen header in zit
-- Decorative fotos moeten een alt hebben (leeg)
-- input/button focus toevoegen
+Dit zijn de punten die ik heb verbeterd (dit heb ik op een later moment gedaan) 
+- Ik heb duidelijke input en buttons geschreven  
+- Een section moet DIV worden als er geen header inzit 
+- Decorative fotos moeten een alt hebben, je mag het eventueel leeg laten
+- Kleur contrast was nog niet goed, dit heb aangepast
+- Er miste op bepaalde plekken nog aria labels 
+- Eén header per pagina, ik had nog geen header...
 
-Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+Chat GPT checkt mijn code 
+Ik heb ook aan chatGPT gevraagd of er nog extra dingen zijn die ik kan doen om mijn code te optimaliseren. En chatGPT heeft zeker wat goede suggesties gegeven die ik heb toegevoegd. 
+De volgende dingen heb ik aangepast door ChatGPT: 
+- Alt text verbeterd, foto's nog specifier omschreven
+- Arialabel kan je ook toevoegen op de navigatie en forms. Zo is voor bezoekers nog toegankelijker.
+
+Wave checker 
+Wave is een website die je code checked of ze toegankelijk genoeg zijn en of er nog dingen aangepast moet worden. Ik kreeg wel een aantal melding, vooral op het gebied van kleur/contrast en font grootte. De volgende dingen heb ik aangepast: 
+- Font groote, op sommige plekken was mijn font slecht leesbaar. Deze heb ik aangepast naar een grotere en dikkere font
+- Kleuren contrast was op sommige plekken niet goed, vooral lichtblauw en lichtoranje kreeg veel meldingen
+- Op sommige plekken was mijn alt-text te lang. Ik heb dit aangepast naar een wat kortere tekst.
+<img src="/readme-images/wave_onderzoek.png" width="375px" alt="Wave website checker foto">
+
 
 </details>
 
@@ -257,33 +292,37 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
 <details>
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
-### Stand van zaken
+### Stand van zaken 
+Ik heb deze week als erg pittig ervaren. Ik heb een hele inhaalslag moeten doen omdat ik te lang ben blijven hangen in het goed plaatsen van de content dat ik een beetje in tijdnood kwam. Maar het is mij uiteindelijk wel gelukt om wat moois neer te zetten, maar niet zonder slag of stoot. Hieronder heb ik mijn lastigste obstakels uitgeschreven, vooral voormezef zodat ik het beter begrijp. 
 
-- media queries
-- hamburger menu / responsive
-- Winkelmand
--
+Hamburgermenu werkend en responsive 
+Ik heb de hamburger met javascript werkend kunnen maken. Hieronder heb ik een uitleg voor mezelf gemaakt zodat ik het beter begrijp. Dit is geschreven met hulp van chatGPT. Zo begrijp ik zelf beter wat er gebeurd: 
+In het hamburger menu staat een lijst met pagina's die standaard de klasse ”verstopt-alleen-mobiel” hebben. Deze klasse zorgt ervoor dat de menu-items op mobiele apparaten verborgen zijn, terwijl ze op een desktop wel zichtbaar blijven. Dit komt doordat het menu op een desktop standaard altijd zichtbaar is, maar op mobiel alleen wanneer het hamburgermenu is geopend.
+Wanneer je op het hamburger-icoontje tikt, wordt de klasse ”verstopt-alleen-mobiel” verwijderd, waardoor de menu-items op mobiel zichtbaar worden. Als je vervolgens op het sluit-icoontje van het hamburgermenu tikt, wordt de klasse ”verstopt-alleen-mobiel” opnieuw toegevoegd, waardoor de items weer verborgen worden.
 
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik heb tijdens mijn vorige project een hamburger menu gemaakt, dus dit ging opzich wel soepel met javascript. 
+Met een EventListener en een variabel was dit erg goed te doen. Alleen ik raakte erg in de waar omdat ik de hamburgermenu ook responsive wilde maken en het daar ineens heel anders werd. Ik kon niet alleen display:none doen omdat de hamburger menu op laptop openklapt, maar zoals je eerder hebt gelezen heb ik dit opgelost om in de media quaries een andere stijling te geven. 
 
-### Agenda voor meeting
+<img src="/readme-images/hamburger_menu_uitleg.png" width="375px" alt="Hamburger menu uitleggen HTML">
 
-samen met je groepje opstellen
+<img src="/readme-images/hamburger_menu_java.png" width="375px" alt="Hamburger menu uitleggen javascript">
 
-| student 1      | student 2          | student 3    | student 4        |
-| -------------- | ------------------ | ------------ | ---------------- |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
 
-### Verslag van meeting
+Uitleg toggle functie (geschreven met ChatGPT) 
+Er is één knop om de dropdown "Bekijk hele assortiment" te openen. We gebruiken JavaScript om te detecteren wanneer iemand op deze knop drukt. Als dat gebeurt, roepen we een functie aan die de klasse toggle gebruikt om de klasse ”verstopt-alles” toe te voegen of te verwijderen.
+Als de dropdown-lijst al de class ”verstopt-alles” heeft, wordt deze verwijderd. Als de class er nog niet is, wordt deze toegevoegd. Op deze manier wisselt de dropdown tussen het wel of niet hebben van de class, oftewel hij "toggled” tussen de twee staten. 
 
-hier na afloop snel de uitkomsten van de meeting vastleggen
+De toggle functie was opzich goed te begrijpen en achteraf bedacht ik mij dat de toggle ook kon toepassen op het hamburger menu. Maar ik heb uiteindelijk toch voor gekozen om het zo te laten. 
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+<img src="/readme-images/hele_assortiment.png" width="375px" alt="Assortiment menu uitgelegd">
+
+Uitleg winkelmand (geschreven met ChatGPT)
+In de winkelwagen hebben we verschillende elementen: een minknop, een plusknop, een invoerveld voor het aantal producten, de productprijs en de totale prijs van de bestelling. Als de gebruiker drukt op de plus knop  wordt de functie ‘plusWinkelwagen’ aangeroepen. Deze functie verhoogt het aantal producten in het invoerveld met 1, wat gedaan wordt via “winkelwagenInput.value++”. Vervolgens wordt de productprijs en de totale bestelprijs bijgewerkt. Dit gebeurt door het aantal producten te vermenigvuldigen met de productprijs. Tot slot wordt er een euroteken en “,00” toegevoegd voor een nette weergave. Als de gebruiker drukt op de min knop, roepen we ’minusWinkelwagen’ aan. Deze functie kijkt eerst of het aantal producten meer dan 1 is. Is dat het geval, dan vermindert het aantal met 1. Maar als er slechts 1 product over is en je drukt nogmaals op de minknop, dan wordt je naar de pagina winkelwagen_leeg.html gestuurd, omdat een winkelwagen niet leeg mag zijn.
+
+Het is gelukt! Maar het process om dit te maken was niet leuk. Ik vond het best complex omdat ik meerdere elementen wilden laten werken. Maar chatGPT heeft mij goed geholpen met het begrijpen van de code. In het begin kwam ik er echt niet uit, maar uiteindelijk is het mij toch gelukt om het werkend te krijgen en ik kan het zelfds uitleggen! 
+
+<img src="/readme-images/winkelwagen.png" width="375px" alt="Winkelwawgen uitgwerkt">
+
 
 </details>
 
@@ -294,32 +333,94 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Je uitkomst - karakteristiek screenshots:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
 
 ### Dit ging goed/Heb ik geleerd:
+- HTML stuctuur is als heet goed is helemaal semantisch en toegankelijk, ik heb er extra tijd aan besteed. Voor mij is het belangrijk dat mijn pagina toegankelijk is voor iedereen
+<img src="readme-images/stuctuur_goed.png" width="375px" alt="bummer">
 
-Korte omschrijving met plaatjes
+- Mijn website is responsive! Ik ben hier echt mega trots op!! Het was vooral in mijn css nogal puzzelen omdat het bestand nog langer word door media quaries, maar het was echt mega leuk toen alles begon te werken
+<img src="readme-images/responsive_telefoon.png" width="375px" alt="bummer">
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+<img src="/readme-images/responsive_laptop.png" width="375px" alt="bummer">
+
+Werken met ROOT was ook echt heel fijn! Aan het einde wilde ik de coolblue kleuren aanpassen en dat ging zo gemakkelijk! Dus dat was super nice! 
+<img src="/readme-images/root.png" width="375px" alt="bummer">
+
+Het toevoegen van een focus en active state ging ook erg goed. Ik vond het ook erg leuk om te ontdekken wat je allemaal hebt. Zo heb ik ook een hover toegevoegd om zo de toegankelijkheid te verbeteren
+<img src="/readme-images/focus_active.png" width="375px" alt="bummer">
+
 
 ### Dit was lastig/Is niet gelukt:
 
-Korte omschrijving met plaatjes
+- Ik vond alles met javascript super lastig en hierdoor wel wat minder leuk om te doen. Ik heb eigenlijk bij elk javascript onderdeeld hulp gehad. En nog steeds vind ik het vrij lastig om het te begrijpen.
+<img src="/readme-images/javascript.png" width="375px" alt="bummer">
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+-Vanwege de tijd kon ik niet een footer maken met inschrijven voor een nieuwsbrief
+
+- In de winkelwagen kan je alleen optellen, niet aftrekken. Ik wist even niet meer hoe ik dat snel kon oplossen
+
+- Het behouden van een opgeruimd bestand, dit vond ik oprecht lastig. Op een gegeven moment had ik 1000+ lijnen css, en had ik geen overzicht meer. Het heeft mij een halve dag gekost om dit allemaal op te ruimen.
+<img src="/readme-images/winkelwagen_nietgelukt.png" width="375px" alt="bummer">
+
+Bij een element in mijn code wilde ik het graag herschrijven omdat mijn structuur niet goed was. Mijn doel was om dit te doen nadat de toegankelijkheid van mijn site verbeterd was. Maar dit heeft veel meer tijd gekost dan verwacht. Hierdoor heb ik dit niet kunnen verbeteren. 
+<img src="/readme-images/foutje_structuur.png" width="375px" alt="bummer">
 </details>
 
 ## Bronnenlijst
+1. https://stackoverflow.com/questions/24453148/style-radio-buttons-with-css3-before-and-after
+2. https://chat.openai.com/share/c1eef304-c742-4a39-a375-3a132fed9ab1
+3. https://chat.openai.com/share/d615e309-d1f0-4de2-a9f5-75fc0264c3c2
+4. https://chat.openai.com/share/a5ff3b37-6bcf-4918-8bc3-d69d2cb005b0
+5. https://wave.webaim.org/
+6. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+7. https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
+8. https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth
+9. https://dlo.mijnhva.nl/d2l/le/content/437031/viewContent/1547172/View
+10. https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage
+11. https://laracasts.com/discuss/channels/javascript/how-to-when-click-a-button-add-a-number-using-javascript
+12. https://codepen.io/Sepehr-code/pen/oNegxKm
+13. https://www.svgrepo.com/svg/80156/down-arrow
+14. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+15. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
+16. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label
+17. https://icons8.com/icons/set/search
+18. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+19. https://www.svgrepo.com/svg/80156/down-arrow
+20. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu
+21. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
+22. https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+23. https://webaim.org/techniques/css/invisiblecontent/
+24. https://stackoverflow.com/questions/32206116/position-absolute-left50-does-not-position-span-in-the-middle
+25. https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables
+26. https://stackoverflow.com/questions/8684917/is-it-bad-practice-to-use-negative-margins-or-padding-in-css
+27. https://css-tricks.com/practical-css-scroll-snapping
+28. https://stackoverflow.com/questions/4148499/how-to-style-a-checkbox-using-css
+29. https://markheath.net/post/customize-radio-button-css
+30. https://developer.mozilla.org/en-US/docs/Web/CSS/::after
+31. https://stackoverflow.com/questions/24453148/style-radio-buttons-with-css3-before-and-after
+32. https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset
+33. https://www.youtube.com/watch?v=8QKOaTYvYUA
+34. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+35. https://cssgridgarden.com/#nl
+36. https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+37. https://www.w3.org/WAI/standards-guidelines/wcag/
+38. https://webaim.org/resources/contrastchecker/
+39. https://coolors.co/contrast-checker/112a46-acc8e5
+40. https://css-tricks.com/snippets/css/complete-guide-grid/
+41. https://css-tricks.com/almanac/properties/g/grid-template-columns/
+42. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Menselijke bronnen: 
+1. Brianne (Klassen assistente)
+2. Marten Paul Moolenaar
+3. Sjors Van Holst
+Verder heb ik ook nog hulp gehad van twee andere klassen assistenten, waarvan ik de namen helaas niet meer weet. 
+
+
 
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-Nb. ChatGpT en andere AI horen er ook bij.
-Nb. Vermeld de bronnen ook in je code.
-
-1. bron 1
-2. bron 2
-3. ...
 
 </details>
