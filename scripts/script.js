@@ -1,3 +1,5 @@
+// DIT IS DE CAROUSEL
+// De carousel heb ik samen gemaakt met Sjors van Holst (Derdejaars CMD student)
 // Dit is de breedte van het scherm. Met innerwidth pak je de hele schermbreedte
 var eenAfbeelding = window.innerWidth;
 
@@ -31,6 +33,12 @@ if (carousel) {
   setInterval(scrollDeCarousel, 5000);
 }
 
+
+
+
+
+
+// HAMBURGER MENU
 var menu = document.querySelector("body>header>nav:nth-of-type(2)");
 var overlay = document.querySelector("body>header>div");
 
@@ -40,6 +48,7 @@ var sluitKnop = document.querySelector(
 );
 
 // https://dlo.mijnhva.nl/d2l/le/content/437031/viewContent/1547172/View
+
 sluitKnop.addEventListener("click", sluitMenu);
 openKnop.addEventListener("click", openMenu);
 
@@ -53,6 +62,11 @@ function openMenu() {
   overlay.classList.remove("verstopt-alleen-mobiel");
 }
 
+
+
+
+
+// BEKIJK ONS HELE ASSORTIMENT 
 var assortimentKnop = document.querySelector(
   "header>nav:first-of-type>ul>li:nth-of-type(3)>button"
 );
@@ -66,23 +80,35 @@ function openAssortiment() {
   assortiment.classList.toggle("verstopt-alles");
 }
 
+
+
+
+
+
+// het totaalbedrag
 var winkelwagenTotaal = document.querySelector(
   "body>main>section>ul>li>p:nth-of-type(2)"
 );
+
+// de prijs
 var winkelwagenPrijs = document.querySelector("body>main>ul>li>section>strong");
 
+// De hoeveelheid input (waar je ziet hoeveel je van iets hebt)
 var winkelwagenInput = document.querySelector(
   "body>main>ul>li>section>menu>li>input"
 );
-
+ 
+// De min knop
 var winkelwagenMinus = document.querySelector(
   "body>main>ul>li>section>menu>li:first-of-type>button"
 );
 
+// plus knop
 var winkelwagenPlus = document.querySelector(
   "body>main>ul>li>section>menu>li:nth-of-type(3)>button"
 );
 
+// De if is zodat hij niet probeert te luisteren naar een knop die niet bestaat op andere pagina's
 if (winkelwagenPlus) {
   winkelwagenPlus.addEventListener("click", plusWinkelwagen);
 }
@@ -91,16 +117,19 @@ if (winkelwagenMinus) {
   winkelwagenMinus.addEventListener("click", minusWinkelwagen);
 }
 
+// hiermee voeg iets toe
 function plusWinkelwagen() {
   // Als ik '+= 1' schrijf, komt er letterlijk een 1 erachter. Ik heb geen idee waarom.
   // Maar als ik een ++ doe dan telt hij wel gewoon op.
   // Ik kreeg de tip van Sjors van Holst om ++ te gebruiken
-  winkelwagenInput.value++;
+
+  winkelwagenInput.value ++;
 
   winkelwagenPrijs.innerHTML = "€" + winkelwagenInput.value * 799 + ",00";
   winkelwagenTotaal.innerHTML = "€" + winkelwagenInput.value * 799 + ",00";
 }
 
+// hiermee haal je er iets vanaf
 function minusWinkelwagen() {
   if (winkelwagenInput.value > 1) {
     winkelwagenInput.value--;

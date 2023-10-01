@@ -941,6 +941,8 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 	background-color: var(--coolblue-blue);
 }
 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::after */
+/* https://stackoverflow.com/questions/24453148/style-radio-buttons-with-css3-before-and-after */
 .winkelwagen>main>ul>li>section>fieldset>ul>li>input:checked+span:after {
 	content: "";
 	position: absolute;
@@ -954,7 +956,6 @@ hoe je repeat kan gebruiken. Dus mijn probeem is opgelost */
 }
 
 /* Dit bevat de bestellen knop / totaal prijs */
-
 .winkelwagen>main>section:nth-of-type(2) {
 	display: inline;
 }
