@@ -67,35 +67,35 @@ Text to speech leest niet alles voor
 De text to speech slaat een volledige blok over omdaat Coolblue een afbeelding heeft geplaatst zonder Alt-text.
 Het blok ging over werken bij Coolblue en vacatures. Ze hadden van de afbeelding een A gemaakt. Dus voor iemand met een screenreader is het onmogelijk om te weten waar opklikken.
 
-Heel veel DIV
 
 Bevindingen disability test
 Tijdens de werkgroep hebben we ook aantal testen gedaan waarbij je kan ervaren hoe het is om ADHD, Slechtziend, Parkinson en een lichamelijke beperking. Het was erg interessant en belangrijk om zulke testen uit te voeren. Zo heb ik zelf getest hoe het is om met ADHD, slechtziendheid en een lichamelijke beperking door een website heen te navigeren. Normaal gesproken sta je helemaal niet stil bij dit soort disabilities dus het was hee lerg leerzaam om dit te ervaren. Hieronder heb ik aantal bevindingen uitgeschreven:
 
 Bevindingen ADHD
-
 - Opvallende dingen vallen op
 - Erg lastig om een zinnen te lezen
 - Heel veel moeite met concentratie
 - Het kost meer energie om je gedachten erbij te houden
 
 Bevindingen slechtziendheid
-
 - Kleine letters zijn bijna niet te lezen
 - Dingen die te dicht bij elkaar staan zijn lastig te onderscheiden
 - Hele dunne lettertypes zijn niet te lezen
 - Lichte kleuren zijn niet goed te zien
 
 Bevindingen Lichamelijke beperking (Het missen van twee vingers)
-
 - Teksten uittypen duurde wat langer
 - Het is lastiger om sommige shortcuts te gebruiken op je laptop, denk aan CMD+P
 
-Bevindingen WCAG Checklist
-
-bevindingen Kleurenblind
-
-Contrast checken & bevindingen
+WCAG Checklist
+<a href="/readme-images/WCAG_Week1.pdf"> WCAG Checklist </a>
+Ik vind Coolblue een super leuke winkel en had ook verwacht dat ze super accessible zouden zijn. Maar samen met Jade kwamen we erachter dat het best wel tegenviel. 
+Hieronder heb ik mijn bevindingen uitgeschreven: 
+- Veel kleuren die ze gebruikte waren niet vriendelijk voor mensen die bijvoorbeeld kleurenblind zijn. Zelfs hun blauwe hoofdthema kleur was niet goed.
+- Sommige buttons bevatten geen Aria-Label of zijn vaag omschreven. Dit geld ook ook voor foto's. Ze bevatten nietszeggende Alt-teksten. 
+- Ze hebben een H1 en H2, maar de kopjes van de producten zelf staan in een span (op de homepagina)
+- Je kan niet inzoomen
+- Ze hebben bij veel elementen foto's gebruikt waarop hele belangrijke content staat, hierdoor kan je als gebruiker niet echt door alle content heen gaan 
 
 </details>
 
@@ -114,17 +114,6 @@ Contrast checken & bevindingen
   <img src="/readme-images/breakdownschetsen1.JPG" width="375px" alt="breakdown van de hele pagina">
     <img src="/readme-images/breakdownschetsen2.JPG" width="375px" alt="breakdown van de hele pagina">
 
-### Winkelwagen leeg:
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-### Hamburger menu:
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
-
-### Carousel:
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -138,6 +127,7 @@ Contrast checken & bevindingen
 Tijdens de tweede week kreeg ik voor het eerst te maken met Grid. Ik heb vorig jaar vooral veel les gehad over Flexbox, dus werken met grid was voor mij helemaal nieuw. Aangezien ik dit dus nooit had gedaan besloot ik de oefenopdrachten te doen en heb ik grid garden gemaakt zodat ik een beter begrip kreeg van de grid methode. Ik zeg het maar direct: I HATE GRID! Ik heb er erg veel moeite mee. Ik begrijp ongeveer wel hoe het werkt na de oefeningen, maar in praktijk is het echt irritant. Ik kan mij wel voorstellen dat dit misschien in de toekomst makkelijker gaat zijn. Maar helaas ben ik daar nog niet.
 
   <img src="readme-images/header1.png" width="375px" alt="header op de server">
+  
   <img src="readme-images/header2.png" width="375px" alt="code van de header">
 
 Ik begon met het maken van de header, de header is op beide pagina hetzelfde dus het leek mij handig om daarmee te beginnen. Eerlijk gezegd dacht ik dat het een makkelijk zou zijn maar de header was ook direct mijn grootste uitdaging. Ten eerste vond ik het lastig om te bepalen of flexbox of grid hiervoor geschikt was en had behoorlijke opstart problemen omdat ik even niet meer wist hoe alles werkt aangezien ik vorig jaar voor het laatst iets met codes had gedaan.
@@ -182,21 +172,11 @@ Li-tag & Aria label
 Voor het maken van een zoekbalk heb je een input nodig, hierbij heb je een bijpassende tag. Ik had er eerst een Li tag omheen gezet omdat ik dacht dat dit een onderdeel was van de navigatie en het er dus een list item van gemaakt. Maar ik kwam erachter dat dit niet semantisch is om twee redenen:
 
 1. Er moet altijd een UL omheen, dit had ik dus niet gedaan... echte schande!
-2. Een form-tag is veel meer geschikt voor een input. Volgens NDM is een form-tag geschikt voor het versturen van data. Aangezien je in een input data intypt de geeft aan de server om iets te vinden, leek mij dus deze tag er meer geschikt voor
+2. Een form-tag is meer geschikt voor een input. Volgens NDM is een form-tag geschikt voor het versturen van data. Aangezien je in een input data intypt de geeft aan de server om iets te vinden, leek mij dus deze tag er meer geschikt voor
    <img src="/readme-images/zoekbalk.png" width="375px" alt="Tijdelijke classes">
 
 Verder heb ik ontdekt dat je bij een button een aria label kan zetten zodat screenreader extra informatie kan geven aan de gebruikers. Een aria-label verbeterd toegankelijkheid en zorgt voor duidelijke acties. Je weet beter wat te verwachten als je de knop indrukt.
 Ik vind het erg leuk om meer bezig te zijn met toegankelijkheid van website, het is belangrijk om iets te maken waar iedereen gebruik van kan maken. Dit vak zorgt ervoor dat ik mij meer bewust ben van verschillende groepen mensen waar je rekening mee moet houden.
-
-Carousel
-
-<img src="/readme-images/carousel1.png" width="375px" alt="Carousel HTML ">
-
-<img src="/readme-images/carousel2.png" width="375px" alt="Carousel javscript">
-
-<img src="/readme-images/carousel3.jpg" width="375px" alt="Carousel op de server">
-
-<img src="/readme-images/carousel4.png" width="375px" alt="Carousel begrijpen">
 
 categorien
 Voor de categorieën heb ik ervoor gekozen om er alleen een UL-tag om de items heen te zetten en geen article omdat de links gaan naar nog een overzichtspagina en niet naar een soort detail pagina met aanvullende content.
@@ -218,19 +198,28 @@ Het kom werken section is op de coolblue website niet gecodeerd maar het is een 
 <img src="/readme-images/Komwerken-plaatje2.png" width="375px" alt="Vacature van Coolblue">
 
 Autorepeat
-Tijdens de werkgroep vroeg de docent bij een element waarom ik geen autorepeat had gebruikt. Ik begreep niet helemaal wat hij bedoelde en kwam je een soort shortcuts heb met grid.
+Tijdens de werkgroep vroeg de docent bij een element waarom ik geen autorepeat had gebruikt. Ik begreep niet helemaal wat hij bedoelde. 
+Dus ik heb met een studentassistent opgezocht hoe het werkte. En uiteindelijk is mij ook gelukt om het te gebruiken in mijn code. 
+Ik vond het echt handig en ben het op plekken gaan gebruiken. 
 
-Winkelmandje
-Grid (Winkelwagen)
-productpolonaise
-winkelmandmetcamera
-flexbox/grid
 
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+
+
+Hulp met Java script 
+Carousel
+
+<img src="/readme-images/carousel1.png" width="375px" alt="Carousel HTML ">
+
+<img src="/readme-images/carousel2.png" width="375px" alt="Carousel javscript">
+
+<img src="/readme-images/carousel3.jpg" width="375px" alt="Carousel op de server">
+
+<img src="/readme-images/carousel4.png" width="375px" alt="Carousel begrijpen">
 
 ### Agenda voor meeting
 
-- Ik had wat vragen over
+
 
 ### Verslag van meeting
 
