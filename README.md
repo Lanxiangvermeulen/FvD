@@ -277,8 +277,7 @@ Wave is een website die je code checked of ze toegankelijk genoeg zijn en of er 
 - Font groote, op sommige plekken was mijn font slecht leesbaar. Deze heb ik aangepast naar een grotere en dikkere font
 - Kleuren contrast was op sommige plekken niet goed, vooral lichtblauw en lichtoranje kreeg veel meldingen
 - Op sommige plekken was mijn alt-text te lang. Ik heb dit aangepast naar een wat kortere tekst.
-
-<img src="/readme-images/carousel4.png" width="375px" alt="Carousel begrijpen">
+<img src="/readme-images/wave_onderzoek" width="375px" alt="Wave website checker foto">
 
 
 </details>
@@ -289,16 +288,35 @@ Wave is een website die je code checked of ze toegankelijk genoeg zijn en of er 
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
 ### Stand van zaken 
+Ik heb deze week als erg pittig ervaren. Ik heb een hele inhaalslag moeten doen omdat ik te lang ben blijven hangen in het goed plaatsen van de content dat ik een beetje in tijdnood kwam. Maar het is mij uiteindelijk wel gelukt om wat moois neer te zetten, maar niet zonder slag of stoot. Hieronder heb ik mijn lastigste obstakels uitgeschreven, vooral voormezef zodat ik het beter begrijp. 
+
+Hamburgermenu werkend en responsive 
+Ik heb de hamburger met javascript werkend kunnen maken. Hieronder heb ik een uitleg voor mezelf gemaakt zodat ik het beter begrijp. Dit is geschreven met hulp van chatGPT. Zo begrijp ik zelf beter wat er gebeurd: 
+In het hamburger menu staat een lijst met pagina's die standaard de klasse ”verstopt-alleen-mobiel” hebben. Deze klasse zorgt ervoor dat de menu-items op mobiele apparaten verborgen zijn, terwijl ze op een desktop wel zichtbaar blijven. Dit komt doordat het menu op een desktop standaard altijd zichtbaar is, maar op mobiel alleen wanneer het hamburgermenu is geopend.
+Wanneer je op het hamburger-icoontje tikt, wordt de klasse ”verstopt-alleen-mobiel” verwijderd, waardoor de menu-items op mobiel zichtbaar worden. Als je vervolgens op het sluit-icoontje van het hamburgermenu tikt, wordt de klasse ”verstopt-alleen-mobiel” opnieuw toegevoegd, waardoor de items weer verborgen worden.
+
+Ik heb tijdens mijn vorige project een hamburger menu gemaakt, dus dit ging opzich wel soepel met javascript. 
+Met een EventListener en een variabel was dit erg goed te doen. Alleen ik raakte erg in de waar omdat ik de hamburgermenu ook responsive wilde maken en het daar ineens heel anders werd. Ik kon niet alleen display:none doen omdat de hamburger menu op laptop openklapt, maar zoals je eerder hebt gelezen heb ik dit opgelost om in de media quaries een andere stijling te geven. 
+
+<img src="/hamburger_menu_uitleg.png" width="375px" alt="Hamburger menu uitleggen HTML">
+
+<img src="/hamburger_menu_java.png" width="375px" alt="Hamburger menu uitleggen javascript">
 
 
-Hamburger menu 
+Uitleg toggle functie (geschreven met ChatGPT) 
+Er is één knop om de dropdown "Bekijk hele assortiment" te openen. We gebruiken JavaScript om te detecteren wanneer iemand op deze knop drukt. Als dat gebeurt, roepen we een functie aan die de klasse toggle gebruikt om de klasse ”verstopt-alles” toe te voegen of te verwijderen.
+Als de dropdown-lijst al de class ”verstopt-alles” heeft, wordt deze verwijderd. Als de class er nog niet is, wordt deze toegevoegd. Op deze manier wisselt de dropdown tussen het wel of niet hebben van de class, oftewel hij "toggled” tussen de twee staten. 
 
+De toggle functie was opzich goed te begrijpen en achteraf bedacht ik mij dat de toggle ook kon toepassen op het hamburger menu. Maar ik heb uiteindelijk toch voor gekozen om het zo te laten. 
 
+<img src="/readme-images/hele_assortiment.png" width="375px" alt="Assortiment menu uitgelegd">
 
-### Agenda voor meeting
+Uitleg winkelmand (geschreven met ChatGPT)
+In de winkelwagen hebben we verschillende elementen: een minknop, een plusknop, een invoerveld voor het aantal producten, de productprijs en de totale prijs van de bestelling. Als de gebruiker drukt op de plus knop  wordt de functie ‘plusWinkelwagen’ aangeroepen. Deze functie verhoogt het aantal producten in het invoerveld met 1, wat gedaan wordt via “winkelwagenInput.value++”. Vervolgens wordt de productprijs en de totale bestelprijs bijgewerkt. Dit gebeurt door het aantal producten te vermenigvuldigen met de productprijs. Tot slot wordt er een euroteken en “,00” toegevoegd voor een nette weergave. Als de gebruiker drukt op de min knop, roepen we ’minusWinkelwagen’ aan. Deze functie kijkt eerst of het aantal producten meer dan 1 is. Is dat het geval, dan vermindert het aantal met 1. Maar als er slechts 1 product over is en je drukt nogmaals op de minknop, dan wordt je naar de pagina winkelwagen_leeg.html gestuurd, omdat een winkelwagen niet leeg mag zijn.
 
+Het is gelukt! Maar het process om dit te maken was niet leuk. Ik vond het best complex omdat ik meerdere elementen wilden laten werken. Maar chatGPT heeft mij goed geholpen met het begrijpen van de code. In het begin kwam ik er echt niet uit, maar uiteindelijk is het mij toch gelukt om het werkend te krijgen en ik kan het zelfds uitleggen! 
 
-### Verslag van meeting
+<img src="/winkelwagen.png" width="375px" alt="Winkelwawgen uitgwerkt">
 
 
 </details>
@@ -310,22 +328,90 @@ Hamburger menu
 
 ### Je uitkomst - karakteristiek screenshots:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
 
 ### Dit ging goed/Heb ik geleerd:
+- HTML stuctuur is als heet goed is helemaal semantisch en toegankelijk, ik heb er extra tijd aan besteed. Voor mij is het belangrijk dat mijn pagina toegankelijk is voor iedereen
+<img src="readme-images/stuctuur_goed.png" width="375px" alt="bummer">
 
-Korte omschrijving met plaatjes
+- Mijn website is responsive! Ik ben hier echt mega trots op!! Het was vooral in mijn css nogal puzzelen omdat het bestand nog langer word door media quaries, maar het was echt mega leuk toen alles begon te werken
+<img src="readme-images/responsive_telefoon.png" width="375px" alt="bummer">
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+<img src="responsive_laptop.png" width="375px" alt="bummer">
+
+Werken met ROOT was ook echt heel fijn! Aan het einde wilde ik de coolblue kleuren aanpassen en dat ging zo gemakkelijk! Dus dat was super nice! 
+<img src="readme-images/root.png" width="375px" alt="bummer">
+
+Het toevoegen van een focus en active state ging ook erg goed. Ik vond het ook erg leuk om te ontdekken wat je allemaal hebt. Zo heb ik ook een hover toegevoegd om zo de toegankelijkheid te verbeteren
+<img src="readme-images/focus_active.png" width="375px" alt="bummer">
+
 
 ### Dit was lastig/Is niet gelukt:
 
-Korte omschrijving met plaatjes
+- Ik vond alles met javascript super lastig en hierdoor wel wat minder leuk om te doen. Ik heb eigenlijk bij elk javascript onderdeeld hulp gehad. En nog steeds vind ik het vrij lastig om het te begrijpen.
+<img src="readme-images/javascript.png" width="375px" alt="bummer">
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+-Vanwege de tijd kon ik niet een footer maken met inschrijven voor een nieuwsbrief
+
+- In de winkelwagen kan je alleen optellen, niet aftrekken. Ik wist even niet meer hoe ik dat snel kon oplossen
+
+- Het behouden van een opgeruimd bestand, dit vond ik oprecht lastig. Op een gegeven moment had ik 1000+ lijnen css, en had ik geen overzicht meer. Het heeft mij een halve dag gekost om dit allemaal op te ruimen.
+<img src="readme-images/winkelwagen_nietgelukt.png" width="375px" alt="bummer">
+
+Bij een element in mijn code wilde ik het graag herschrijven omdat mijn structuur niet goed was. Mijn doel was om dit te doen nadat de toegankelijkheid van mijn site verbeterd was. Maar dit heeft veel meer tijd gekost dan verwacht. Hierdoor heb ik dit niet kunnen verbeteren. 
+<img src="readme-images/foutje_structuur.png" width="375px" alt="bummer">
 </details>
 
 ## Bronnenlijst
+1. https://stackoverflow.com/questions/24453148/style-radio-buttons-with-css3-before-and-after
+2. https://chat.openai.com/share/c1eef304-c742-4a39-a375-3a132fed9ab1
+3. https://chat.openai.com/share/d615e309-d1f0-4de2-a9f5-75fc0264c3c2
+4. https://chat.openai.com/share/a5ff3b37-6bcf-4918-8bc3-d69d2cb005b0
+5. https://wave.webaim.org/
+6. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+7. https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
+8. https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth
+9. https://dlo.mijnhva.nl/d2l/le/content/437031/viewContent/1547172/View
+10. https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage
+11. https://laracasts.com/discuss/channels/javascript/how-to-when-click-a-button-add-a-number-using-javascript
+12. https://codepen.io/Sepehr-code/pen/oNegxKm
+13. https://www.svgrepo.com/svg/80156/down-arrow
+14. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+15. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
+16. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label
+17. https://icons8.com/icons/set/search
+18. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+19. https://www.svgrepo.com/svg/80156/down-arrow
+20. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu
+21. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
+22. https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+23. https://webaim.org/techniques/css/invisiblecontent/
+24. https://stackoverflow.com/questions/32206116/position-absolute-left50-does-not-position-span-in-the-middle
+25. https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables
+26. https://stackoverflow.com/questions/8684917/is-it-bad-practice-to-use-negative-margins-or-padding-in-css
+27. https://css-tricks.com/practical-css-scroll-snapping
+28. https://stackoverflow.com/questions/4148499/how-to-style-a-checkbox-using-css
+29. https://markheath.net/post/customize-radio-button-css
+30. https://developer.mozilla.org/en-US/docs/Web/CSS/::after
+31. https://stackoverflow.com/questions/24453148/style-radio-buttons-with-css3-before-and-after
+32. https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset
+33. https://www.youtube.com/watch?v=8QKOaTYvYUA
+34. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+35. https://cssgridgarden.com/#nl
+36. https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+37. https://www.w3.org/WAI/standards-guidelines/wcag/
+38. https://webaim.org/resources/contrastchecker/
+39. https://coolors.co/contrast-checker/112a46-acc8e5
+40. https://css-tricks.com/snippets/css/complete-guide-grid/
+41. https://css-tricks.com/almanac/properties/g/grid-template-columns/
+42. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Menselijke bronnen: 
+1. Brianne (Klassen assistente)
+2. Marten Paul Moolenaar
+3. Sjors Van Holst
+Verder heb ik ook nog hulp gehad van twee andere klassen assistenten, waarvan ik de namen helaas niet meer weet. 
+
+
 
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
