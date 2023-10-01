@@ -137,7 +137,6 @@ Ik kwam er algauw achter dat de coolblue website heel erg uitgebreid is. Om dit 
 ### Agenda voor meeting
 
 Voorbereidende vragen
-
 - Wanneer kan je het beste flexbox gebruiken? En wanneer grid?
 - Is de structuur van mijn HTML semantisch?
 - Oefeningen doen tijdens de werkgroepen, veel om feedback vragen
@@ -202,12 +201,12 @@ Tijdens de werkgroep vroeg de docent bij een element waarom ik geen autorepeat h
 Dus ik heb met een studentassistent opgezocht hoe het werkte. En uiteindelijk is mij ook gelukt om het te gebruiken in mijn code. 
 Ik vond het echt handig en ben het op plekken gaan gebruiken. 
 
-
-
-
-
-Hulp met Java script 
-Carousel
+Moeite met de carousel 
+Ik wilde graag proberen om de carousel te maken. Het is mij gelukt met hulp! Maar ik vind het begrijpen van die code erg lastig. 
+Daarom besloot om het op papier uit te tekenen zodat ik beter begrijp wat er nou precies gebeurd. 
+Nu heb ik dit een aantal keer uitgelegd gekregen en vind het nog steeds best lastig. Ik wilde hem eigenlijk ook eraf halen aangezien ik de code niet goed begrijp. 
+Maar ik heb uiteindelijk toch besloten om het erop te houden omdat de website voor mijn gevoel af is en op deze manier toch een mooie site kan opleveren. Ik heb geprobeerd om 
+de codes beter begrijpbaar voor mezelf te maken door extra veel comments bij te zetten. 
 
 <img src="/readme-images/carousel1.png" width="375px" alt="Carousel HTML ">
 
@@ -217,23 +216,36 @@ Carousel
 
 <img src="/readme-images/carousel4.png" width="375px" alt="Carousel begrijpen">
 
-### Agenda voor meeting
 
+### Agenda voor meeting
+Voorbereidende vragen
+- Wat kan ik doen om mijn accessibility te optimaliseren?
+- Klopt de stuctuur van mijn website nog steeds?
 
 
 ### Verslag van meeting
+Ik had aan het einde van de week een feedback gesprek gehad met een student assistente genaamd Brianne. Wij hebben samen naar mijn codes en readme gekeken. 
+Als eerst kreeg ik het advies om echt mijn readme bij te houden. Spoiler... het was mij niet helemaal gelukt. Ik kreeg wel de tip om steekwoorden en kleine zinnen neer te zetten zodat ik niet vergeet wat er per week gebeurd is. En aangezien ik vaak dingen uitstel, leek mij dit wel echt een hele goede tip. Dus na het gesprek had ik direct alle besproken onderdelen in steekwoorden opgeschreven. 
 
-Feedback/advies Brianne
+Brianne en ik hebben de volgende dingen besproken: 
+- Mijn codes zien er goed uit op het gebied van content, vanaf nu moet ik mij ook wat meer gaan focussen op accessibility, dus denk aan active states, hover states en focus states
+- Een goede ALT-text, op veel plekken stond er nog geen correcte ALT-tekst.
+- Bij de buttons staan er nog geen aria-labels. Echt belangrijk om te doen voor je gebruiker
+- Ik heb nog geen H1
+  
+Plan voor week 4
+De content staat. De aankomende week ga ik focussen op het responsive maken van mijn site en ik ga proberen wat kleine micro-actions toe te voegen aan de site. 
+Om eerlijk te zijn strok ik erg van de moeilijkheidsgraad van de carousel waardoor ik eigenlijk niets meer met Javascript wilde doen. Misschien was het niet zo handig om met de carousel te beginnen. Maar ik ga het toch proberen en hopelijk zijn de andere elementen wat makkelijker te schrijven en begrijpen :) 
 
-- States - focus
-- Active states / hover actives (vb checkbox)
-- Alt text
-- Aria-label
-- Header toevoegen
-- Kloppende hiërarchie
+To lijst (dit moet wel echt werken): 
+- Responsive maken van mijn site met media queries
+- Hamburgermenu werkend maken
+- Winkelmand werkend maken
 
-Plan voor week 3
-
+To do lijst (Leuk als het werkt:
+- Footer met nieuwsbrief aanmelden
+- Kleine verrassing in de code voor de docent
+- De zoekfunctie werkend maken zoals op coolblue
 </details>
 
 ## Toegankelijkheidstest 2/2 (week 4)
@@ -242,13 +254,32 @@ Plan voor week 3
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
 ### Bevindingen
+<a href="/readme-images/WCAG_week4"> WCAG Checklist </a>
+In de vierde week ging ik samen met Charlotte de WCAG lijst doornemen en checken of mijn website volgens de hun regels is gemaakt. 
+Ik had al snel door dat ik heel veel dingen nog niet goed erin had gezet. Ik heb hiervan een lijst gemaakt en toegevoegd aan mijn to do lijst. 
 
-- Input label
-- section moet div worden als er geen header in zit
-- Decorative fotos moeten een alt hebben (leeg)
-- input/button focus toevoegen
+Dit zijn de punten die ik heb verbeterd (dit heb ik op een later moment gedaan) 
+- Ik heb duidelijke input en buttons geschreven  
+- Een section moet DIV worden als er geen header inzit 
+- Decorative fotos moeten een alt hebben, je mag het eventueel leeg laten
+- Kleur contrast was nog niet goed, dit heb aangepast
+- Er miste op bepaalde plekken nog aria labels 
+- Eén header per pagina, ik had nog geen header...
 
-Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+Chat GPT checkt mijn code 
+Ik heb ook aan chatGPT gevraagd of er nog extra dingen zijn die ik kan doen om mijn code te optimaliseren. En chatGPT heeft zeker wat goede suggesties gegeven die ik heb toegevoegd. 
+De volgende dingen heb ik aangepast door ChatGPT: 
+- Alt text verbeterd, foto's nog specifier omschreven
+- Arialabel kan je ook toevoegen op de navigatie en forms. Zo is voor bezoekers nog toegankelijker.
+
+Wave checker 
+Wave is een website die je code checked of ze toegankelijk genoeg zijn en of er nog dingen aangepast moet worden. Ik kreeg wel een aantal melding, vooral op het gebied van kleur/contrast en font grootte. De volgende dingen heb ik aangepast: 
+- Font groote, op sommige plekken was mijn font slecht leesbaar. Deze heb ik aangepast naar een grotere en dikkere font
+- Kleuren contrast was op sommige plekken niet goed, vooral lichtblauw en lichtoranje kreeg veel meldingen
+- Op sommige plekken was mijn alt-text te lang. Ik heb dit aangepast naar een wat kortere tekst.
+
+<img src="/readme-images/carousel4.png" width="375px" alt="Carousel begrijpen">
+
 
 </details>
 
@@ -257,33 +288,18 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
 <details>
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
-### Stand van zaken
+### Stand van zaken 
 
-- media queries
-- hamburger menu / responsive
-- Winkelmand
--
 
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Hamburger menu 
+
+
 
 ### Agenda voor meeting
 
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| -------------- | ------------------ | ------------ | ---------------- |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
 
 ### Verslag van meeting
 
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- punt 1
-- punt 2
-- nog een punt
-- ...
 
 </details>
 
@@ -314,12 +330,5 @@ Korte omschrijving met plaatjes
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-Nb. ChatGpT en andere AI horen er ook bij.
-Nb. Vermeld de bronnen ook in je code.
-
-1. bron 1
-2. bron 2
-3. ...
 
 </details>
