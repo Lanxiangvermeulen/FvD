@@ -67,6 +67,7 @@ function openMenu() {
 
 
 // BEKIJK ONS HELE ASSORTIMENT 
+// https://codepen.io/Sepehr-code/pen/oNegxKm
 var assortimentKnop = document.querySelector(
   "header>nav:first-of-type>ul>li:nth-of-type(3)>button"
 );
@@ -76,6 +77,7 @@ var assortiment = document.querySelector(
 
 assortimentKnop.addEventListener("click", openAssortiment);
 
+
 function openAssortiment() {
   assortiment.classList.toggle("verstopt-alles");
 }
@@ -84,7 +86,7 @@ function openAssortiment() {
 
 
 
-
+// https://laracasts.com/discuss/channels/javascript/how-to-when-click-a-button-add-a-number-using-javascript
 // het totaalbedrag
 var winkelwagenTotaal = document.querySelector(
   "body>main>section>ul>li>p:nth-of-type(2)"
