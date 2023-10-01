@@ -339,26 +339,26 @@ Het is gelukt! Maar het process om dit te maken was niet leuk. Ik vond het best 
 <img src="/readme-images/responsive_laptop.png" width="375px" alt="bummer">
 
 Werken met ROOT was ook echt heel fijn! Aan het einde wilde ik de coolblue kleuren aanpassen en dat ging zo gemakkelijk! Dus dat was super nice! 
-<img src="/readme-images/readme-images/root.png" width="375px" alt="bummer">
+<img src="/readme-images/root.png" width="375px" alt="bummer">
 
 Het toevoegen van een focus en active state ging ook erg goed. Ik vond het ook erg leuk om te ontdekken wat je allemaal hebt. Zo heb ik ook een hover toegevoegd om zo de toegankelijkheid te verbeteren
-<img src="/readme-images/readme-images/focus_active.png" width="375px" alt="bummer">
+<img src="/readme-images/focus_active.png" width="375px" alt="bummer">
 
 
 ### Dit was lastig/Is niet gelukt:
 
 - Ik vond alles met javascript super lastig en hierdoor wel wat minder leuk om te doen. Ik heb eigenlijk bij elk javascript onderdeeld hulp gehad. En nog steeds vind ik het vrij lastig om het te begrijpen.
-<img src="/readme-images/readme-images/javascript.png" width="375px" alt="bummer">
+<img src="/readme-images/javascript.png" width="375px" alt="bummer">
 
 -Vanwege de tijd kon ik niet een footer maken met inschrijven voor een nieuwsbrief
 
 - In de winkelwagen kan je alleen optellen, niet aftrekken. Ik wist even niet meer hoe ik dat snel kon oplossen
 
 - Het behouden van een opgeruimd bestand, dit vond ik oprecht lastig. Op een gegeven moment had ik 1000+ lijnen css, en had ik geen overzicht meer. Het heeft mij een halve dag gekost om dit allemaal op te ruimen.
-<img src="/readme-images/readme-images/winkelwagen_nietgelukt.png" width="375px" alt="bummer">
+<img src="/readme-images/winkelwagen_nietgelukt.png" width="375px" alt="bummer">
 
 Bij een element in mijn code wilde ik het graag herschrijven omdat mijn structuur niet goed was. Mijn doel was om dit te doen nadat de toegankelijkheid van mijn site verbeterd was. Maar dit heeft veel meer tijd gekost dan verwacht. Hierdoor heb ik dit niet kunnen verbeteren. 
-<img src="readme-images/foutje_structuur.png" width="375px" alt="bummer">
+<img src="/readme-images/foutje_structuur.png" width="375px" alt="bummer">
 </details>
 
 ## Bronnenlijst
